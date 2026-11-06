@@ -1,0 +1,709 @@
+﻿{
+  "meta": {
+    "version": "1.0",
+    "date": "2026-09-06",
+    "auteur": "AMELEGAL SARL",
+    "statut": "validé par AMELEGAL, à implémenter",
+    "avertissement": "Référentiel administrable. Aucune de ces valeurs ne doit être codée en dur (cahier des charges, art. 8.1 et 27.6)."
+  },
+  "juridiction": {
+    "code": "TG",
+    "nom": "Togo",
+    "nom_officiel": "République togolaise",
+    "langue": "fr",
+    "socle_regional": "CEDEAO",
+    "herite_du_socle": true
+  },
+  "sources": {
+    "texte_principal": {
+      "intitule": "Loi n° 2019-014 du 29 octobre 2019 relative à la protection des données à caractère personnel",
+      "date": "2019-10-29",
+      "publication": "Journal officiel de la République togolaise, 64e année, n° 26 ter, numéro spécial du 29 octobre 2019",
+      "verifie_sur": "exemplaire du Journal officiel versé au dossier Sources et référentiels, Textes"
+    },
+    "textes_application": {
+      "etat": "non publiés à ce jour",
+      "consequence": "Les paramètres relatifs au registre, à l'analyse d'impact et à la notification des violations procèdent des standards internationaux retenus par AMELEGAL, et non d'un texte togolais. Ils sont marqués source=standard_international et affichés sous la réserve d'interprétation de l'article 12 du cahier des charges."
+    },
+    "articles_cles": [
+      {
+        "art": "2",
+        "objet": "champ d'application"
+      },
+      {
+        "art": "3",
+        "objet": "exclusions"
+      },
+      {
+        "art": "4",
+        "objet": "définitions, dont données sensibles"
+      },
+      {
+        "art": "5",
+        "objet": "régime de la dispense de formalités"
+      },
+      {
+        "art": "6",
+        "objet": "régime de la déclaration"
+      },
+      {
+        "art": "7",
+        "objet": "normes de simplification et d'exonération"
+      },
+      {
+        "art": "8",
+        "objet": "régime d'autorisation"
+      },
+      {
+        "art": "9",
+        "objet": "acte réglementaire après avis motivé"
+      },
+      {
+        "art": "10",
+        "objet": "contenu des demandes et déclarations"
+      },
+      {
+        "art": "12",
+        "objet": "transmission des déclarations et demandes"
+      },
+      {
+        "art": "13",
+        "objet": "saisine de l'Instance"
+      },
+      {
+        "art": "21 et 22",
+        "objet": "interdiction de principe du traitement de données sensibles et exceptions"
+      },
+      {
+        "art": "28 à 31",
+        "objet": "transferts vers un pays tiers"
+      },
+      {
+        "art": "32 à 34",
+        "objet": "interconnexion de fichiers"
+      },
+      {
+        "art": "51 à 54",
+        "objet": "confidentialité, sécurité, conservation, pérennité"
+      },
+      {
+        "art": "55 à 74",
+        "objet": "Instance de protection des données à caractère personnel"
+      },
+      {
+        "art": "75 à 78",
+        "objet": "correspondant à la protection des données"
+      },
+      {
+        "art": "79",
+        "objet": "sanction du non-respect des formalités préalables"
+      },
+      {
+        "art": "94",
+        "objet": "régime dérogatoire de la déclaration"
+      },
+      {
+        "art": "95",
+        "objet": "délai de mise en conformité"
+      }
+    ]
+  },
+  "autorite": {
+    "denomination": "Instance de protection des données à caractère personnel",
+    "sigle": "IPDCP",
+    "fondement": "art. 55",
+    "adresse": null,
+    "telephone": null,
+    "courriel": null,
+    "site": null,
+    "modalites_depot": [
+      {
+        "canal": "à renseigner",
+        "source": "pratique de l'IPDCP"
+      }
+    ],
+    "delais_instruction": [
+      {
+        "regime": "declaration",
+        "delai": "1 mois",
+        "objet": "délivrance du récépissé",
+        "prorogeable": "une fois sur décision motivée",
+        "fondement": "art. 6"
+      },
+      {
+        "regime": "autorisation",
+        "delai": null,
+        "objet": "instruction",
+        "fondement": "non chiffré par la loi"
+      },
+      {
+        "regime": "avis_motive",
+        "delai": null,
+        "objet": "avis",
+        "fondement": "non chiffré par la loi"
+      },
+      {
+        "regime": "acte_reglementaire",
+        "delai": null,
+        "objet": "avis",
+        "fondement": "non chiffré par la loi"
+      }
+    ]
+  },
+  "terminologie": {
+    "autorite": "Instance de protection des données à caractère personnel",
+    "autorite_sigle": "IPDCP",
+    "correspondant": "correspondant à la protection des données à caractère personnel",
+    "correspondant_sigle": "CPDCP",
+    "analyse_impact": "analyse d'impact relative à la protection des données à caractère personnel",
+    "analyse_impact_sigle": "AIPD",
+    "registre": "registre des activités de traitement",
+    "registre_note": "La loi n'emploie pas ce terme. L'article 76, 5° impose au correspondant de tenir une liste des traitements effectués immédiatement accessible. Le libellé retenu est celui du standard international.",
+    "personne_concernee": "personne concernée",
+    "responsable": "responsable du traitement",
+    "sous_traitant": "sous-traitant"
+  },
+  "regimes": [
+    {
+      "id": "TG-DISPENSE",
+      "code": "dispense",
+      "libelle": "Pas de formalité",
+      "libelle_officiel": "Dispense de formalités préalables",
+      "famille_couleur": "neutre",
+      "ordre": 1,
+      "fondement": "art. 5",
+      "portee": "Aucune formalité préalable auprès de l'IPDCP. Toutes les autres obligations de la loi demeurent."
+    },
+    {
+      "id": "TG-DECLARATION",
+      "code": "declaration",
+      "libelle": "Déclaration",
+      "libelle_officiel": "Déclaration préalable auprès de l'IPDCP",
+      "famille_couleur": "standard",
+      "ordre": 2,
+      "fondement": "art. 6",
+      "portee": "Régime de droit commun. Accusé de réception, puis récépissé délivré dans un délai maximal d'un mois, prorogeable une fois sur décision motivée. Seule la réception du récépissé donne droit à la mise en oeuvre du traitement."
+    },
+    {
+      "id": "TG-AVIS",
+      "code": "avis_motive",
+      "libelle": "Avis motivé",
+      "libelle_officiel": "Avis motivé de l'IPDCP préalable au transfert",
+      "famille_couleur": "attention",
+      "ordre": 3,
+      "fondement": "art. 28, alinéa 2",
+      "portee": "Avant tout transfert vers un pays tiers, le responsable informe préalablement l'IPDCP, qui donne un avis motivé."
+    },
+    {
+      "id": "TG-AUTORISATION",
+      "code": "autorisation",
+      "libelle": "Autorisation",
+      "libelle_officiel": "Autorisation préalable de l'IPDCP",
+      "famille_couleur": "eleve",
+      "ordre": 4,
+      "fondement": "art. 8",
+      "portee": "Mise en oeuvre subordonnée à l'autorisation expresse de l'IPDCP."
+    },
+    {
+      "id": "TG-ACTE",
+      "code": "acte_reglementaire",
+      "libelle": "Acte réglementaire après avis",
+      "libelle_officiel": "Acte réglementaire pris après avis motivé de l'IPDCP",
+      "famille_couleur": "critique",
+      "ordre": 5,
+      "fondement": "art. 9",
+      "portee": "Le traitement est décidé par acte réglementaire pris après avis motivé de l'IPDCP. L'acte est publié avant la mise en oeuvre du traitement."
+    }
+  ],
+  "logigramme": {
+    "entree": "TG-Q1",
+    "nb_questions": 8,
+    "nb_sorties": 5,
+    "questions": [
+      {
+        "id": "TG-Q1",
+        "ordre": 1,
+        "libelle": "Le traitement porte-t-il sur des données à caractère personnel ?",
+        "champ": "bloc2.nature_donnees_personnelles",
+        "type": "booleen",
+        "aide": "donnee_a_caractere_personnel",
+        "fondement": "art. 2 et 4",
+        "oui": {
+          "type": "question",
+          "cible": "TG-Q2"
+        },
+        "non": {
+          "type": "sortie",
+          "cible": "TG-DISPENSE",
+          "motif": "Le traitement ne porte pas sur des données à caractère personnel : il échappe au champ de la loi."
+        }
+      },
+      {
+        "id": "TG-Q2",
+        "ordre": 2,
+        "libelle": "A-t-il pour objet un registre destiné exclusivement à l'information du public ?",
+        "champ": "bloc1.registre_information_public",
+        "type": "booleen",
+        "aide": "registre_information_public",
+        "fondement": "art. 5, 2°",
+        "oui": {
+          "type": "sortie",
+          "cible": "TG-DISPENSE",
+          "motif": "Le traitement a pour seul objet la tenue d'un registre destiné exclusivement à l'information du public : il est dispensé de formalités."
+        },
+        "non": {
+          "type": "question",
+          "cible": "TG-Q3"
+        }
+      },
+      {
+        "id": "TG-Q3",
+        "ordre": 3,
+        "libelle": "Un correspondant à la protection des données a-t-il été désigné ?",
+        "champ": "bloc3.correspondant_designe",
+        "type": "booleen",
+        "aide": "correspondant",
+        "fondement": "art. 5, 3° et art. 77",
+        "note": "Indicateur juridique de désignation, distinct du rôle applicatif Correspondant et de l'existence d'un mandat de cabinet. À défaut de renseignement explicite, la valeur est réputée fausse.",
+        "oui": {
+          "type": "question",
+          "cible": "TG-Q4"
+        },
+        "non": {
+          "type": "question",
+          "cible": "TG-Q5"
+        }
+      },
+      {
+        "id": "TG-Q4",
+        "ordre": 4,
+        "libelle": "Le traitement implique-t-il un transfert de données hors du Togo ?",
+        "champ": "bloc3.transfert_international",
+        "type": "booleen",
+        "aide": "transfert_international",
+        "fondement": "art. 5, 3°, in fine, et art. 28, alinéa 2",
+        "oui": {
+          "type": "sortie",
+          "cible": "TG-AVIS",
+          "motif": "La désignation d'un correspondant dispense des formalités, sauf lorsqu'un transfert vers un pays tiers est envisagé. Le transfert appelle l'avis motivé préalable de l'IPDCP."
+        },
+        "non": {
+          "type": "sortie",
+          "cible": "TG-DISPENSE",
+          "motif": "Un correspondant a été désigné et aucun transfert hors du Togo n'est envisagé : le traitement est dispensé de formalités préalables."
+        }
+      },
+      {
+        "id": "TG-Q5",
+        "ordre": 5,
+        "libelle": "Le traitement porte-t-il sur des données sensibles ?",
+        "champ": "bloc2.donnees_sensibles",
+        "type": "booleen",
+        "aide": "donnees_sensibles",
+        "fondement": "art. 4, art. 21 et art. 6",
+        "oui": {
+          "type": "question",
+          "cible": "TG-Q6"
+        },
+        "non": {
+          "type": "sortie",
+          "cible": "TG-DECLARATION",
+          "motif": "Le traitement ne relève d'aucun régime dérogatoire : il suit le régime de droit commun de la déclaration."
+        }
+      },
+      {
+        "id": "TG-Q6",
+        "ordre": 6,
+        "libelle": "Est-il mis en oeuvre par l'État, une collectivité locale ou une entité privée chargée d'une mission de service public ?",
+        "champ": "bloc1.personne_publique_ou_mission_service_public",
+        "type": "booleen",
+        "aide": "mission_service_public",
+        "fondement": "art. 9",
+        "oui": {
+          "type": "question",
+          "cible": "TG-Q7"
+        },
+        "non": {
+          "type": "question",
+          "cible": "TG-Q8"
+        }
+      },
+      {
+        "id": "TG-Q7",
+        "ordre": 7,
+        "libelle": "Concerne-t-il la sûreté de l'État, la sécurité publique, la Défense nationale ou le recensement ?",
+        "champ": "bloc3.mission_regalienne",
+        "type": "booleen",
+        "aide": "mission_regalienne",
+        "fondement": "art. 9, 1° et 3°",
+        "oui": {
+          "type": "sortie",
+          "cible": "TG-ACTE",
+          "motif": "Traitement opéré pour le compte d'une personne publique et portant sur une mission régalienne ou le recensement : il est décidé par acte réglementaire pris après avis motivé de l'IPDCP."
+        },
+        "non": {
+          "type": "sortie",
+          "cible": "TG-AUTORISATION",
+          "motif": "Traitement de données sensibles opéré pour le compte d'une personne publique, hors mission régalienne : il est soumis à l'autorisation préalable de l'IPDCP."
+        }
+      },
+      {
+        "id": "TG-Q8",
+        "ordre": 8,
+        "libelle": "Porte-t-il sur des données génétiques ou biométriques, une interconnexion de fichiers, un numéro national d'identification, ou relève-t-il de statistiques, de recherche scientifique ou d'un motif d'intérêt public ?",
+        "champ": "bloc2.caracteristiques_article_8",
+        "type": "multiple",
+        "aide": "caracteristiques_autorisation",
+        "fondement": "art. 8, 1° à 6°",
+        "options": [
+          "donnees_genetiques",
+          "recherche_sante",
+          "infractions_condamnations",
+          "interconnexion",
+          "numero_national_identification",
+          "donnees_biometriques",
+          "interet_public_historique_statistique_scientifique"
+        ],
+        "oui": {
+          "type": "sortie",
+          "cible": "TG-AUTORISATION",
+          "motif": "Le traitement relève de l'un des cas de l'article 8 : il est soumis à l'autorisation préalable de l'IPDCP."
+        },
+        "non": {
+          "type": "sortie",
+          "cible": "TG-DECLARATION",
+          "motif": "Le traitement porte sur des données sensibles sans relever d'un cas d'autorisation : il suit le régime de la déclaration."
+        }
+      }
+    ]
+  },
+  "feuilles_de_route": {
+    "TG-DISPENSE": [
+      {
+        "ordre": 1,
+        "etape": "Documenter la dispense au registre des activités de traitement."
+      },
+      {
+        "ordre": 2,
+        "etape": "Conserver la justification de la dispense : registre destiné à l'information du public, ou désignation du correspondant."
+      },
+      {
+        "ordre": 3,
+        "etape": "Réévaluer la qualification en cas de changement de finalité, de données, de destinataires ou de transfert."
+      }
+    ],
+    "TG-DECLARATION": [
+      {
+        "ordre": 1,
+        "etape": "Compléter le formulaire de déclaration.",
+        "piece": "Formulaire de déclaration conforme au modèle établi par l'IPDCP (art. 6)"
+      },
+      {
+        "ordre": 2,
+        "etape": "Joindre la fiche de registre du traitement.",
+        "piece": "Fiche de registre au format Waɖɛ"
+      },
+      {
+        "ordre": 3,
+        "etape": "Déposer le dossier auprès de l'IPDCP.",
+        "piece": "Accusé de réception"
+      },
+      {
+        "ordre": 4,
+        "etape": "Conserver le récépissé de déclaration, seul titre autorisant la mise en oeuvre.",
+        "piece": "Récépissé"
+      }
+    ],
+    "TG-AVIS": [
+      {
+        "ordre": 1,
+        "etape": "Décrire le transfert, sa finalité et son encadrement."
+      },
+      {
+        "ordre": 2,
+        "etape": "Vérifier le niveau de protection assuré par le pays destinataire.",
+        "piece": "Éléments d'appréciation du niveau de protection"
+      },
+      {
+        "ordre": 3,
+        "etape": "Informer préalablement l'IPDCP et solliciter son avis motivé.",
+        "piece": "Demande d'avis"
+      },
+      {
+        "ordre": 4,
+        "etape": "Encadrer le transfert par les clauses et garanties appropriées.",
+        "piece": "Clauses ou garanties"
+      }
+    ],
+    "TG-AUTORISATION": [
+      {
+        "ordre": 1,
+        "etape": "Constituer le dossier de demande d'autorisation.",
+        "piece": "Demande d'autorisation, mentions de l'article 10"
+      },
+      {
+        "ordre": 2,
+        "etape": "Réaliser l'analyse d'impact et la joindre au dossier.",
+        "piece": "Rapport d'analyse d'impact"
+      },
+      {
+        "ordre": 3,
+        "etape": "Décrire précisément les mesures de sécurité.",
+        "piece": "Description des mesures de sécurité"
+      },
+      {
+        "ordre": 4,
+        "etape": "Déposer le dossier et suivre l'instruction de l'IPDCP.",
+        "piece": "Accusé de réception, puis décision"
+      }
+    ],
+    "TG-ACTE": [
+      {
+        "ordre": 1,
+        "etape": "Préparer le projet d'acte réglementaire."
+      },
+      {
+        "ordre": 2,
+        "etape": "Constituer le dossier de saisine de l'IPDCP.",
+        "piece": "Projet d'acte et dossier de saisine"
+      },
+      {
+        "ordre": 3,
+        "etape": "Recueillir l'avis motivé de l'IPDCP.",
+        "piece": "Avis motivé"
+      },
+      {
+        "ordre": 4,
+        "etape": "Publier l'acte avant la mise en oeuvre du traitement.",
+        "piece": "Acte publié"
+      }
+    ]
+  },
+  "aipd": {
+    "denomination": "analyse d'impact relative à la protection des données à caractère personnel",
+    "fondement_textuel": "art. 76, 3°, qui range le conseil sur l'analyse d'impact parmi les missions du correspondant. La loi n'institue pas de régime d'analyse d'impact et n'en fixe ni les critères ni le contenu.",
+    "source_des_criteres": "standard_international",
+    "note_affichage": "Présenter le résultat sous la réserve d'interprétation de l'article 12 du cahier des charges, en indiquant que les critères procèdent des standards internationaux retenus par AMELEGAL en l'absence de textes d'application.",
+    "criteres": [
+      {
+        "id": "TG-AIPD-1",
+        "libelle": "Données sensibles",
+        "champ": "bloc2.donnees_sensibles"
+      },
+      {
+        "id": "TG-AIPD-2",
+        "libelle": "Données génétiques ou biométriques, ou interconnexion de fichiers",
+        "champ": "bloc2.caracteristiques_article_8"
+      },
+      {
+        "id": "TG-AIPD-3",
+        "libelle": "Transfert international de données",
+        "champ": "bloc3.transfert_international"
+      },
+      {
+        "id": "TG-AIPD-4",
+        "libelle": "Traitement intéressant la sûreté de l'État, la sécurité publique, la Défense nationale ou le recensement",
+        "champ": "bloc3.mission_regalienne"
+      },
+      {
+        "id": "TG-AIPD-5",
+        "libelle": "Volume de personnes concernées supérieur au seuil paramétré",
+        "champ": "bloc2.volume_personnes",
+        "seuil": 10000
+      }
+    ],
+    "regle": "Une analyse d'impact est requise dès lors qu'un critère au moins est réuni.",
+    "presomption_regimes": [
+      "TG-AUTORISATION",
+      "TG-ACTE"
+    ],
+    "presomption_effet": "Le besoin d'analyse d'impact est présumé, et l'analyse validée est jointe au dossier déposé auprès de l'IPDCP.",
+    "grille": [
+      {
+        "section": 1,
+        "titre": "Description et finalité",
+        "contenu": "Identification et description du traitement, données utilisées, finalités, personnes concernées, destinataires, technologies employées."
+      },
+      {
+        "section": 2,
+        "titre": "Nécessité et proportionnalité",
+        "contenu": "Justification du recours au traitement, alternatives envisagées et écartées, mesures de minimisation, proportionnalité au regard de la finalité, base juridique."
+      },
+      {
+        "section": 3,
+        "titre": "Risques pour les personnes",
+        "contenu": "Identification et appréciation des risques, gravité et vraisemblance, caractère réversible ou non de l'atteinte, incidences concrètes."
+      },
+      {
+        "section": 4,
+        "titre": "Mesures de sécurité et de réduction",
+        "contenu": "Mesures existantes et proposées, risque résiduel, synthèse et avis du correspondant."
+      }
+    ],
+    "niveaux_risque": [
+      "faible",
+      "modéré",
+      "élevé"
+    ]
+  },
+  "violations": {
+    "fondement_textuel": null,
+    "note": "La loi n° 2019-014 ne comporte ni obligation de notification des violations, ni délai, ni obligation d'information des personnes concernées. Les textes d'application ne sont pas publiés à ce jour.",
+    "source": "standard_international",
+    "note_affichage": "Le compte à rebours et les modèles de notification sont présentés comme la bonne pratique retenue par AMELEGAL, sous la réserve d'interprétation de l'article 12 du cahier des charges.",
+    "delai_notification_heures": 72,
+    "point_de_depart": "prise de connaissance de la violation par le responsable du traitement",
+    "destinataire": "IPDCP",
+    "arbre": [
+      {
+        "id": "TG-V1",
+        "ordre": 1,
+        "libelle": "La violation est-elle susceptible d'engendrer un risque pour les droits et libertés des personnes concernées ?",
+        "aide": "risque_droits_libertes",
+        "oui": {
+          "type": "question",
+          "cible": "TG-V2",
+          "effet": "notification_autorite_requise"
+        },
+        "non": {
+          "type": "decision",
+          "notification_autorite": false,
+          "information_personnes": false,
+          "motif": "La violation n'est pas susceptible d'engendrer un risque pour les droits et libertés : elle est consignée au registre interne sans notification."
+        }
+      },
+      {
+        "id": "TG-V2",
+        "ordre": 2,
+        "libelle": "Ce risque est-il élevé, au regard de la nature des données, du nombre de personnes touchées et de la gravité des conséquences ?",
+        "aide": "risque_eleve",
+        "oui": {
+          "type": "decision",
+          "notification_autorite": true,
+          "information_personnes": true,
+          "motif": "Le risque est élevé : la violation est notifiée à l'IPDCP et les personnes concernées en sont informées."
+        },
+        "non": {
+          "type": "decision",
+          "notification_autorite": true,
+          "information_personnes": false,
+          "motif": "La violation présente un risque sans être élevé : elle est notifiée à l'IPDCP, sans information des personnes concernées."
+        }
+      }
+    ],
+    "consignation_registre_interne": "obligatoire en toute hypothèse, y compris en l'absence de notification",
+    "rappels": [
+      {
+        "proportion_delai": 0.25
+      },
+      {
+        "proportion_delai": 0.5
+      },
+      {
+        "proportion_delai": 0.75
+      },
+      {
+        "proportion_delai": 0.9
+      }
+    ]
+  },
+  "correspondant": {
+    "denomination": "correspondant à la protection des données à caractère personnel",
+    "designation_obligatoire": false,
+    "fondement": "art. 75 à 78",
+    "statut": "Personne bénéficiant des qualifications requises, ne pouvant faire l'objet d'aucune sanction du fait de l'accomplissement de ses missions, pouvant saisir l'IPDCP des difficultés rencontrées. Son profil est précisé par l'IPDCP (art. 75).",
+    "missions": [
+      "informer et conseiller le responsable, le sous-traitant et les employés",
+      "veiller au respect de la loi et des règles internes, y compris la sensibilisation et la formation du personnel",
+      "dispenser des conseils, sur demande, sur l'analyse d'impact",
+      "coopérer avec l'IPDCP",
+      "tenir une liste des traitements effectués immédiatement accessible",
+      "faire office de point de contact pour l'IPDCP"
+    ],
+    "formalite_designation": "La désignation est notifiée à l'IPDCP (art. 77). La révocation obéit à l'article 78.",
+    "correspondant_externe": {
+      "admis": null,
+      "note": "La loi ne l'exclut pas expressément et ne le consacre pas non plus. Point à trancher par AMELEGAL, car il conditionne l'offre destinée aux cabinets."
+    },
+    "effet_sur_formalites": "La désignation dispense des formalités préalables, sauf lorsqu'un transfert vers un pays tiers est envisagé (art. 5, 3°).",
+    "regle_moteur": "L'existence d'un mandat de cabinet ou le port du rôle applicatif Correspondant n'emporte par lui-même aucune dispense. Seul l'indicateur juridique de désignation alimente le moteur."
+  },
+  "transferts": {
+    "principe": "Transfert possible vers un pays tiers assurant un niveau de protection suffisant. Avant tout transfert, le responsable informe préalablement l'IPDCP, qui donne un avis motivé (art. 28).",
+    "pays_reconnus": [],
+    "pays_reconnus_note": "Aucune liste publiée à ce jour. Rubrique à renseigner dès publication par l'IPDCP.",
+    "derogations_ponctuelles": {
+      "fondement": "art. 29",
+      "conditions": [
+        "transfert ponctuel et non massif avec consentement exprès de la personne",
+        "sauvegarde de la vie de la personne",
+        "sauvegarde de l'intérêt public",
+        "constatation, exercice ou défense d'un droit en justice",
+        "exécution d'un contrat entre le responsable et l'intéressé, ou de mesures précontractuelles"
+      ]
+    },
+    "autorisation_garanties": {
+      "fondement": "art. 30",
+      "objet": "L'IPDCP peut autoriser un transfert vers un pays n'assurant pas un niveau adéquat, sur demande motivée, lorsque le responsable offre des garanties suffisantes."
+    },
+    "donnees_provenant_etranger": {
+      "fondement": "art. 31",
+      "objet": "Vérification préalable par l'IPDCP du niveau de protection assuré par le responsable."
+    },
+    "formalite_associee": "TG-AVIS"
+  },
+  "indice": {
+    "composantes": [
+      {
+        "code": "completude_registre",
+        "libelle": "Complétude du registre",
+        "poids": 0.35,
+        "calcul": "moyenne des taux de complétude des fiches publiées"
+      },
+      {
+        "code": "formalites_accomplies",
+        "libelle": "Accomplissement des formalités",
+        "poids": 0.35,
+        "calcul": "part des traitements qualifiés dont la formalité est au statut Acceptée, Récépissé reçu ou Dispense documentée"
+      },
+      {
+        "code": "aipd_realisees",
+        "libelle": "Réalisation des analyses d'impact requises",
+        "poids": 0.2,
+        "calcul": "part des traitements appelant une analyse d'impact dont l'analyse est validée"
+      },
+      {
+        "code": "violations_traitees",
+        "libelle": "Traitement des violations",
+        "poids": 0.1,
+        "calcul": "part des violations des douze derniers mois closes dans le délai applicable"
+      }
+    ],
+    "composante_sensibilisation": {
+      "active": false,
+      "note": "Le module de sensibilisation relève du lot 2. La composante reste inactive tant qu'il n'est pas livré."
+    },
+    "seuils": [
+      {
+        "libelle": "Action requise",
+        "min": 0,
+        "max": 39
+      },
+      {
+        "libelle": "À surveiller",
+        "min": 40,
+        "max": 64
+      },
+      {
+        "libelle": "Bon, à consolider",
+        "min": 65,
+        "max": 84
+      },
+      {
+        "libelle": "Solide",
+        "min": 85,
+        "max": 100
+      }
+    ]
+  }
+}

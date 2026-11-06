@@ -1,0 +1,1261 @@
+﻿{
+  "meta": {
+    "version": "1.0",
+    "date": "2026-09-06",
+    "auteur": "AMELEGAL SARL",
+    "objet": "Contenu des bulles d'information de Waɖɛ, socle commun et surcharges par juridiction",
+    "regle_heritage": "Une notion non surchargée au niveau national restitue la définition du socle. Une notion dont la surcharge porte reference=null est servie sans référence de texte, et la conséquence indique la source retenue.",
+    "reserve_interpretation": "Cette aide est générale. Elle ne constitue pas un conseil juridique adapté à une situation particulière et ne se substitue pas à l'analyse d'un juriste."
+  },
+  "socle": [
+    {
+      "id": "donnee_a_caractere_personnel",
+      "domaine": "Objet du traitement",
+      "libelle": "Donnée à caractère personnel",
+      "determinante": true,
+      "champs": [
+        "t.nature_donnees_personnelles"
+      ],
+      "definition": "Toute information qui se rapporte à une personne physique identifiée ou qui permet de l'identifier, directement ou en la recoupant avec d'autres informations. Peu importe le support et peu importe que l'information soit publique ou confidentielle.",
+      "exemples": [
+        "Le nom et l'adresse d'un client dans un fichier commercial.",
+        "Un numéro de plaque, une adresse électronique professionnelle, une photographie de visage, une empreinte digitale, un identifiant de connexion."
+      ],
+      "contre_exemple": "Le chiffre d'affaires d'une société, ou une statistique donnant le nombre de visiteurs d'un site sans permettre de remonter à une personne, ne sont pas des données à caractère personnel.",
+      "consequence": "Si le traitement ne porte sur aucune donnée à caractère personnel, il sort du champ de la loi et aucune formalité n'est due.",
+      "fiche_developpee": true
+    },
+    {
+      "id": "traitement",
+      "domaine": "Objet du traitement",
+      "libelle": "Traitement",
+      "determinante": false,
+      "champs": [
+        "t.description"
+      ],
+      "definition": "Toute opération portant sur des données à caractère personnel, qu'elle soit automatisée ou non. La collecte, l'enregistrement, la consultation, la modification, la communication, l'archivage et l'effacement sont autant de traitements.",
+      "exemples": [
+        "Tenir un fichier de paie.",
+        "Filmer un hall d'accueil.",
+        "Envoyer une lettre d'information à une liste d'abonnés."
+      ],
+      "contre_exemple": "Consulter un annuaire papier sans en extraire ni en réutiliser une information ne constitue pas, à soi seul, un traitement au sens de la loi.",
+      "consequence": "Chaque traitement fait l'objet d'une fiche distincte au registre et d'une qualification propre.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "finalite",
+      "domaine": "Objet du traitement",
+      "libelle": "Finalité",
+      "determinante": false,
+      "champs": [
+        "t.finalites"
+      ],
+      "definition": "L'objectif poursuivi par le traitement, énoncé de manière précise et compréhensible. La finalité commande tout le reste : les données à collecter, les personnes qui y accèdent et la durée de conservation.",
+      "exemples": [
+        "Gérer la paie des salariés.",
+        "Assurer la sécurité des locaux par vidéosurveillance."
+      ],
+      "contre_exemple": "Améliorer nos services ou mieux connaître nos clients sont des finalités trop générales : elles ne permettent pas de vérifier que les données collectées sont nécessaires.",
+      "consequence": "Une finalité mal définie rend le contrôle de proportionnalité impossible et fragilise la déclaration.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "responsable_de_traitement",
+      "domaine": "Objet du traitement",
+      "libelle": "Responsable de traitement",
+      "determinante": false,
+      "champs": [
+        "t.responsable_traitement"
+      ],
+      "definition": "La personne ou l'organisme qui décide pourquoi et comment les données sont traitées. C'est lui qui répond des obligations légales, même lorsqu'il confie l'exécution à un prestataire.",
+      "exemples": [
+        "L'entreprise qui décide de mettre en place un fichier de clientèle.",
+        "La mairie qui décide d'installer un dispositif de vidéosurveillance."
+      ],
+      "contre_exemple": "Le prestataire informatique qui héberge le fichier sans en décider les finalités n'est pas responsable de traitement, mais sous-traitant.",
+      "consequence": "Le responsable de traitement est celui qui accomplit la formalité et signe les documents produits.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "sous_traitant",
+      "domaine": "Objet du traitement",
+      "libelle": "Sous-traitant",
+      "determinante": false,
+      "champs": [
+        "t.sous_traitance",
+        "t.sous_traitants"
+      ],
+      "definition": "La personne ou l'organisme qui traite des données pour le compte du responsable de traitement, sur ses instructions et sans en définir les finalités. La relation doit être encadrée par un contrat.",
+      "exemples": [
+        "Un prestataire de paie externalisée.",
+        "Un hébergeur de site, une plateforme d'envoi de courriels, un service de sauvegarde en ligne."
+      ],
+      "contre_exemple": "Un partenaire qui exploite les mêmes données pour ses propres finalités n'est pas sous-traitant : il est responsable de traitement pour ce qu'il en fait.",
+      "consequence": "Le recours à un sous-traitant appelle un contrat conforme aux exigences de la juridiction applicable ; son absence déclenche une alerte.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "destinataire",
+      "domaine": "Objet du traitement",
+      "libelle": "Destinataire",
+      "determinante": false,
+      "champs": [
+        "t.acces_internes",
+        "t.communications_nationales"
+      ],
+      "definition": "Toute personne ou tout organisme qui reçoit communication des données. Les destinataires comprennent aussi bien les services internes habilités que les tiers extérieurs à l'organisation.",
+      "exemples": [
+        "Le service des ressources humaines et le service comptable, pour un fichier de paie.",
+        "L'organisme de sécurité sociale auquel une déclaration est adressée."
+      ],
+      "contre_exemple": "L'autorité de contrôle agissant dans le cadre d'une mission de contrôle n'est pas comptée comme destinataire.",
+      "consequence": "La liste des destinataires figure au registre et doit être portée à la connaissance des personnes concernées.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "personne_concernee",
+      "domaine": "Objet du traitement",
+      "libelle": "Personne concernée",
+      "determinante": false,
+      "champs": [
+        "t.categories_personnes"
+      ],
+      "definition": "La personne physique à laquelle se rapportent les données traitées. C'est elle qui exerce les droits reconnus par la loi.",
+      "exemples": [
+        "Les salariés, pour un fichier de paie.",
+        "Les usagers, les patients, les élèves, les clients, les visiteurs."
+      ],
+      "contre_exemple": "Une société n'est pas une personne concernée : les données relatives aux personnes morales ne relèvent pas, en elles-mêmes, du droit de la protection des données.",
+      "consequence": "Les catégories de personnes concernées sont renseignées au registre et déterminent la portée de l'information à délivrer.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "base_juridique",
+      "domaine": "Licéité",
+      "libelle": "Base juridique",
+      "determinante": false,
+      "champs": [
+        "t.fondement_juridique"
+      ],
+      "definition": "Le fondement qui autorise le traitement en droit. Tout traitement doit reposer sur l'une des bases prévues par la loi applicable, et une seule est retenue par finalité.",
+      "exemples": [
+        "Le contrat de travail, pour la gestion de la paie.",
+        "Une obligation légale, pour la tenue du registre du personnel."
+      ],
+      "contre_exemple": "Le fait de disposer techniquement des données ne constitue pas une base juridique.",
+      "consequence": "Une fiche sans base juridique renseignée déclenche une alerte et fait obstacle à la publication au registre.",
+      "fiche_developpee": true
+    },
+    {
+      "id": "consentement",
+      "domaine": "Licéité",
+      "libelle": "Consentement",
+      "determinante": false,
+      "champs": [
+        "t.fondement_juridique",
+        "t.modalites_consentement"
+      ],
+      "definition": "L'accord libre, spécifique, éclairé et non équivoque de la personne, donné par un acte positif. Il doit pouvoir être retiré aussi facilement qu'il a été donné, et son retrait ne peut avoir de conséquence défavorable.",
+      "exemples": [
+        "Une case à cocher, non pré-cochée, pour recevoir une lettre d'information."
+      ],
+      "contre_exemple": "L'accord d'un salarié à son employeur est rarement libre : le lien de subordination interdit en principe de fonder un traitement de ressources humaines sur le consentement.",
+      "consequence": "Le consentement suppose de conserver la preuve de son recueil et d'organiser son retrait.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "contrat",
+      "domaine": "Licéité",
+      "libelle": "Exécution d'un contrat",
+      "determinante": false,
+      "champs": [
+        "t.fondement_juridique"
+      ],
+      "definition": "Le traitement est nécessaire à l'exécution d'un contrat auquel la personne est partie, ou à des démarches précontractuelles prises à sa demande. La nécessité s'apprécie strictement.",
+      "exemples": [
+        "Traiter l'adresse d'un client pour lui livrer sa commande."
+      ],
+      "contre_exemple": "Envoyer de la publicité à ce même client n'est pas nécessaire à l'exécution du contrat de vente et appelle une autre base.",
+      "consequence": "Une base contractuelle mal choisie fragilise l'ensemble du traitement.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "obligation_legale",
+      "domaine": "Licéité",
+      "libelle": "Obligation légale",
+      "determinante": false,
+      "champs": [
+        "t.fondement_juridique"
+      ],
+      "definition": "Le traitement est imposé par un texte auquel le responsable est soumis. Le texte doit être identifié, et non simplement supposé.",
+      "exemples": [
+        "La conservation des pièces comptables imposée par le droit commercial.",
+        "Les déclarations sociales et fiscales obligatoires."
+      ],
+      "contre_exemple": "Une pratique de la profession, si constante soit-elle, n'est pas une obligation légale.",
+      "consequence": "La référence du texte est portée au registre et justifie la durée de conservation retenue.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "mission_interet_public",
+      "domaine": "Licéité",
+      "libelle": "Mission d'intérêt public",
+      "determinante": false,
+      "champs": [
+        "t.fondement_juridique"
+      ],
+      "definition": "Le traitement est nécessaire à l'exécution d'une mission d'intérêt public ou relevant de l'exercice de l'autorité publique dont le responsable est investi.",
+      "exemples": [
+        "L'état civil tenu par une commune.",
+        "La gestion d'un service public de transport."
+      ],
+      "contre_exemple": "Une entreprise privée agissant pour son seul compte commercial ne peut invoquer cette base.",
+      "consequence": "Cette base va souvent de pair avec la qualité de personne publique, qui influe sur le régime de formalité.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "interet_legitime",
+      "domaine": "Licéité",
+      "libelle": "Intérêt légitime",
+      "determinante": false,
+      "champs": [
+        "t.fondement_juridique"
+      ],
+      "definition": "Le traitement répond à un intérêt réel du responsable ou d'un tiers, à condition que cet intérêt ne porte pas une atteinte excessive aux droits des personnes. La mise en balance doit être documentée.",
+      "exemples": [
+        "La sécurisation d'un système d'information contre les intrusions.",
+        "La prévention de la fraude, dans les limites strictement nécessaires."
+      ],
+      "contre_exemple": "La revente de fichiers de clients à des tiers ne saurait, en règle générale, reposer sur cette base.",
+      "consequence": "L'intérêt légitime suppose de conserver la trace de la mise en balance effectuée.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "donnees_sensibles",
+      "domaine": "Nature des données",
+      "libelle": "Données sensibles",
+      "determinante": true,
+      "champs": [
+        "t.donnees_sensibles",
+        "t.classification_donnees"
+      ],
+      "definition": "Certaines catégories de données font l'objet d'une protection renforcée en raison du risque particulier qu'elles présentent pour les personnes. La liste exacte est fixée par la loi de la juridiction applicable.",
+      "exemples": [
+        "Un dossier médical, une fiche mentionnant l'appartenance syndicale d'un salarié."
+      ],
+      "contre_exemple": "Le nom et le poste d'un salarié ne sont pas des données sensibles, même s'ils figurent dans le même fichier que des données de santé. C'est la donnée qui est sensible, non le fichier entier.",
+      "consequence": "La présence de données sensibles fait basculer le traitement vers un régime de formalité plus lourd et déclenche le besoin d'analyse d'impact.",
+      "fiche_developpee": true
+    },
+    {
+      "id": "donnees_genetiques",
+      "domaine": "Nature des données",
+      "libelle": "Données génétiques",
+      "determinante": true,
+      "champs": [
+        "t.caracteristiques_article_8",
+        "t.caracteristiques_article_407"
+      ],
+      "definition": "Les données relatives aux caractéristiques héréditaires d'une personne, obtenues notamment par l'analyse d'un échantillon biologique.",
+      "exemples": [
+        "Un résultat de test de filiation.",
+        "Un profil génétique conservé dans le cadre d'une recherche médicale."
+      ],
+      "contre_exemple": "Un groupe sanguin figurant dans un dossier médical relève des données de santé, non des données génétiques au sens strict.",
+      "consequence": "La présence de données génétiques conduit au régime d'autorisation.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "donnees_biometriques",
+      "domaine": "Nature des données",
+      "libelle": "Données biométriques",
+      "determinante": true,
+      "champs": [
+        "t.caracteristiques_article_8",
+        "t.caracteristiques_article_407"
+      ],
+      "definition": "Les données issues d'un traitement technique des caractéristiques physiques, physiologiques ou comportementales d'une personne, permettant de l'identifier de manière unique.",
+      "exemples": [
+        "Un dispositif de pointage par empreinte digitale.",
+        "Une reconnaissance faciale à l'entrée d'un site."
+      ],
+      "contre_exemple": "Une photographie d'identité conservée dans un dossier n'est pas une donnée biométrique tant qu'elle n'est pas traitée par un dispositif de reconnaissance.",
+      "consequence": "La présence de données biométriques conduit au régime d'autorisation.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "interconnexion",
+      "domaine": "Nature des données",
+      "libelle": "Interconnexion de fichiers",
+      "determinante": true,
+      "champs": [
+        "t.caracteristiques_article_8",
+        "t.caracteristiques_article_407"
+      ],
+      "definition": "La mise en relation de deux fichiers poursuivant des finalités différentes, de manière à enrichir l'un par l'autre ou à comparer leurs contenus.",
+      "exemples": [
+        "Le rapprochement d'un fichier de paie et d'un fichier de contrôle d'accès pour vérifier les heures de présence."
+      ],
+      "contre_exemple": "L'échange ponctuel d'une information entre deux services d'une même organisation, sans mise en relation automatique des fichiers, n'est pas une interconnexion.",
+      "consequence": "L'interconnexion conduit au régime d'autorisation et pèse dans l'appréciation du risque.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "numero_national_identification",
+      "domaine": "Nature des données",
+      "libelle": "Numéro national d'identification",
+      "determinante": true,
+      "champs": [
+        "t.caracteristiques_article_8",
+        "t.caracteristiques_article_407"
+      ],
+      "definition": "Un identifiant attribué par l'État à une personne et utilisable dans plusieurs fichiers, ce qui en fait une clé de rapprochement particulièrement puissante.",
+      "exemples": [
+        "Un numéro d'identification personnelle délivré par l'administration."
+      ],
+      "contre_exemple": "Un matricule interne à une entreprise n'est pas un identifiant de portée générale.",
+      "consequence": "L'usage d'un tel identifiant conduit au régime d'autorisation.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "interet_public_recherche",
+      "domaine": "Nature des données",
+      "libelle": "Finalité statistique, de recherche scientifique ou d'intérêt public",
+      "determinante": true,
+      "champs": [
+        "t.caracteristiques_article_8",
+        "t.caracteristiques_article_407"
+      ],
+      "definition": "Traitements poursuivant une finalité de connaissance, historique, statistique ou scientifique, ou répondant à un motif d'intérêt public reconnu.",
+      "exemples": [
+        "Une enquête statistique nationale.",
+        "Une recherche épidémiologique."
+      ],
+      "contre_exemple": "Une étude de satisfaction commerciale n'est pas une recherche scientifique.",
+      "consequence": "Cette finalité conduit au régime d'autorisation.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "personne_publique",
+      "domaine": "Qualité de l'organisme",
+      "libelle": "Personne publique",
+      "determinante": true,
+      "champs": [
+        "org.nature_publique"
+      ],
+      "definition": "L'État, ses démembrements, les collectivités locales et les établissements publics. La qualité s'apprécie au regard du statut juridique de l'organisme, non de son activité.",
+      "exemples": [
+        "Un ministère, une commune, un établissement public hospitalier."
+      ],
+      "contre_exemple": "Une société commerciale dont l'État est actionnaire demeure une personne privée.",
+      "consequence": "La qualité de personne publique oriente le traitement vers un régime de formalité plus lourd.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "mission_service_public",
+      "domaine": "Qualité de l'organisme",
+      "libelle": "Mission de service public",
+      "determinante": true,
+      "champs": [
+        "org.mission_service_public"
+      ],
+      "definition": "Une activité d'intérêt général confiée à un organisme, y compris privé, sous le contrôle de la personne publique qui la lui a confiée.",
+      "exemples": [
+        "Un concessionnaire de distribution d'eau.",
+        "Une clinique privée participant au service public hospitalier."
+      ],
+      "contre_exemple": "Une entreprise qui vend au public un bien ou un service dans des conditions de marché n'est pas chargée d'une mission de service public.",
+      "consequence": "Une personne privée chargée d'une mission de service public suit, pour certains traitements, le régime applicable aux personnes publiques.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "mission_regalienne",
+      "domaine": "Qualité de l'organisme",
+      "libelle": "Mission régalienne",
+      "determinante": true,
+      "champs": [
+        "t.mission_regalienne",
+        "t.objets_article_411"
+      ],
+      "definition": "Les activités que l'État n'exerce que par lui-même : sûreté de l'État, défense, sécurité publique, poursuite des infractions, recensement de la population.",
+      "exemples": [
+        "Un fichier de police judiciaire.",
+        "Le recensement général de la population."
+      ],
+      "contre_exemple": "La gestion du personnel d'un ministère n'est pas une mission régalienne : c'est un traitement de ressources humaines ordinaire.",
+      "consequence": "Un traitement régalien relève du régime le plus lourd, l'acte réglementaire ou le décret pris après avis motivé de l'autorité.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "registre_information_public",
+      "domaine": "Qualité de l'organisme",
+      "libelle": "Registre destiné exclusivement à l'information du public",
+      "determinante": true,
+      "champs": [
+        "t.registre_information_public"
+      ],
+      "definition": "Un registre qu'un texte destine à la consultation du public ou de toute personne justifiant d'un intérêt légitime, et qui n'a pas d'autre objet.",
+      "exemples": [
+        "Un registre du commerce ouvert à la consultation.",
+        "Un registre foncier public."
+      ],
+      "contre_exemple": "Un annuaire interne du personnel, même largement diffusé dans l'organisation, n'est pas destiné à l'information du public.",
+      "consequence": "Ce caractère dispense le traitement de toute formalité préalable.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "cadre_domestique",
+      "domaine": "Qualité de l'organisme",
+      "libelle": "Cadre exclusivement personnel ou domestique",
+      "determinante": true,
+      "champs": [
+        "t.cadre_domestique"
+      ],
+      "definition": "Traitement mis en oeuvre par une personne physique pour ses seuls besoins privés, sans communication à des tiers ni diffusion. Les trois conditions sont cumulatives et s'apprécient strictement.",
+      "exemples": [
+        "Un carnet d'adresses personnel.",
+        "Des photographies de famille conservées sur un ordinateur privé."
+      ],
+      "contre_exemple": "La publication de ces mêmes photographies sur un réseau social accessible au public fait sortir le traitement du cadre domestique.",
+      "consequence": "Le traitement échappe alors aux formalités préalables.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "correspondant",
+      "domaine": "Correspondant",
+      "libelle": "Correspondant ou délégué à la protection des données",
+      "determinante": true,
+      "champs": [
+        "dpo.designe",
+        "t.correspondant_designe"
+      ],
+      "definition": "La personne chargée de veiller, de manière indépendante, au respect du droit de la protection des données dans l'organisation. Sa désignation est un acte formel, notifié à l'autorité de contrôle.",
+      "exemples": [
+        "Un juriste interne désigné et déclaré comme tel auprès de l'autorité.",
+        "Un cabinet extérieur désigné dans les mêmes conditions, lorsque la juridiction l'admet."
+      ],
+      "contre_exemple": "Le fait qu'un salarié s'occupe des questions de conformité, sans désignation formelle ni notification, ne fait pas de lui un correspondant au sens de la loi.",
+      "consequence": "La désignation modifie le régime de formalité applicable. Elle est renseignée par une réponse explicite ; à défaut, elle est réputée absente.",
+      "fiche_developpee": true
+    },
+    {
+      "id": "correspondant_role_applicatif",
+      "domaine": "Correspondant",
+      "libelle": "Rôle applicatif et désignation légale",
+      "determinante": true,
+      "champs": [
+        "dpo.designe"
+      ],
+      "definition": "Waɖɛ distingue deux choses. Le rôle applicatif Correspondant décrit ce qu'un utilisateur peut faire dans le logiciel. La désignation au sens de la loi est un fait juridique, renseigné séparément, qui seul produit des effets sur les formalités.",
+      "exemples": [
+        "Un utilisateur peut porter le rôle Correspondant pour piloter le registre sans qu'aucune désignation n'ait été notifiée à l'autorité."
+      ],
+      "contre_exemple": "L'existence d'un mandat confié à un cabinet ne vaut jamais désignation : ce sont deux actes distincts, aux effets distincts.",
+      "consequence": "Seul l'indicateur juridique de désignation alimente le moteur de qualification. Le rôle et le mandat n'ont aucun effet sur le régime.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "correspondant_interne_externe",
+      "domaine": "Correspondant",
+      "libelle": "Correspondant interne et correspondant externe",
+      "determinante": true,
+      "champs": [
+        "dpo.statut"
+      ],
+      "definition": "Le correspondant peut être un membre du personnel ou un prestataire extérieur. L'admissibilité d'un correspondant externe dépend de la juridiction applicable et doit être vérifiée avant de s'en prévaloir.",
+      "exemples": [
+        "Un responsable qualité salarié, désigné correspondant interne.",
+        "Un cabinet spécialisé désigné correspondant externe."
+      ],
+      "contre_exemple": "Un prestataire informatique qui se borne à héberger les données ne peut être désigné correspondant : la mission suppose indépendance et compétence juridique.",
+      "consequence": "Le statut retenu est renseigné au registre et figure dans les documents produits.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "autorite_de_controle",
+      "domaine": "Formalités",
+      "libelle": "Autorité de contrôle",
+      "determinante": false,
+      "champs": [],
+      "definition": "L'autorité indépendante chargée, dans chaque État, de veiller à l'application du droit de la protection des données. Elle reçoit les formalités, instruit les dossiers, contrôle et sanctionne.",
+      "exemples": [
+        "Elle délivre les récépissés et les autorisations.",
+        "Elle peut être saisie par toute personne concernée."
+      ],
+      "contre_exemple": "Un service interne de conformité, si structuré soit-il, n'est pas une autorité de contrôle.",
+      "consequence": "L'autorité compétente est celle de la juridiction retenue pour le traitement. Ses coordonnées figurent dans le résultat de la qualification.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "formalite_prealable",
+      "domaine": "Formalités",
+      "libelle": "Formalité préalable",
+      "determinante": true,
+      "champs": [],
+      "definition": "La démarche à accomplir auprès de l'autorité de contrôle avant de mettre en oeuvre un traitement. Selon les cas, elle prend la forme d'une simple déclaration, d'une demande d'autorisation, d'une demande d'avis ou d'un acte réglementaire.",
+      "exemples": [
+        "Déposer une déclaration et attendre le récépissé.",
+        "Solliciter une autorisation pour un dispositif biométrique."
+      ],
+      "contre_exemple": "Informer les personnes concernées est une obligation distincte, qui ne remplace jamais la formalité préalable.",
+      "consequence": "Le régime applicable est déterminé par le logigramme de la juridiction, à partir des seules réponses portées à la fiche.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "recepisse",
+      "domaine": "Formalités",
+      "libelle": "Récépissé",
+      "determinante": false,
+      "champs": [
+        "t.reference_decision_autorite"
+      ],
+      "definition": "Le document délivré par l'autorité en réponse à une déclaration. Selon les juridictions, il autorise la mise en oeuvre du traitement ou en atteste seulement le dépôt.",
+      "exemples": [
+        "Le récépissé conservé au dossier et produit en cas de contrôle."
+      ],
+      "contre_exemple": "L'accusé de réception du dépôt n'est pas le récépissé : il atteste seulement que le dossier est parvenu à l'autorité.",
+      "consequence": "Le récépissé est joint au dossier de formalité et sa date fait courir, le cas échéant, la durée de validité.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "instruction",
+      "domaine": "Formalités",
+      "libelle": "Instruction du dossier",
+      "determinante": false,
+      "champs": [],
+      "definition": "La phase pendant laquelle l'autorité examine le dossier, demande le cas échéant des compléments et statue. Sa durée est encadrée par la loi de chaque juridiction.",
+      "exemples": [
+        "Une demande de pièces complémentaires suspendant l'examen.",
+        "Une décision de report pour complément."
+      ],
+      "contre_exemple": "Le silence de l'autorité n'a pas partout la même portée : dans certaines juridictions il vaut acceptation, dans d'autres il ne produit aucun effet.",
+      "consequence": "Waɖɛ affiche le délai applicable et son point de départ, et alerte à l'approche du terme.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "duree_conservation",
+      "domaine": "Conservation et sécurité",
+      "libelle": "Durée de conservation",
+      "determinante": false,
+      "champs": [
+        "t.duree_conservation",
+        "t.base_duree_conservation"
+      ],
+      "definition": "La durée pendant laquelle les données restent utilisables pour la finalité poursuivie. Elle doit être déterminée d'avance, justifiée, et suivie d'un archivage ou d'une suppression.",
+      "exemples": [
+        "Cinq ans après la fin de la relation commerciale.",
+        "La durée du contrat de travail, puis la durée de prescription applicable."
+      ],
+      "contre_exemple": "Conserver les données tant qu'elles peuvent servir n'est pas une durée : c'est l'absence de durée.",
+      "consequence": "Une fiche sans durée de conservation renseignée déclenche une alerte et fait obstacle à la publication au registre.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "minimisation",
+      "domaine": "Conservation et sécurité",
+      "libelle": "Minimisation",
+      "determinante": false,
+      "champs": [
+        "t.categories_donnees"
+      ],
+      "definition": "Ne collecter que les données nécessaires à la finalité annoncée, et rien de plus. Le caractère nécessaire s'apprécie donnée par donnée.",
+      "exemples": [
+        "Ne pas demander la date de naissance lorsque la majorité suffit."
+      ],
+      "contre_exemple": "Collecter une information au motif qu'elle pourrait servir un jour est exactement ce que la minimisation interdit.",
+      "consequence": "Le contrôle de minimisation se fait au moment de la qualification et lors de chaque revue de la fiche.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "proportionnalite",
+      "domaine": "Conservation et sécurité",
+      "libelle": "Proportionnalité",
+      "determinante": false,
+      "champs": [],
+      "definition": "L'exigence que l'atteinte portée à la vie privée demeure en rapport avec le but poursuivi. Elle s'apprécie en comparant le résultat attendu et les moyens employés.",
+      "exemples": [
+        "Une caméra orientée sur une caisse plutôt que sur l'ensemble d'un open space."
+      ],
+      "contre_exemple": "Une surveillance permanente de tous les postes de travail pour prévenir un vol isolé est disproportionnée.",
+      "consequence": "La proportionnalité est appréciée dans la deuxième section de l'analyse d'impact.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "mesures_securite",
+      "domaine": "Conservation et sécurité",
+      "libelle": "Mesures de sécurité",
+      "determinante": false,
+      "champs": [
+        "t.mesures_securite"
+      ],
+      "definition": "L'ensemble des dispositions techniques et d'organisation destinées à préserver la confidentialité, l'intégrité et la disponibilité des données.",
+      "exemples": [
+        "Chiffrement des sauvegardes, gestion des comptes et des mots de passe, cloisonnement des accès, journalisation.",
+        "Clauses de confidentialité, formation du personnel, procédure en cas d'incident."
+      ],
+      "contre_exemple": "L'existence d'un antivirus ne constitue pas, à elle seule, une politique de sécurité.",
+      "consequence": "Les mesures déclarées sont reprises dans le dossier de formalité et dans l'analyse d'impact.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "habilitation",
+      "domaine": "Conservation et sécurité",
+      "libelle": "Habilitation",
+      "determinante": false,
+      "champs": [
+        "t.acces_internes"
+      ],
+      "definition": "Le droit reconnu à une personne déterminée d'accéder à certaines données, à raison de ses fonctions et dans la limite de ce que celles-ci exigent.",
+      "exemples": [
+        "Le service paie accède aux salaires, le service accueil n'y accède pas."
+      ],
+      "contre_exemple": "Donner à tout le personnel l'accès à l'ensemble d'un fichier, par commodité, n'est pas une habilitation mais son contraire.",
+      "consequence": "La liste des personnes habilitées figure au registre, avec la nature juridique de leur rapport à l'organisation.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "journalisation",
+      "domaine": "Conservation et sécurité",
+      "libelle": "Journalisation",
+      "determinante": false,
+      "champs": [],
+      "definition": "L'enregistrement automatique des accès et des opérations effectuées sur les données, de manière à pouvoir reconstituer qui a fait quoi et quand.",
+      "exemples": [
+        "Un journal des consultations d'un dossier médical."
+      ],
+      "contre_exemple": "Un cahier tenu à la main par le personnel n'offre pas la garantie d'intégrité qu'exige la journalisation.",
+      "consequence": "La journalisation est une mesure de sécurité déclarée, distincte du journal de conformité tenu par Waɖɛ.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "transfert_international",
+      "domaine": "Transferts",
+      "libelle": "Transfert international",
+      "determinante": true,
+      "champs": [
+        "t.transfert_international"
+      ],
+      "definition": "Toute opération qui rend des données accessibles depuis un autre État, que ce soit par envoi, par mise à disposition ou par simple possibilité de consultation à distance.",
+      "exemples": [
+        "Héberger un fichier chez un prestataire dont les serveurs sont situés à l'étranger.",
+        "Permettre à une maison mère établie hors du pays de consulter la base clients."
+      ],
+      "contre_exemple": "Envoyer un courrier électronique à une personne se trouvant temporairement à l'étranger n'est pas, en soi, un transfert au sens de la loi.",
+      "consequence": "Le transfert international modifie le régime de formalité et déclenche le besoin d'analyse d'impact.",
+      "fiche_developpee": true
+    },
+    {
+      "id": "pays_destinataire",
+      "domaine": "Transferts",
+      "libelle": "Pays destinataire",
+      "determinante": false,
+      "champs": [
+        "t.transferts"
+      ],
+      "definition": "L'État où les données sont transférées ou depuis lequel elles sont accessibles. Le niveau de protection qu'il assure conditionne la possibilité du transfert.",
+      "exemples": [
+        "Le pays d'implantation des serveurs du prestataire.",
+        "Le pays du siège de la société destinataire."
+      ],
+      "contre_exemple": "Le pays de nationalité du prestataire importe peu si les données ne s'y trouvent pas et n'y sont pas accessibles.",
+      "consequence": "Le pays destinataire est renseigné au registre et figure dans le dossier de formalité.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "garanties_transfert",
+      "domaine": "Transferts",
+      "libelle": "Garanties encadrant le transfert",
+      "determinante": false,
+      "champs": [
+        "t.transferts"
+      ],
+      "definition": "Les engagements juridiques et techniques qui compensent l'insuffisance éventuelle du niveau de protection du pays destinataire.",
+      "exemples": [
+        "Des clauses contractuelles imposant au destinataire des obligations équivalentes.",
+        "Des mesures techniques rendant les données inintelligibles pour le prestataire."
+      ],
+      "contre_exemple": "La seule mention, dans un contrat, que le prestataire respecte la loi ne constitue pas une garantie.",
+      "consequence": "Les garanties retenues sont décrites dans le dossier soumis à l'autorité.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "aipd",
+      "domaine": "Analyse d'impact",
+      "libelle": "Analyse d'impact",
+      "determinante": false,
+      "champs": [
+        "t.volume_personnes"
+      ],
+      "definition": "Une étude conduite avant la mise en oeuvre d'un traitement susceptible de présenter un risque élevé, pour décrire ce risque et décider des mesures qui le réduisent. Elle est documentée et conservée.",
+      "exemples": [
+        "L'analyse conduite avant le déploiement d'un dispositif biométrique de contrôle d'accès."
+      ],
+      "contre_exemple": "Une note interne constatant que le traitement paraît sans danger ne constitue pas une analyse d'impact : celle-ci suppose une méthode et une appréciation motivée des risques.",
+      "consequence": "Lorsqu'une analyse est requise et n'a pas été réalisée, une alerte est émise et l'indice de conformité en tient compte.",
+      "fiche_developpee": true
+    },
+    {
+      "id": "risque_eleve",
+      "domaine": "Analyse d'impact",
+      "libelle": "Risque élevé",
+      "determinante": true,
+      "champs": [],
+      "definition": "Le degré de risque qui, par la nature des données, l'ampleur du traitement ou la vulnérabilité des personnes, appelle des précautions particulières. Il s'apprécie du point de vue des personnes, non de celui de l'organisation.",
+      "exemples": [
+        "Un traitement de données de santé portant sur des dizaines de milliers de patients.",
+        "Une surveillance systématique d'un lieu accessible au public."
+      ],
+      "contre_exemple": "Le risque pour l'organisation, réputation ou sanction, n'est pas le risque dont il s'agit ici.",
+      "consequence": "Le caractère élevé du risque déclenche l'analyse d'impact et, dans certaines juridictions, la consultation préalable de l'autorité.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "gravite",
+      "domaine": "Analyse d'impact",
+      "libelle": "Gravité",
+      "determinante": false,
+      "champs": [],
+      "definition": "L'ampleur des conséquences pour la personne si le risque se réalise, indépendamment de la probabilité que cela arrive.",
+      "exemples": [
+        "La divulgation d'un diagnostic médical, dont les conséquences sont durables et difficilement réparables."
+      ],
+      "contre_exemple": "La gravité ne se confond pas avec le nombre de personnes touchées, qui relève de l'ampleur du traitement.",
+      "consequence": "La gravité et la vraisemblance se combinent pour produire le niveau de risque.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "vraisemblance",
+      "domaine": "Analyse d'impact",
+      "libelle": "Vraisemblance",
+      "determinante": false,
+      "champs": [],
+      "definition": "La probabilité que le risque se réalise, compte tenu des mesures déjà en place et des sources de menace identifiées.",
+      "exemples": [
+        "Un fichier accessible depuis internet sans authentification présente une vraisemblance élevée d'accès non autorisé."
+      ],
+      "contre_exemple": "Le fait qu'aucun incident ne se soit jamais produit ne rend pas le risque invraisemblable.",
+      "consequence": "La vraisemblance est appréciée dans la troisième section de l'analyse d'impact.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "risque_residuel",
+      "domaine": "Analyse d'impact",
+      "libelle": "Risque résiduel",
+      "determinante": false,
+      "champs": [],
+      "definition": "Le risque qui subsiste une fois toutes les mesures de réduction appliquées. C'est lui qui commande la décision finale.",
+      "exemples": [
+        "Après chiffrement et cloisonnement, le risque d'accès non autorisé subsiste pour les administrateurs du système."
+      ],
+      "contre_exemple": "Un risque que l'on renonce à traiter n'est pas un risque résiduel : c'est un risque accepté sans mesure, ce qui doit être motivé.",
+      "consequence": "Un risque résiduel demeurant élevé appelle, dans certaines juridictions, la consultation préalable de l'autorité.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "necessite_proportionnalite",
+      "domaine": "Analyse d'impact",
+      "libelle": "Nécessité et proportionnalité",
+      "determinante": false,
+      "champs": [],
+      "definition": "Le double contrôle par lequel on vérifie d'abord que le traitement est utile à la finalité, puis que l'atteinte qu'il porte reste mesurée au regard du bénéfice attendu.",
+      "exemples": [
+        "Vérifier qu'aucune solution moins intrusive ne permettait d'atteindre le même résultat."
+      ],
+      "contre_exemple": "Le fait qu'un dispositif soit courant dans le secteur ne suffit pas à établir sa nécessité.",
+      "consequence": "Ces deux points forment la deuxième section de la grille d'analyse d'impact.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "violation_donnees",
+      "domaine": "Violations",
+      "libelle": "Violation de données",
+      "determinante": true,
+      "champs": [],
+      "definition": "Tout incident de sécurité qui aboutit, de manière accidentelle ou illicite, à la destruction, la perte, l'altération, la divulgation ou l'accès non autorisé à des données à caractère personnel.",
+      "exemples": [
+        "Le vol d'un ordinateur portable contenant un fichier de clients.",
+        "L'envoi d'un courriel à la mauvaise liste de destinataires.",
+        "Un rançongiciel rendant les données indisponibles."
+      ],
+      "contre_exemple": "Une panne de serveur sans perte ni accès aux données, résolue par le redémarrage, n'est pas une violation.",
+      "consequence": "La déclaration ouvre le décompte du délai de notification et impose la consignation au registre interne, même en l'absence de notification.",
+      "fiche_developpee": true
+    },
+    {
+      "id": "risque_droits_libertes",
+      "domaine": "Violations",
+      "libelle": "Risque pour les droits et libertés",
+      "determinante": true,
+      "champs": [],
+      "definition": "La possibilité que la violation cause un préjudice aux personnes : usurpation d'identité, perte financière, atteinte à la réputation, discrimination, ou simple perte de maîtrise sur ses données.",
+      "exemples": [
+        "La divulgation d'une liste de bénéficiaires d'une aide sociale."
+      ],
+      "contre_exemple": "Le préjudice subi par l'organisation elle-même n'entre pas dans cette appréciation.",
+      "consequence": "L'existence d'un risque commande la notification à l'autorité.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "delai_notification",
+      "domaine": "Violations",
+      "libelle": "Délai de notification et point de départ",
+      "determinante": true,
+      "champs": [],
+      "definition": "Le temps dont dispose le responsable pour notifier la violation à l'autorité, et le moment à partir duquel ce temps court. Le point de départ est la prise de connaissance de la violation, non sa survenance.",
+      "exemples": [
+        "Une violation survenue un vendredi et découverte le lundi fait courir le délai à compter du lundi."
+      ],
+      "contre_exemple": "Attendre d'avoir tout élucidé avant de notifier n'est pas admis : la notification peut être complétée ensuite.",
+      "consequence": "Le compte à rebours est affiché dès la déclaration et demeure visible sur tous les écrans.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "information_personnes",
+      "domaine": "Violations",
+      "libelle": "Information des personnes concernées",
+      "determinante": true,
+      "champs": [],
+      "definition": "L'obligation d'avertir directement les personnes lorsque la violation est susceptible d'engendrer un risque élevé pour elles, afin qu'elles puissent se protéger.",
+      "exemples": [
+        "Avertir des clients qu'ils doivent changer leur mot de passe et surveiller leurs comptes."
+      ],
+      "contre_exemple": "Une communication publique ne remplace l'information individuelle que lorsque celle-ci exigerait des efforts disproportionnés.",
+      "consequence": "La décision d'informer et son motif sont consignés au dossier d'incident.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "juridiction_applicable",
+      "domaine": "Cadre de l'intervention",
+      "libelle": "Juridiction applicable",
+      "determinante": true,
+      "champs": [
+        "t.juridiction",
+        "org.pays_etablissement"
+      ],
+      "definition": "Le droit national au regard duquel le traitement est qualifié. Waɖɛ applique le référentiel de la juridiction du traitement, à défaut celle de l'organisation.",
+      "exemples": [
+        "Un groupe présent dans deux États qualifie séparément un même traitement sous chacun des deux droits."
+      ],
+      "contre_exemple": "La nationalité du prestataire informatique ne détermine pas la juridiction applicable.",
+      "consequence": "La juridiction retenue et le texte de référence appliqué sont affichés en permanence, de sorte qu'aucun résultat ne soit lu hors de son droit.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "mandat",
+      "domaine": "Cadre de l'intervention",
+      "libelle": "Mandat",
+      "determinante": false,
+      "champs": [],
+      "definition": "L'acte par lequel une organisation autorise un cabinet à accéder à ses données de conformité et à agir en son nom dans Waɖɛ. Il est exprès, révocable à tout moment et traçable.",
+      "exemples": [
+        "Un cabinet mandaté au niveau Pilotage complet qualifie les traitements et dépose les formalités."
+      ],
+      "contre_exemple": "Le mandat n'emporte jamais désignation en qualité de correspondant : cette désignation est renseignée séparément et produit seule des effets sur les formalités.",
+      "consequence": "Le mandat est le seul fondement d'un accès entre organisations. Il n'a aucun effet sur la qualification des traitements.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "perimetre_mandat",
+      "domaine": "Cadre de l'intervention",
+      "libelle": "Périmètre d'un mandat",
+      "determinante": false,
+      "champs": [],
+      "definition": "L'étendue des données sur lesquelles le cabinet peut intervenir : toute l'organisation, certains services, ou certaines entités du groupe.",
+      "exemples": [
+        "Un mandat limité aux ressources humaines ne donne aucun accès aux traitements commerciaux."
+      ],
+      "contre_exemple": "Le périmètre ne se confond pas avec le niveau du mandat, qui détermine ce que le cabinet peut faire et non sur quoi.",
+      "consequence": "Le plus restrictif du rôle de cabinet et du niveau de mandat l'emporte toujours.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "revocation_mandat",
+      "domaine": "Cadre de l'intervention",
+      "libelle": "Révocation du mandat",
+      "determinante": false,
+      "champs": [],
+      "definition": "La décision par laquelle l'organisation met fin au mandat, sans préavis et sans motif. Elle produit effet immédiatement, y compris sur les sessions ouvertes.",
+      "exemples": [
+        "L'organisation révoque le mandat et le cabinet perd aussitôt tout accès."
+      ],
+      "contre_exemple": "La suspension n'est pas la révocation : elle interrompt les accès sans mettre fin au mandat.",
+      "consequence": "L'organisation conserve l'intégralité des données produites sous mandat ; le cabinet ne conserve que l'historique de ses interventions.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "volume_personnes",
+      "domaine": "Analyse d'impact",
+      "libelle": "Volume de personnes concernées",
+      "determinante": true,
+      "champs": [
+        "t.volume_personnes"
+      ],
+      "definition": "Le nombre approximatif de personnes dont les données figurent dans le traitement, exprimé par tranches. Il mesure l'ampleur de l'atteinte potentielle, indépendamment de la nature des données.",
+      "exemples": [
+        "Un fichier de paie de quarante salariés.",
+        "Une base de clients de deux cent mille personnes."
+      ],
+      "contre_exemple": "Le nombre de fiches ou d'enregistrements n'est pas le nombre de personnes : une même personne peut apparaître plusieurs fois.",
+      "consequence": "Le franchissement du seuil paramétré, fixé par défaut à dix mille personnes, déclenche à lui seul le besoin d'analyse d'impact.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "caracteristiques_autorisation",
+      "domaine": "Formalités",
+      "libelle": "Caractéristiques appelant l'autorisation",
+      "determinante": true,
+      "champs": [
+        "t.caracteristiques_article_8"
+      ],
+      "definition": "La liste fermée des cas dans lesquels un traitement ne peut être mis en oeuvre qu'après autorisation expresse de l'autorité de contrôle. Il suffit qu'un seul cas soit réuni.",
+      "exemples": [
+        "Un dispositif de pointage biométrique.",
+        "Le rapprochement de deux fichiers poursuivant des finalités différentes."
+      ],
+      "contre_exemple": "Le seul fait de traiter un grand volume de données ne figure pas dans cette liste : il pèse sur l'analyse d'impact, non sur le régime.",
+      "consequence": "La réunion d'un seul de ces cas conduit au régime d'autorisation, quel que soit le reste de la fiche.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "caracteristiques_autorisation_benin",
+      "domaine": "Formalités",
+      "libelle": "Caractéristiques appelant l'autorisation",
+      "determinante": true,
+      "champs": [
+        "t.caracteristiques_article_407"
+      ],
+      "definition": "La liste des catégories particulières de données et des situations qui soumettent un traitement à l'autorisation préalable de l'autorité. Il suffit qu'une seule soit réunie.",
+      "exemples": [
+        "Une décision automatisée refusant l'accès à une prestation.",
+        "Un transfert vers un État tiers.",
+        "Un dispositif biométrique."
+      ],
+      "contre_exemple": "Un traitement volumineux mais ordinaire, comme un fichier de clients, ne relève d'aucune de ces catégories.",
+      "consequence": "La réunion d'un seul de ces cas conduit à l'autorisation préalable, matérialisée par un extrait de délibération.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "dispense_benin",
+      "domaine": "Formalités",
+      "libelle": "Cas de dispense de formalité",
+      "determinante": true,
+      "champs": [
+        "t.dispense_article_410"
+      ],
+      "definition": "Une liste limitative de traitements courants que la loi dispense de formalité préalable, en raison de leur caractère habituel et du faible risque qu'ils présentent.",
+      "exemples": [
+        "La comptabilité générale.",
+        "La gestion des rémunérations du personnel et celle des fournisseurs."
+      ],
+      "contre_exemple": "Un fichier de prospection commerciale ne figure pas dans la liste, si banal soit-il.",
+      "consequence": "La dispense porte sur la seule formalité. Le registre, l'information des personnes, la sécurité, les durées de conservation et le rapport annuel demeurent dus.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "objets_411",
+      "domaine": "Formalités",
+      "libelle": "Objets appelant le décret après avis",
+      "determinante": true,
+      "champs": [
+        "t.objets_article_411"
+      ],
+      "definition": "Les cinq objets qui, lorsque le traitement est mis en oeuvre pour le compte d'une personne publique ou d'un service public, imposent le régime le plus lourd.",
+      "exemples": [
+        "Le recensement de la population.",
+        "Un fichier de salaires, pensions, impôts et taxes tenu par l'administration."
+      ],
+      "contre_exemple": "Un traitement de ressources humaines d'un établissement public, hors salaires et pensions, ne relève pas nécessairement de ces objets.",
+      "consequence": "La condition organique et la condition matérielle sont cumulatives : il faut à la fois la qualité de l'organisme et l'un des cinq objets.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "norme_simplifiee",
+      "domaine": "Formalités",
+      "libelle": "Norme simplifiée",
+      "determinante": true,
+      "champs": [
+        "t.norme_simplifiee_applicable"
+      ],
+      "definition": "Un modèle publié par l'autorité pour les catégories les plus courantes de traitements non susceptibles de porter atteinte à la vie privée. Le responsable qui s'y conforme entièrement déclare par simple référence à la norme.",
+      "exemples": [
+        "Une norme applicable à la gestion administrative du personnel, si l'autorité en publie une."
+      ],
+      "contre_exemple": "S'écarter d'un seul point de la norme fait perdre le bénéfice de la simplification : la déclaration ordinaire redevient due.",
+      "consequence": "En l'absence de norme publiée applicable, la déclaration préalable de droit commun s'impose.",
+      "fiche_developpee": false
+    },
+    {
+      "id": "exemption_benin",
+      "domaine": "Formalités",
+      "libelle": "Exemption de déclaration",
+      "determinante": true,
+      "champs": [
+        "t.exemption_article_408"
+      ],
+      "definition": "La dispense de déclaration accordée par décision de l'autorité à des catégories de traitements manifestement sans risque et documentés, ou lorsqu'un délégué à la protection des données a été désigné.",
+      "exemples": [
+        "Une catégorie de traitements couverte par une décision d'exemption publiée."
+      ],
+      "contre_exemple": "La seule désignation d'un délégué ne suffit pas : l'exemption suppose une décision de l'autorité, et elle est fermée aux autorités publiques.",
+      "consequence": "L'exemption n'est pas un droit acquis. En l'absence de décision publiée, la déclaration demeure due.",
+      "fiche_developpee": false
+    }
+  ],
+  "surcharges": {
+    "TG": {
+      "_texte": "Loi n° 2019-014 du 29 octobre 2019 relative à la protection des données à caractère personnel",
+      "donnee_a_caractere_personnel": {
+        "reference": "art. 4"
+      },
+      "traitement": {
+        "reference": "art. 4"
+      },
+      "sous_traitant": {
+        "reference": "art. 4 et art. 20"
+      },
+      "personne_concernee": {
+        "reference": "art. 4"
+      },
+      "consentement": {
+        "reference": "art. 14"
+      },
+      "base_juridique": {
+        "reference": "art. 14 et art. 15"
+      },
+      "donnees_sensibles": {
+        "reference": "art. 4, et art. 21 pour l'interdiction de principe",
+        "definition": "Les données relatives à l'origine raciale ou ethnique, aux opinions ou activités religieuses, philosophiques, politiques ou syndicales, à la vie sexuelle, à la santé, aux mesures d'ordre social, aux poursuites et aux sanctions pénales ou administratives. Leur traitement est interdit en principe, sauf dans les cas que la loi prévoit.",
+        "consequence": "La présence de données sensibles écarte le régime de la déclaration et oriente vers l'autorisation ou l'acte réglementaire, selon la qualité de l'organisme et l'objet du traitement."
+      },
+      "donnees_genetiques": {
+        "reference": "art. 8, 1°"
+      },
+      "donnees_biometriques": {
+        "reference": "art. 8, 5°"
+      },
+      "interconnexion": {
+        "reference": "art. 8, 3°, et art. 32 à 34"
+      },
+      "numero_national_identification": {
+        "reference": "art. 8, 4°"
+      },
+      "interet_public_recherche": {
+        "reference": "art. 8, 6°"
+      },
+      "mission_regalienne": {
+        "reference": "art. 9, 1° à 3°"
+      },
+      "registre_information_public": {
+        "reference": "art. 5, 2°"
+      },
+      "cadre_domestique": {
+        "reference": null,
+        "consequence": "La loi togolaise ne consacre pas d'exclusion domestique autonome. La notion n'est pas servie dans cette juridiction."
+      },
+      "correspondant": {
+        "reference": "art. 75 à 78",
+        "definition": "La personne bénéficiant des qualifications requises pour exercer les missions de l'article 76, chargée d'assurer de manière indépendante le respect de la loi. Elle ne peut être sanctionnée du fait de ses missions et peut saisir l'Instance des difficultés rencontrées. Sa désignation est notifiée à l'Instance.",
+        "consequence": "La désignation dispense des formalités préalables, sauf lorsqu'un transfert vers un pays tiers est envisagé. C'est le levier le plus avantageux du dispositif, et le transfert en est la seule limite."
+      },
+      "correspondant_interne_externe": {
+        "reference": "art. 75 et art. 77",
+        "consequence": "La loi n'exclut pas expressément le correspondant externe et ne le consacre pas non plus. Tant qu'AMELEGAL n'a pas tranché, l'aide indique que le point est ouvert."
+      },
+      "autorite_de_controle": {
+        "reference": "art. 55",
+        "definition": "L'Instance de protection des données à caractère personnel, sigle IPDCP, autorité nationale créée par l'article 55 de la loi."
+      },
+      "formalite_prealable": {
+        "reference": "art. 5 à 13",
+        "consequence": "Cinq régimes sont possibles : pas de formalité, déclaration, avis motivé, autorisation, acte réglementaire après avis motivé."
+      },
+      "recepisse": {
+        "reference": "art. 6",
+        "definition": "Le document délivré par l'Instance dans un délai maximal d'un mois à compter de la déclaration, prorogeable une fois sur décision motivée. Seule sa réception donne droit à la mise en oeuvre du traitement.",
+        "consequence": "Tant que le récépissé n'est pas reçu, le traitement ne peut être mis en oeuvre, quand bien même la déclaration aurait été déposée."
+      },
+      "instruction": {
+        "reference": "art. 6 et art. 13",
+        "consequence": "Le silence de l'Instance ne vaut pas acceptation. Le délai d'un mois ne concerne que la délivrance du récépissé de déclaration."
+      },
+      "duree_conservation": {
+        "reference": "art. 16 et art. 53"
+      },
+      "mesures_securite": {
+        "reference": "art. 19 et art. 52"
+      },
+      "transfert_international": {
+        "reference": "art. 28 à 31",
+        "consequence": "Avant tout transfert vers un pays tiers, le responsable informe préalablement l'Instance, qui donne un avis motivé. Lorsqu'un correspondant a été désigné, le transfert fait tomber la dispense et conduit à l'avis motivé."
+      },
+      "garanties_transfert": {
+        "reference": "art. 29 et art. 30"
+      },
+      "pays_destinataire": {
+        "reference": "art. 28"
+      },
+      "aipd": {
+        "reference": "art. 76, 3°",
+        "consequence": "La loi ne l'institue pas comme régime autonome : elle la mentionne au titre des missions du correspondant. Les critères retenus par Waɖɛ procèdent des standards internationaux et sont présentés comme tels, sous la réserve d'interprétation."
+      },
+      "risque_eleve": {
+        "reference": null,
+        "consequence": "Aucun texte togolais ne définit ce seuil à ce jour. Waɖɛ retient l'appréciation issue des standards internationaux."
+      },
+      "violation_donnees": {
+        "reference": null,
+        "consequence": "La loi ne comporte pas d'obligation de notification des violations. Waɖɛ retient le standard international et l'indique dans l'interface."
+      },
+      "delai_notification": {
+        "reference": null,
+        "consequence": "Waɖɛ retient soixante-douze heures à compter de la prise de connaissance, au titre des standards internationaux. Ce délai n'est pas fixé par la loi togolaise."
+      },
+      "information_personnes": {
+        "reference": null,
+        "consequence": "Standard international retenu par Waɖɛ, en l'absence de disposition togolaise."
+      },
+      "risque_droits_libertes": {
+        "reference": null
+      },
+      "caracteristiques_autorisation": {
+        "reference": "art. 8"
+      },
+      "volume_personnes": {
+        "reference": null,
+        "consequence": "Le seuil de dix mille personnes procède des standards internationaux retenus par AMELEGAL, en l'absence de texte d'application."
+      },
+      "caracteristiques_autorisation_benin": {
+        "reference": null,
+        "consequence": "Notion propre à une autre juridiction. Non servie ici."
+      },
+      "dispense_benin": {
+        "reference": null,
+        "consequence": "Notion propre à une autre juridiction. Non servie ici."
+      },
+      "objets_411": {
+        "reference": null,
+        "consequence": "Notion propre à une autre juridiction. Non servie ici."
+      },
+      "norme_simplifiee": {
+        "reference": "art. 7",
+        "consequence": "L'Instance peut établir et publier des normes destinées à simplifier ou à exonérer l'obligation de déclaration. Aucune n'est publiée à ce jour."
+      },
+      "exemption_benin": {
+        "reference": null,
+        "consequence": "Notion propre à une autre juridiction. Non servie ici."
+      }
+    },
+    "BJ": {
+      "_texte": "Loi n° 2017-20 portant code du numérique en République du Bénin, Livre cinquième",
+      "donnee_a_caractere_personnel": {
+        "reference": "art. 1er, 380 et 381"
+      },
+      "cadre_domestique": {
+        "reference": "art. 382 et art. 410, 1°",
+        "consequence": "Le traitement sort du champ du Livre cinquième. Les trois conditions, usage personnel ou domestique, absence de communication à des tiers et absence de diffusion, sont cumulatives et strictes."
+      },
+      "donnees_sensibles": {
+        "reference": "art. 394, et art. 397 pour les régimes spéciaux",
+        "consequence": "La présence de données sensibles conduit à l'autorisation préalable de l'APDP."
+      },
+      "donnees_biometriques": {
+        "reference": "art. 407"
+      },
+      "numero_national_identification": {
+        "reference": "art. 407"
+      },
+      "interconnexion": {
+        "reference": "art. 407"
+      },
+      "interet_public_recherche": {
+        "reference": "art. 407"
+      },
+      "donnees_genetiques": {
+        "reference": null,
+        "consequence": "Le décisiomètre ne retient pas les données génétiques comme cas distinct. Elles relèvent des données sensibles de l'article 394."
+      },
+      "mission_regalienne": {
+        "reference": "art. 411",
+        "consequence": "Le traitement est décidé par décret en Conseil des ministres pris après avis motivé de l'APDP. L'avis est publié avec le décret, qu'il soit favorable ou non."
+      },
+      "registre_information_public": {
+        "reference": null,
+        "consequence": "Le droit béninois ne retient pas ce cas de dispense. La notion n'est pas servie dans cette juridiction."
+      },
+      "correspondant": {
+        "reference": "art. 408",
+        "definition": "Le délégué à la protection des données, chargé d'assurer de manière indépendante l'application de la loi et de tenir le registre des traitements. Sa désignation est l'une des voies ouvrant l'exemption de déclaration.",
+        "consequence": "La désignation ne dispense pas à elle seule : l'exemption suppose en outre une décision de l'APDP portant sur des catégories de traitements, et elle est fermée aux autorités publiques."
+      },
+      "autorite_de_controle": {
+        "reference": "art. 464",
+        "definition": "L'Autorité de protection des données à caractère personnel, sigle APDP, qui succède à la Commission nationale de l'informatique et des libertés."
+      },
+      "formalite_prealable": {
+        "reference": "art. 405 à 411",
+        "consequence": "Huit sorties sont possibles, dont deux exclusions du champ. La déclaration préalable est la règle, les autres sorties sont des exceptions."
+      },
+      "recepisse": {
+        "reference": "art. 405 et art. 412"
+      },
+      "instruction": {
+        "reference": "art. 412 et art. 490",
+        "definition": "L'examen du dossier par l'APDP, dans un délai de soixante jours prorogeable une fois de trente jours par décision motivée. Les délais sont doublés lorsque l'Autorité exerce ses pouvoirs d'investigation.",
+        "consequence": "Le silence de l'APDP vaut acceptation : à l'expiration du délai, la réponse est réputée favorable. Waɖɛ produit alors le statut Acceptation tacite."
+      },
+      "transfert_international": {
+        "reference": "art. 407",
+        "consequence": "Le transfert vers un État tiers figure parmi les cas d'autorisation préalable de l'APDP."
+      },
+      "aipd": {
+        "reference": "art. 428, et art. 429 pour la consultation préalable",
+        "consequence": "L'analyse est obligatoire lorsque le traitement présente un risque élevé. Si le risque résiduel demeure élevé, l'APDP est consultée et répond sous huit semaines, prorogeables de six."
+      },
+      "risque_eleve": {
+        "reference": "art. 428"
+      },
+      "risque_residuel": {
+        "reference": "art. 429"
+      },
+      "violation_donnees": {
+        "reference": null,
+        "consequence": "Le Livre cinquième ne fixe pas de délai de notification. Waɖɛ retient le standard international et l'indique dans l'interface. Le formulaire de signalement publié par l'APDP est utilisé."
+      },
+      "delai_notification": {
+        "reference": null,
+        "consequence": "Soixante-douze heures à compter de la prise de connaissance, au titre des standards internationaux."
+      },
+      "information_personnes": {
+        "reference": null
+      },
+      "risque_droits_libertes": {
+        "reference": null
+      },
+      "caracteristiques_autorisation_benin": {
+        "reference": "art. 407"
+      },
+      "dispense_benin": {
+        "reference": "art. 410"
+      },
+      "objets_411": {
+        "reference": "art. 411"
+      },
+      "norme_simplifiee": {
+        "reference": "art. 406",
+        "consequence": "L'APDP n'a publié aucune norme à ce jour. Tant qu'il en est ainsi, la déclaration ordinaire demeure due."
+      },
+      "exemption_benin": {
+        "reference": "art. 408"
+      },
+      "volume_personnes": {
+        "reference": null,
+        "consequence": "Le seuil de dix mille personnes procède des standards internationaux retenus par AMELEGAL."
+      },
+      "caracteristiques_autorisation": {
+        "reference": null,
+        "consequence": "Notion propre à une autre juridiction. Non servie ici."
+      }
+    }
+  }
+}

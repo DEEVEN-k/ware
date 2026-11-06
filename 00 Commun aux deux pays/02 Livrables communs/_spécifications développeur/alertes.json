@@ -1,0 +1,145 @@
+[
+  {
+    "code": "AL-01",
+    "objet": "Violation à notifier",
+    "fait_generateur": "une violation est déclarée et l'arbre conclut à la notification",
+    "declenchement": "dès la déclaration",
+    "rappel": "à l'échéance du délai applicable",
+    "canal": "application et courriel",
+    "urgence": "1",
+    "libelle": "Violation à notifier avant le {echeance}. Il reste {reste}.",
+    "parametrable_organisation": "non"
+  },
+  {
+    "code": "AL-02",
+    "objet": "Analyse d'impact requise et non réalisée",
+    "fait_generateur": "un critère de déclenchement est réuni et aucune analyse n'est validée",
+    "declenchement": "à la qualification",
+    "rappel": "aucune",
+    "canal": "application",
+    "urgence": "2",
+    "libelle": "Ce traitement appelle une analyse d'impact. Elle n'a pas été réalisée.",
+    "parametrable_organisation": "non"
+  },
+  {
+    "code": "AL-03",
+    "objet": "Formalité qualifiée non déposée",
+    "fait_generateur": "le régime est arrêté et le dossier n'est pas au statut Envoyée",
+    "declenchement": "30 jours après la qualification",
+    "rappel": "paramétrable",
+    "canal": "application et courriel",
+    "urgence": "3",
+    "libelle": "La formalité déterminée pour ce traitement n'a pas été déposée.",
+    "parametrable_organisation": "oui, délai"
+  },
+  {
+    "code": "AL-04",
+    "objet": "Dossier déposé sans suite",
+    "fait_generateur": "le dossier est au statut Envoyée ou Accusé de réception reçu depuis la durée paramétrée",
+    "declenchement": "délai d'instruction de la juridiction, majoré de 15 jours",
+    "rappel": "paramétrable",
+    "canal": "application",
+    "urgence": "4",
+    "libelle": "Aucune décision reçue depuis {duree}. Relancer l'autorité.",
+    "parametrable_organisation": "oui, durée"
+  },
+  {
+    "code": "AL-05",
+    "objet": "Fiche incomplète",
+    "fait_generateur": "base juridique, durée de conservation ou mesures de sécurité non renseignées",
+    "declenchement": "à la soumission",
+    "rappel": "aucune",
+    "canal": "application",
+    "urgence": "5",
+    "libelle": "Cette fiche ne peut être publiée : {champs} manquent.",
+    "parametrable_organisation": "non"
+  },
+  {
+    "code": "AL-06",
+    "objet": "Sous-traitant sans contrat conforme",
+    "fait_generateur": "recours à un sous-traitant sans contrat renseigné",
+    "declenchement": "à la qualification",
+    "rappel": "aucune",
+    "canal": "application",
+    "urgence": "6",
+    "libelle": "Un sous-traitant est déclaré sans contrat conforme aux exigences de la juridiction.",
+    "parametrable_organisation": "non"
+  },
+  {
+    "code": "AL-07",
+    "objet": "Transfert non encadré",
+    "fait_generateur": "transfert international sans pays, garantie ou justificatif renseigné",
+    "declenchement": "à la qualification",
+    "rappel": "aucune",
+    "canal": "application",
+    "urgence": "6",
+    "libelle": "Un transfert international est déclaré sans encadrement renseigné.",
+    "parametrable_organisation": "non"
+  },
+  {
+    "code": "AL-08",
+    "objet": "Fiche non revue",
+    "fait_generateur": "la date de dernière revue dépasse la période paramétrée",
+    "declenchement": "période de revue, 12 mois par défaut",
+    "rappel": "à chaque échéance",
+    "canal": "application",
+    "urgence": "7",
+    "libelle": "Cette fiche n'a pas été revue depuis {duree}.",
+    "parametrable_organisation": "oui, période"
+  },
+  {
+    "code": "AL-09",
+    "objet": "Évolution du référentiel",
+    "fait_generateur": "publication d'une version dont l'application change le régime d'un traitement déjà qualifié",
+    "declenchement": "à la publication",
+    "rappel": "aucune",
+    "canal": "application et courriel",
+    "urgence": "3",
+    "libelle": "Le droit applicable a évolué. {nombre} traitements appellent une revue.",
+    "parametrable_organisation": "non"
+  },
+  {
+    "code": "AL-10",
+    "objet": "Mandat à échéance",
+    "fait_generateur": "un mandat à terme fixe approche de son terme",
+    "declenchement": "30 jours avant le terme, puis 7 jours",
+    "rappel": "au terme",
+    "canal": "application et courriel",
+    "urgence": "4",
+    "libelle": "Le mandat sur {organisation} expire le {date}.",
+    "parametrable_organisation": "non"
+  },
+  {
+    "code": "AL-11",
+    "objet": "Tâche en retard",
+    "fait_generateur": "une tâche affectée dépasse son échéance",
+    "declenchement": "à l'échéance",
+    "rappel": "tous les 7 jours",
+    "canal": "application",
+    "urgence": "8",
+    "libelle": "La tâche {objet} est en retard depuis {duree}.",
+    "parametrable_organisation": "non"
+  },
+  {
+    "code": "AL-12",
+    "objet": "Décision arrivant à expiration",
+    "fait_generateur": "une décision de l'autorité assortie d'une durée de validité approche de son terme",
+    "declenchement": "60 jours avant le terme, puis 15 jours",
+    "rappel": "au terme",
+    "canal": "application et courriel",
+    "urgence": "4",
+    "libelle": "La décision relative à {traitement} expire le {date}. Une nouvelle formalité est à engager.",
+    "parametrable_organisation": "oui, préavis"
+  },
+  {
+    "code": "AL-13",
+    "objet": "Modification appelant une nouvelle déclaration",
+    "fait_generateur": "modification substantielle d'une fiche publiée dans une juridiction qui l'exige",
+    "declenchement": "à la publication de la modification",
+    "rappel": "aucune",
+    "canal": "application",
+    "urgence": "3",
+    "libelle": "Cette modification appelle une nouvelle déclaration auprès de l'autorité.",
+    "parametrable_organisation": "non"
+  }
+]

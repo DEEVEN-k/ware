@@ -1,0 +1,860 @@
+﻿{
+  "meta": {
+    "version": "1.0",
+    "date": "2026-09-06",
+    "auteur": "AMELEGAL SARL",
+    "statut": "validé par AMELEGAL, à implémenter",
+    "avertissement": "Référentiel administrable. Aucune de ces valeurs ne doit être codée en dur (cahier des charges, art. 8.1 et 27.6)."
+  },
+  "juridiction": {
+    "code": "BJ",
+    "nom": "Bénin",
+    "nom_officiel": "République du Bénin",
+    "langue": "fr",
+    "socle_regional": "CEDEAO",
+    "herite_du_socle": true
+  },
+  "sources": {
+    "texte_principal": {
+      "intitule": "Loi n° 2017-20 portant code du numérique en République du Bénin, Livre cinquième",
+      "date_adoption": "2017-06-13",
+      "publication": null,
+      "reserve": "L'exemplaire versé au dossier est la version adoptée par l'Assemblée nationale. La version promulguée et sa référence au Journal officiel de la République du Bénin restent à obtenir avant publication du référentiel."
+    },
+    "articles_cles": [
+      {
+        "art": "1er, 380 et 381",
+        "objet": "champ du Livre cinquième"
+      },
+      {
+        "art": "382",
+        "objet": "exclusion du cadre exclusivement personnel ou domestique"
+      },
+      {
+        "art": "394",
+        "objet": "données sensibles"
+      },
+      {
+        "art": "397",
+        "objet": "régimes spéciaux de données"
+      },
+      {
+        "art": "405",
+        "objet": "déclaration préalable, régime de droit commun"
+      },
+      {
+        "art": "406",
+        "objet": "déclaration simplifiée, normes publiées par l'APDP"
+      },
+      {
+        "art": "407",
+        "objet": "autorisation préalable ; alinéa 2, obligation de consulter en cas de doute"
+      },
+      {
+        "art": "408",
+        "objet": "exemption de déclaration, fermée aux autorités publiques"
+      },
+      {
+        "art": "409",
+        "objet": "contenu du dossier, douze mentions minimales"
+      },
+      {
+        "art": "410",
+        "objet": "dispenses de formalité"
+      },
+      {
+        "art": "411",
+        "objet": "décret en Conseil des ministres après avis motivé de l'APDP"
+      },
+      {
+        "art": "412",
+        "objet": "délais d'instruction, silence valant acceptation"
+      },
+      {
+        "art": "413",
+        "objet": "modalités de dépôt"
+      },
+      {
+        "art": "428",
+        "objet": "analyse d'impact en cas de risque élevé"
+      },
+      {
+        "art": "429",
+        "objet": "consultation préalable de l'APDP en cas de risque résiduel élevé"
+      },
+      {
+        "art": "464",
+        "objet": "composition de l'APDP"
+      },
+      {
+        "art": "490",
+        "objet": "pouvoirs d'investigation, doublement des délais"
+      }
+    ],
+    "doctrine_autorite": [
+      "Rapports annuels d'activité 2022, 2023 et 2024",
+      "Décisions n° 2019-020, n° 2022-0007, n° 2024-008 et n° 2024-009",
+      "Formulaire unique et annexes 1 à 4",
+      "Modèle de registre des activités de traitement",
+      "Modèle d'analyse d'impact"
+    ]
+  },
+  "autorite": {
+    "denomination": "Autorité de protection des données à caractère personnel",
+    "sigle": "APDP",
+    "fondement": "art. 464",
+    "adresse": null,
+    "telephone": null,
+    "courriel": null,
+    "site": null,
+    "modalites_depot": [
+      {
+        "canal": "voie électronique",
+        "fondement": "art. 413"
+      },
+      {
+        "canal": "voie postale",
+        "fondement": "art. 413"
+      },
+      {
+        "canal": "dépôt au guichet contre accusé de réception",
+        "fondement": "art. 413"
+      }
+    ],
+    "delais_instruction": [
+      {
+        "regime": "toutes formalités",
+        "delai": "60 jours",
+        "prorogeable": "une fois de 30 jours par décision motivée",
+        "fondement": "art. 412"
+      },
+      {
+        "regime": "toutes formalités",
+        "delai": "doublé",
+        "condition": "lorsque l'APDP exerce ses pouvoirs d'investigation",
+        "fondement": "art. 490"
+      },
+      {
+        "regime": "consultation préalable après analyse d'impact",
+        "delai": "8 semaines",
+        "prorogeable": "de 6 semaines",
+        "fondement": "art. 429"
+      }
+    ],
+    "silence_vaut_acceptation": {
+      "actif": true,
+      "fondement": "art. 412",
+      "formulation": "La réponse est réputée favorable à l'expiration du délai d'instruction.",
+      "effet_moteur": "Le décompte du délai emporte une conséquence juridique. Le suivi des statuts de formalité doit produire un statut Acceptation tacite à l'échéance, distinct du statut Acceptée."
+    },
+    "validite_decisions": {
+      "duree": "2 ans",
+      "objet": "Les décisions de l'APDP sont valables deux ans.",
+      "effet_moteur": "Alerte de renouvellement à l'approche du terme."
+    },
+    "issues_dossier": [
+      "Récépissé de déclaration",
+      "Extrait de délibération d'autorisation",
+      "Rejet",
+      "Radiation",
+      "Report pour complément",
+      "Certificat de conformité délivré sur demande, valable deux ans"
+    ]
+  },
+  "terminologie": {
+    "autorite": "Autorité de protection des données à caractère personnel",
+    "autorite_sigle": "APDP",
+    "correspondant": "délégué à la protection des données",
+    "correspondant_sigle": "DPD",
+    "analyse_impact": "analyse d'impact relative à la protection des données",
+    "analyse_impact_sigle": "AIPD",
+    "registre": "registre des activités de traitement",
+    "personne_concernee": "personne concernée",
+    "responsable": "responsable du traitement",
+    "sous_traitant": "sous-traitant"
+  },
+  "regimes": [
+    {
+      "id": "BJ-HORS-CHAMP",
+      "code": "hors_champ",
+      "libelle": "Hors du champ d'application",
+      "libelle_officiel": "Hors du champ d'application du Livre cinquième",
+      "famille_couleur": "neutre",
+      "ordre": 1,
+      "fondement": "art. 1er, 380 et 381",
+      "est_un_regime_de_formalite": false,
+      "portee": "Aucune formalité. Le Livre cinquième ne s'applique pas."
+    },
+    {
+      "id": "BJ-DOMESTIQUE",
+      "code": "exclusion_domestique",
+      "libelle": "Exclusion domestique",
+      "libelle_officiel": "Exclusion du cadre exclusivement personnel ou domestique",
+      "famille_couleur": "neutre",
+      "ordre": 2,
+      "fondement": "art. 382 et 410, 1°",
+      "est_un_regime_de_formalite": false,
+      "portee": "Aucune formalité. Conditions cumulatives et strictes : usage exclusivement personnel ou domestique, sans communication à des tiers ni diffusion."
+    },
+    {
+      "id": "BJ-DISPENSE",
+      "code": "dispense",
+      "libelle": "Dispense de formalité",
+      "libelle_officiel": "Dispense de formalité préalable",
+      "famille_couleur": "neutre",
+      "ordre": 3,
+      "fondement": "art. 410",
+      "est_un_regime_de_formalite": true,
+      "portee": "La dispense porte sur la formalité seule. Le registre, l'information des personnes, la sécurité, les durées de conservation et le rapport annuel demeurent."
+    },
+    {
+      "id": "BJ-DECRET",
+      "code": "decret_avis_motive",
+      "libelle": "Décret en Conseil des ministres",
+      "libelle_officiel": "Décret en Conseil des ministres pris après avis motivé de l'APDP",
+      "famille_couleur": "critique",
+      "ordre": 4,
+      "fondement": "art. 411",
+      "est_un_regime_de_formalite": true,
+      "portee": "Régime le plus lourd. L'avis de l'APDP est publié avec le décret, qu'il soit favorable ou non."
+    },
+    {
+      "id": "BJ-AUTORISATION",
+      "code": "autorisation",
+      "libelle": "Autorisation préalable",
+      "libelle_officiel": "Autorisation préalable de l'APDP",
+      "famille_couleur": "eleve",
+      "ordre": 5,
+      "fondement": "art. 407",
+      "est_un_regime_de_formalite": true,
+      "portee": "Extrait de délibération. Une décision unique est possible pour des traitements de même finalité, sur engagement de conformité."
+    },
+    {
+      "id": "BJ-DECLARATION-SIMPLIFIEE",
+      "code": "declaration_simplifiee",
+      "libelle": "Déclaration simplifiée",
+      "libelle_officiel": "Déclaration simplifiée par référence à une norme publiée",
+      "famille_couleur": "standard",
+      "ordre": 6,
+      "fondement": "art. 406",
+      "est_un_regime_de_formalite": true,
+      "portee": "Référence expresse à la norme simplifiée publiée par l'APDP."
+    },
+    {
+      "id": "BJ-EXEMPTION",
+      "code": "exemption",
+      "libelle": "Exemption de déclaration",
+      "libelle_officiel": "Exemption de déclaration par décision de l'APDP",
+      "famille_couleur": "neutre",
+      "ordre": 7,
+      "fondement": "art. 408",
+      "est_un_regime_de_formalite": true,
+      "portee": "Suppose une décision de l'Autorité portant sur des catégories de traitements. Ce n'est pas un droit acquis. Exemption fermée aux autorités publiques."
+    },
+    {
+      "id": "BJ-DECLARATION",
+      "code": "declaration",
+      "libelle": "Déclaration préalable",
+      "libelle_officiel": "Déclaration préalable à l'APDP",
+      "famille_couleur": "standard",
+      "ordre": 8,
+      "fondement": "art. 405, 409, 412 et 413",
+      "est_un_regime_de_formalite": true,
+      "portee": "Régime de droit commun. Récépissé de déclaration. En dehors des cas prévus par le Livre cinquième, tout traitement est déclarable : la déclaration est la règle, les autres sorties sont des exceptions."
+    }
+  ],
+  "logigramme": {
+    "entree": "BJ-Q1",
+    "nb_questions": 8,
+    "nb_sorties": 8,
+    "principe": "Huit questions, dans l'ordre. La première sortie atteinte fixe le régime applicable.",
+    "questions": [
+      {
+        "id": "BJ-Q1",
+        "ordre": 1,
+        "libelle": "Le fichier contient-il des données à caractère personnel permettant d'identifier une personne physique : identité, adresse, numéro de téléphone, image, voix, identifiant en ligne ?",
+        "champ": "bloc2.nature_donnees_personnelles",
+        "type": "booleen",
+        "aide": "donnee_a_caractere_personnel",
+        "fondement": "art. 1er, 380 et 381",
+        "oui": {
+          "type": "question",
+          "cible": "BJ-Q2"
+        },
+        "non": {
+          "type": "sortie",
+          "cible": "BJ-HORS-CHAMP",
+          "motif": "Le fichier ne contient pas de données permettant d'identifier une personne physique : il est hors du champ du Livre cinquième."
+        }
+      },
+      {
+        "id": "BJ-Q2",
+        "ordre": 2,
+        "libelle": "Le traitement relève-t-il du cadre exclusivement personnel ou domestique d'une personne physique, sans communication à des tiers ni diffusion ?",
+        "champ": "bloc1.cadre_domestique",
+        "type": "booleen",
+        "aide": "cadre_domestique",
+        "fondement": "art. 382 et 410, 1°",
+        "oui": {
+          "type": "sortie",
+          "cible": "BJ-DOMESTIQUE",
+          "motif": "Le traitement relève du cadre exclusivement personnel ou domestique, sans communication à des tiers ni diffusion. Les conditions sont cumulatives et strictes."
+        },
+        "non": {
+          "type": "question",
+          "cible": "BJ-Q3"
+        }
+      },
+      {
+        "id": "BJ-Q3",
+        "ordre": 3,
+        "libelle": "Relève-t-il de l'une des dispenses de l'article 410 : registre à usage exclusivement privé, comptabilité générale, gestion des rémunérations du personnel, gestion des fournisseurs, fichier des membres d'un organisme à but non lucratif, archivage à long terme ?",
+        "champ": "bloc1.dispense_article_410",
+        "type": "multiple",
+        "aide": "dispense_benin",
+        "fondement": "art. 410",
+        "options": [
+          "registre_usage_prive",
+          "comptabilite_generale",
+          "remunerations_personnel",
+          "gestion_fournisseurs",
+          "membres_organisme_non_lucratif",
+          "archivage_long_terme"
+        ],
+        "oui": {
+          "type": "sortie",
+          "cible": "BJ-DISPENSE",
+          "motif": "Le traitement figure dans la liste des dispenses de l'article 410. La dispense porte sur la formalité seule : registre, information, sécurité, durées et rapport annuel demeurent."
+        },
+        "non": {
+          "type": "question",
+          "cible": "BJ-Q4"
+        }
+      },
+      {
+        "id": "BJ-Q4",
+        "ordre": 4,
+        "libelle": "Est-il mis en oeuvre pour le compte de l'État, d'un établissement public, d'une collectivité locale, ou d'une personne morale de droit privé gérant un service public ?",
+        "champ": "bloc1.personne_publique_ou_mission_service_public",
+        "type": "booleen",
+        "aide": "mission_service_public",
+        "fondement": "art. 411, alinéa 1er",
+        "nature": "condition organique",
+        "oui": {
+          "type": "question",
+          "cible": "BJ-Q5"
+        },
+        "non": {
+          "type": "question",
+          "cible": "BJ-Q6",
+          "note": "Renvoi direct à la question 6. L'article 411 ne s'applique pas : ni décret, ni avis préalable."
+        }
+      },
+      {
+        "id": "BJ-Q5",
+        "ordre": 5,
+        "libelle": "Porte-t-il sur l'un des cinq objets de l'article 411 : sûreté de l'État, défense ou sécurité publique ; prévention, recherche, constatation ou poursuite des infractions pénales ou exécution des condamnations ; recensement de la population ; origines raciales, ethniques ou régionales, filiation, opinions politiques, philosophiques ou religieuses, appartenance syndicale, santé ou vie sexuelle ; salaires, pensions, impôts, taxes et autres liquidations ?",
+        "champ": "bloc3.objets_article_411",
+        "type": "multiple",
+        "aide": "objets_411",
+        "fondement": "art. 411",
+        "nature": "condition matérielle, cumulative avec la précédente",
+        "options": [
+          "surete_defense_securite",
+          "infractions_condamnations",
+          "recensement",
+          "donnees_sensibles_411_4",
+          "salaires_pensions_impots"
+        ],
+        "oui": {
+          "type": "sortie",
+          "cible": "BJ-DECRET",
+          "motif": "Traitement mis en oeuvre pour le compte d'une personne publique et portant sur l'un des cinq objets de l'article 411 : il est décidé par décret en Conseil des ministres pris après avis motivé de l'APDP, publié avec le décret."
+        },
+        "non": {
+          "type": "question",
+          "cible": "BJ-Q6"
+        }
+      },
+      {
+        "id": "BJ-Q6",
+        "ordre": 6,
+        "libelle": "Porte-t-il sur des catégories particulières de données, ou présente-t-il l'une des caractéristiques de l'article 407 ?",
+        "champ": "bloc2.caracteristiques_article_407",
+        "type": "multiple",
+        "aide": "caracteristiques_autorisation_benin",
+        "fondement": "art. 407, et art. 394 pour les données sensibles",
+        "options": [
+          "donnees_sensibles",
+          "condamnations_penales_infractions",
+          "donnees_biometriques",
+          "numero_national_identification",
+          "appreciations_difficultes_sociales",
+          "interconnexion_fichiers",
+          "transfert_etat_tiers",
+          "interet_public_historique_statistique_scientifique",
+          "decision_automatisee_exclusion",
+          "categorie_a_risque_designee_par_apdp"
+        ],
+        "oui": {
+          "type": "sortie",
+          "cible": "BJ-AUTORISATION",
+          "motif": "Le traitement relève de l'article 407 : il est soumis à l'autorisation préalable de l'APDP, matérialisée par un extrait de délibération."
+        },
+        "non": {
+          "type": "question",
+          "cible": "BJ-Q7"
+        }
+      },
+      {
+        "id": "BJ-Q7",
+        "ordre": 7,
+        "libelle": "Le traitement entre-t-il dans une norme simplifiée publiée par l'APDP pour les catégories les plus courantes de traitements non susceptibles de porter atteinte à la vie privée ?",
+        "champ": "bloc1.norme_simplifiee_applicable",
+        "type": "booleen",
+        "aide": "norme_simplifiee",
+        "fondement": "art. 406",
+        "oui": {
+          "type": "sortie",
+          "cible": "BJ-DECLARATION-SIMPLIFIEE",
+          "motif": "Le traitement entre dans une norme simplifiée publiée par l'APDP : la déclaration est simplifiée, par référence expresse à la norme."
+        },
+        "non": {
+          "type": "question",
+          "cible": "BJ-Q8"
+        }
+      },
+      {
+        "id": "BJ-Q8",
+        "ordre": 8,
+        "libelle": "Le traitement relève-t-il d'une catégorie exemptée par décision de l'APDP, parce qu'il est manifestement sans risque et documenté (finalités, catégories de données, de personnes concernées et de destinataires, durée de conservation), ou parce qu'un délégué à la protection des données a été désigné, chargé d'assurer de manière indépendante l'application de la loi et de tenir le registre des traitements ?",
+        "champ": "bloc3.exemption_article_408",
+        "type": "booleen",
+        "aide": "exemption_benin",
+        "fondement": "art. 408",
+        "condition_bloquante": {
+          "champ": "bloc1.personne_publique_ou_mission_service_public",
+          "valeur": true,
+          "effet": "L'exemption est fermée aux autorités publiques. La réponse est forcée à faux et le motif l'indique."
+        },
+        "oui": {
+          "type": "sortie",
+          "cible": "BJ-EXEMPTION",
+          "motif": "Le traitement relève d'une catégorie exemptée par décision de l'APDP. L'exemption suppose une décision de l'Autorité portant sur des catégories de traitements ; elle n'est pas un droit acquis."
+        },
+        "non": {
+          "type": "sortie",
+          "cible": "BJ-DECLARATION",
+          "motif": "Le traitement ne relève d'aucune exception : il suit le régime de droit commun de la déclaration préalable à l'APDP."
+        }
+      }
+    ],
+    "regles_transverses": [
+      {
+        "id": "BJ-T1",
+        "libelle": "Analyse d'impact préalable",
+        "fondement": "art. 428",
+        "regle": "Si le traitement présente un risque élevé pour les droits et libertés, réaliser une analyse d'impact avant le traitement, quelle que soit la sortie."
+      },
+      {
+        "id": "BJ-T2",
+        "libelle": "Consultation préalable",
+        "fondement": "art. 429",
+        "regle": "Si le risque résiduel demeure élevé après l'analyse, consulter l'APDP, qui répond dans un délai maximum de huit semaines, prorogeable de six."
+      },
+      {
+        "id": "BJ-T3",
+        "libelle": "Le doute oblige à consulter",
+        "fondement": "art. 407, alinéa 2",
+        "regle": "Le responsable du traitement ou le délégué qui hésite sur le régime applicable doit consulter l'Autorité. Waɖɛ propose cette action lorsque l'utilisateur écarte le résultat du moteur."
+      },
+      {
+        "id": "BJ-T4",
+        "libelle": "Modification d'une déclaration",
+        "fondement": "art. 412",
+        "regle": "Toute modification affectant une déclaration initiale donne lieu à une nouvelle déclaration. Une modification substantielle de la fiche déclenche une tâche de nouvelle déclaration."
+      },
+      {
+        "id": "BJ-T5",
+        "libelle": "Validité des décisions",
+        "fondement": "pratique de l'APDP",
+        "regle": "Les décisions de l'APDP sont valables deux ans. Alerte de renouvellement à l'approche du terme."
+      }
+    ],
+    "ecart_texte_pratique": {
+      "sorties_concernees": [
+        "BJ-DECLARATION-SIMPLIFIEE",
+        "BJ-EXEMPTION"
+      ],
+      "constat": "Les sorties 6 et 7 sont écrites dans la loi mais peu appliquées. L'APDP a relevé, dans son rapport 2022, que les responsables déclarent systématiquement alors que la tenue d'un registre ou la désignation d'un délégué devrait les en dispenser.",
+      "regle_affichage": "Tant que l'Autorité n'a pas publié la norme ou la décision d'exemption applicable, Waɖɛ affiche le régime légal et signale, en regard, que la pratique impose de déclarer. Le dossier de déclaration reste proposé."
+    }
+  },
+  "feuilles_de_route": {
+    "BJ-HORS-CHAMP": [
+      {
+        "ordre": 1,
+        "etape": "Documenter au registre le motif de l'exclusion du champ."
+      },
+      {
+        "ordre": 2,
+        "etape": "Réévaluer si le traitement vient à porter sur des données identifiantes."
+      }
+    ],
+    "BJ-DOMESTIQUE": [
+      {
+        "ordre": 1,
+        "etape": "Documenter le caractère exclusivement personnel ou domestique."
+      },
+      {
+        "ordre": 2,
+        "etape": "Réévaluer dès qu'une communication à des tiers ou une diffusion est envisagée, les conditions étant cumulatives et strictes."
+      }
+    ],
+    "BJ-DISPENSE": [
+      {
+        "ordre": 1,
+        "etape": "Documenter la dispense au registre et identifier le cas de l'article 410 retenu."
+      },
+      {
+        "ordre": 2,
+        "etape": "Maintenir les obligations non couvertes par la dispense : registre, information des personnes, sécurité, durées de conservation, rapport annuel."
+      },
+      {
+        "ordre": 3,
+        "etape": "Réévaluer en cas de changement de finalité ou de destinataires."
+      }
+    ],
+    "BJ-DECRET": [
+      {
+        "ordre": 1,
+        "etape": "Préparer le projet de décret."
+      },
+      {
+        "ordre": 2,
+        "etape": "Constituer le dossier de saisine de l'APDP.",
+        "piece": "Formulaire unique et pièces justificatives"
+      },
+      {
+        "ordre": 3,
+        "etape": "Recueillir l'avis motivé de l'APDP.",
+        "piece": "Avis motivé"
+      },
+      {
+        "ordre": 4,
+        "etape": "Faire adopter le décret en Conseil des ministres et le publier avec l'avis, favorable ou non."
+      }
+    ],
+    "BJ-AUTORISATION": [
+      {
+        "ordre": 1,
+        "etape": "Réaliser l'analyse d'impact si le risque est élevé, et consulter l'APDP si le risque résiduel demeure élevé.",
+        "piece": "Rapport d'analyse d'impact"
+      },
+      {
+        "ordre": 2,
+        "etape": "Constituer le dossier : formulaire unique, annexes applicables, pièces justificatives.",
+        "piece": "Formulaire unique, annexes 1 à 4 selon le cas"
+      },
+      {
+        "ordre": 3,
+        "etape": "Déposer le dossier par voie électronique, postale ou au guichet, contre accusé de réception."
+      },
+      {
+        "ordre": 4,
+        "etape": "Suivre l'instruction : 60 jours, prorogeables de 30 ; délais doublés en cas d'investigation."
+      },
+      {
+        "ordre": 5,
+        "etape": "Conserver l'extrait de délibération d'autorisation et suivre sa validité de deux ans.",
+        "piece": "Extrait de délibération"
+      }
+    ],
+    "BJ-DECLARATION-SIMPLIFIEE": [
+      {
+        "ordre": 1,
+        "etape": "Identifier la norme simplifiée publiée par l'APDP et vérifier que le traitement y entre entièrement."
+      },
+      {
+        "ordre": 2,
+        "etape": "Effectuer la déclaration par référence expresse à la norme.",
+        "piece": "Référence de la norme"
+      },
+      {
+        "ordre": 3,
+        "etape": "À défaut de norme publiée applicable, déposer une déclaration préalable de droit commun."
+      }
+    ],
+    "BJ-EXEMPTION": [
+      {
+        "ordre": 1,
+        "etape": "Vérifier l'existence d'une décision d'exemption de l'APDP couvrant la catégorie de traitement."
+      },
+      {
+        "ordre": 2,
+        "etape": "Documenter les finalités, les catégories de données, de personnes concernées et de destinataires, et la durée de conservation."
+      },
+      {
+        "ordre": 3,
+        "etape": "Si un délégué est désigné, conserver la preuve de sa désignation et de la tenue du registre."
+      },
+      {
+        "ordre": 4,
+        "etape": "À défaut de décision d'exemption publiée, déposer une déclaration préalable."
+      }
+    ],
+    "BJ-DECLARATION": [
+      {
+        "ordre": 1,
+        "etape": "Réaliser l'analyse d'impact si le risque est élevé, et consulter l'APDP si le risque résiduel demeure élevé."
+      },
+      {
+        "ordre": 2,
+        "etape": "Constituer le dossier : formulaire unique, annexes applicables, pièces justificatives, douze mentions minimales de l'article 409.",
+        "piece": "Formulaire unique et liste des pièces à joindre"
+      },
+      {
+        "ordre": 3,
+        "etape": "Déposer par voie électronique, postale ou au guichet, contre accusé de réception."
+      },
+      {
+        "ordre": 4,
+        "etape": "Suivre le délai de 60 jours, prorogeable de 30 ; à son expiration, la réponse est réputée favorable."
+      },
+      {
+        "ordre": 5,
+        "etape": "Conserver le récépissé de déclaration et suivre la validité de deux ans.",
+        "piece": "Récépissé"
+      }
+    ]
+  },
+  "annexes_formulaire": [
+    {
+      "code": "annexe_1",
+      "intitule": "Sous-traitance",
+      "declencheur": "bloc3.sous_traitance"
+    },
+    {
+      "code": "annexe_2",
+      "intitule": "Communication",
+      "declencheur": "bloc3.communication_tiers"
+    },
+    {
+      "code": "annexe_3",
+      "intitule": "Interconnexion",
+      "declencheur": "bloc2.caracteristiques_article_407 contient interconnexion_fichiers"
+    },
+    {
+      "code": "annexe_4",
+      "intitule": "Transfert",
+      "declencheur": "bloc3.transfert_international"
+    }
+  ],
+  "aipd": {
+    "denomination": "analyse d'impact relative à la protection des données",
+    "fondement_textuel": "art. 428 pour l'analyse d'impact en cas de risque élevé, art. 429 pour la consultation préalable en cas de risque résiduel élevé.",
+    "source_des_criteres": "texte et standard_international",
+    "criteres": [
+      {
+        "id": "BJ-AIPD-1",
+        "libelle": "Risque élevé pour les droits et libertés des personnes concernées",
+        "champ": "aipd.score_risque",
+        "fondement": "art. 428"
+      },
+      {
+        "id": "BJ-AIPD-2",
+        "libelle": "Données sensibles au sens de l'article 394",
+        "champ": "bloc2.donnees_sensibles",
+        "source": "standard_international"
+      },
+      {
+        "id": "BJ-AIPD-3",
+        "libelle": "Données biométriques, numéro national d'identification ou interconnexion de fichiers",
+        "champ": "bloc2.caracteristiques_article_407",
+        "source": "standard_international"
+      },
+      {
+        "id": "BJ-AIPD-4",
+        "libelle": "Transfert vers un État tiers",
+        "champ": "bloc3.transfert_international",
+        "source": "standard_international"
+      },
+      {
+        "id": "BJ-AIPD-5",
+        "libelle": "Décision automatisée excluant du bénéfice d'un droit, d'une prestation ou d'un contrat",
+        "champ": "bloc2.caracteristiques_article_407",
+        "source": "texte"
+      },
+      {
+        "id": "BJ-AIPD-6",
+        "libelle": "Volume de personnes concernées supérieur au seuil paramétré",
+        "champ": "bloc2.volume_personnes",
+        "seuil": 10000,
+        "source": "standard_international"
+      }
+    ],
+    "regle": "Une analyse d'impact est requise dès lors qu'un critère au moins est réuni.",
+    "presomption_regimes": [
+      "BJ-AUTORISATION",
+      "BJ-DECRET"
+    ],
+    "consultation_prealable": {
+      "fondement": "art. 429",
+      "declencheur": "risque résiduel élevé après analyse",
+      "delai_reponse": "8 semaines, prorogeable de 6",
+      "effet_moteur": "Crée une formalité de consultation préalable, suivie comme un dossier, avec son propre compte à rebours."
+    },
+    "modele_officiel": "Modèle d'analyse d'impact publié par l'APDP, versé au dossier Formulaires et modèles de l'autorité.",
+    "grille": [
+      {
+        "section": 1,
+        "titre": "Description et finalité",
+        "contenu": "Identification et description du traitement, données utilisées, finalités, personnes concernées, destinataires, technologies employées."
+      },
+      {
+        "section": 2,
+        "titre": "Nécessité et proportionnalité",
+        "contenu": "Justification du recours au traitement, alternatives envisagées et écartées, mesures de minimisation, proportionnalité au regard de la finalité, fondement juridique."
+      },
+      {
+        "section": 3,
+        "titre": "Risques pour les personnes",
+        "contenu": "Identification et appréciation des risques, gravité et vraisemblance, caractère réversible ou non de l'atteinte, incidences concrètes."
+      },
+      {
+        "section": 4,
+        "titre": "Mesures de sécurité et de réduction",
+        "contenu": "Mesures existantes et proposées, risque résiduel, synthèse et avis du délégué."
+      }
+    ],
+    "niveaux_risque": [
+      "faible",
+      "modéré",
+      "élevé"
+    ]
+  },
+  "violations": {
+    "fondement_textuel": null,
+    "note": "Le Livre cinquième ne fixe pas de délai de notification des violations. Les éléments retenus procèdent des standards internationaux, afin que les juridictions ouvertes se comportent de la même manière tant qu'un texte n'en dispose pas autrement.",
+    "source": "standard_international",
+    "delai_notification_heures": 72,
+    "point_de_depart": "prise de connaissance de la violation par le responsable du traitement",
+    "destinataire": "APDP",
+    "arbre": [
+      {
+        "id": "BJ-V1",
+        "ordre": 1,
+        "libelle": "La violation est-elle susceptible d'engendrer un risque pour les droits et libertés des personnes concernées ?",
+        "aide": "risque_droits_libertes",
+        "oui": {
+          "type": "question",
+          "cible": "BJ-V2"
+        },
+        "non": {
+          "type": "decision",
+          "notification_autorite": false,
+          "information_personnes": false,
+          "motif": "La violation n'est pas susceptible d'engendrer un risque pour les droits et libertés : elle est consignée au registre interne sans notification."
+        }
+      },
+      {
+        "id": "BJ-V2",
+        "ordre": 2,
+        "libelle": "Ce risque est-il élevé, au regard de la nature des données, du nombre de personnes touchées et de la gravité des conséquences ?",
+        "aide": "risque_eleve",
+        "oui": {
+          "type": "decision",
+          "notification_autorite": true,
+          "information_personnes": true,
+          "motif": "Le risque est élevé : la violation est notifiée à l'APDP et les personnes concernées en sont informées."
+        },
+        "non": {
+          "type": "decision",
+          "notification_autorite": true,
+          "information_personnes": false,
+          "motif": "La violation présente un risque sans être élevé : elle est notifiée à l'APDP, sans information des personnes concernées."
+        }
+      }
+    ],
+    "consignation_registre_interne": "obligatoire en toute hypothèse",
+    "formulaire_officiel": "Formulaire de signalement publié par l'APDP, versé au dossier Formulaires et modèles de l'autorité.",
+    "rappels": [
+      {
+        "proportion_delai": 0.25
+      },
+      {
+        "proportion_delai": 0.5
+      },
+      {
+        "proportion_delai": 0.75
+      },
+      {
+        "proportion_delai": 0.9
+      }
+    ]
+  },
+  "correspondant": {
+    "denomination": "délégué à la protection des données",
+    "designation_obligatoire": false,
+    "fondement": "art. 408",
+    "effet_sur_formalites": "La désignation d'un délégué chargé d'assurer de manière indépendante l'application de la loi et de tenir le registre ouvre la voie de l'exemption de l'article 408. L'exemption suppose une décision de l'Autorité et n'est pas un droit acquis. Elle est fermée aux autorités publiques.",
+    "piece": "Lettre d'engagement du délégué à la protection des données, modèle publié par l'APDP.",
+    "regle_moteur": "La seule désignation d'un délégué ne produit pas l'exemption : la question 8 exige en outre une décision de l'APDP couvrant la catégorie de traitement."
+  },
+  "transferts": {
+    "principe": "Le transfert vers un État tiers figure parmi les cas d'autorisation préalable de l'article 407.",
+    "pays_reconnus": [],
+    "pays_reconnus_note": "À renseigner au vu des décisions de l'APDP versées au dossier.",
+    "piece": "Annexe 4 du formulaire unique, Transfert.",
+    "formalite_associee": "BJ-AUTORISATION"
+  },
+  "indice": {
+    "composantes": [
+      {
+        "code": "completude_registre",
+        "libelle": "Complétude du registre",
+        "poids": 0.35
+      },
+      {
+        "code": "formalites_accomplies",
+        "libelle": "Accomplissement des formalités",
+        "poids": 0.35
+      },
+      {
+        "code": "aipd_realisees",
+        "libelle": "Réalisation des analyses d'impact requises",
+        "poids": 0.2
+      },
+      {
+        "code": "violations_traitees",
+        "libelle": "Traitement des violations",
+        "poids": 0.1
+      }
+    ],
+    "composante_sensibilisation": {
+      "active": false
+    },
+    "seuils": [
+      {
+        "libelle": "Action requise",
+        "min": 0,
+        "max": 39
+      },
+      {
+        "libelle": "À surveiller",
+        "min": 40,
+        "max": 64
+      },
+      {
+        "libelle": "Bon, à consolider",
+        "min": 65,
+        "max": 84
+      },
+      {
+        "libelle": "Solide",
+        "min": 85,
+        "max": 100
+      }
+    ]
+  }
+}
