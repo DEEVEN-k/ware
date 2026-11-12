@@ -15,6 +15,18 @@ Une version PDF consolidée est générée dans `Waɖɛ_Modélisation.pdf`.
 | [06-diagrammes-de-sequence.md](06-diagrammes-de-sequence.md) | Qualification, circuit de validation, dossier et acceptation tacite, violation, mandat, publication d'un référentiel |
 | [07-modele-physique-donnees.md](07-modele-physique-donnees.md) | Schéma PostgreSQL (un schéma par module), isolement par organisation (RLS), index |
 | [08-architecture-composants.md](08-architecture-composants.md) | Déploiement, dépendances entre projets .NET, pile technique |
+| [09-diagramme-classes-complet.md](09-diagramme-classes-complet.md) | **Diagramme de classes complet** : les 90 classes et énumérations sur une seule vue, **généré** depuis le fichier 02 |
+| [10-flux-complet.md](10-flux-complet.md) | **Diagramme de flux complet** : le parcours de bout en bout, coloré par acteur |
+
+## Planches grand format
+
+Les deux vues complètes sont trop grandes pour une page A4. Elles sont fournies à leur taille
+réelle dans `planches/`, à ouvrir et zoomer :
+
+| Planche | Formats |
+|---|---|
+| `Waɖɛ_Diagramme_de_classes_complet` | PDF vectoriel, SVG, PNG, et la source Graphviz `.dot` |
+| `Waɖɛ_Flux_complet` | PDF vectoriel, SVG, PNG, et la source Graphviz `.dot` |
 
 ## Outils
 
@@ -23,12 +35,25 @@ python3 _modélisation/outils/generer_logigrammes.py
 ```
 
 ```bash
+python3 _modélisation/outils/generer_classes_complet.py
+```
+
+```bash
 node _modélisation/outils/construire_pdf.js
 ```
 
-Le premier script régénère `05-logigrammes.md` après toute modification d'un référentiel JSON.
-Le second reconstruit le PDF. Il nécessite Playwright et Chromium, et télécharge Mermaid
-(version 11.4.1) depuis jsDelivr s'il n'est pas déjà présent dans `outils/vendor/`.
+```bash
+python3 _modélisation/outils/generer_flux_complet.py
+```
+
+- `generer_logigrammes.py` régénère `05-logigrammes.md` après toute modification d'un référentiel JSON.
+- `generer_classes_complet.py` fusionne les diagrammes du fichier 02 en une vue unique (`09-…md`) et produit la planche des classes.
+- `generer_flux_complet.py` produit la planche du flux à partir du diagramme de `10-flux-complet.md`.
+- `construire_pdf.js` reconstruit le PDF du dossier. Il nécessite pandoc, Playwright et Chromium, et télécharge Mermaid (version 11.4.1) depuis jsDelivr s'il n'est pas déjà présent dans `outils/vendor/`.
+
+Les deux planches sont mises en page par **Graphviz** (`dot` doit être installé), plus compact que
+Mermaid sur des diagrammes de cette taille. Les fichiers `.md` gardent une version Mermaid pour
+l'affichage sur GitHub.
 
 ## Écarts relevés dans les livrables (à arbitrer par AMELEGAL)
 

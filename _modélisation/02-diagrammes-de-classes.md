@@ -756,3 +756,171 @@ classDiagram
 - `Parametre` est résolu de la portée la plus fine à la plus large : organisation, puis juridiction, puis global. Une valeur d'organisation **ne peut être moins protectrice** que celle de la juridiction (G07). Ce contrôle est fait à l'écriture.
 - `EntreeJournal` est en **ajout seul**. `Empreinte = SHA-256(EmpreintePrecedente + contenu canonique)`, avec une chaîne par organisation. Toute altération rompt la chaîne et devient détectable.
 - `InstantaneIndice` est recalculé à chaque événement qui l'affecte (publication, décision, AIPD validée, violation close). Les instantanés sont historisés pour tracer les courbes d'évolution.
+
+## 2.6 Compléments : énumérations et objets-valeur
+
+Types référencés par les diagrammes précédents et non détaillés plus haut.
+
+```mermaid
+classDiagram
+    direction TB
+    class StatutMandat {
+        <<enumeration>>
+        Demande
+        Accepte
+        Refuse
+        Actif
+        Suspendu
+        Revoque
+        Expire
+    }
+    class PorteeMandat {
+        <<enumeration>>
+        TouteLOrganisation
+        ServicesOuDirections
+        EntitesDuGroupe
+    }
+    class StatutCorrespondant {
+        <<enumeration>>
+        Interne
+        Externe
+    }
+    class TypeQuestion {
+        <<enumeration>>
+        Booleen
+        Multiple
+    }
+    class NiveauChamp {
+        <<enumeration>>
+        Organisation
+        Traitement
+    }
+    class TypeChamp {
+        <<enumeration>>
+        Texte
+        TexteLong
+        Booleen
+        Date
+        Liste
+        ListeMultiple
+        Tranche
+        Tableau
+        Fichier
+        Courriel
+        Telephone
+    }
+    class CanalAlerte {
+        <<enumeration>>
+        Application
+        ApplicationEtCourriel
+    }
+    class OrigineTache {
+        <<enumeration>>
+        Alerte
+        RegleTransverse
+        FeuilleDeRoute
+        Manuelle
+    }
+    class Sources {
+        +TextePrincipal TextePrincipal
+        +string EtatTextesApplication
+        +List~ArticleCle~ ArticlesCles
+        +List~string~ DoctrineAutorite
+    }
+    class ArticleCle {
+        +string Art
+        +string Objet
+    }
+    class ModaliteDepot {
+        +string Canal
+        +string? Fondement
+    }
+    class EcartTextePratique {
+        +List~string~ SortiesConcernees
+        +string Constat
+        +string RegleAffichage
+    }
+    class ConfigCorrespondant {
+        +string Denomination
+        +bool DesignationObligatoire
+        +string Fondement
+        +string EffetSurFormalites
+        +string Piece
+        +string RegleMoteur
+    }
+    class ConfigTransferts {
+        +string Principe
+        +List~string~ PaysReconnus
+        +string Piece
+        +string FormaliteAssociee
+    }
+    class ConsultationPrealable {
+        +string Fondement
+        +string Declencheur
+        +string DelaiReponse
+        +string EffetMoteur
+    }
+    class SectionGrille {
+        +int Section
+        +string Titre
+        +string Contenu
+    }
+    class BrancheViolation {
+        +string Type
+        +string? Cible
+        +bool? NotificationAutorite
+        +bool? InformationPersonnes
+        +string? Motif
+    }
+    class ComposanteIndice {
+        +string Code
+        +string Libelle
+        +decimal Poids
+    }
+    class SeuilIndice {
+        +string Libelle
+        +int Min
+        +int Max
+    }
+    class ResultatQualification {
+        +string JuridictionCode
+        +string VersionReferentiel
+        +string RegimeId
+        +List~string~ Motifs
+        +List~EtapeChemin~ Chemin
+        +bool AipdRequise
+        +List~string~ CriteresAipdReunis
+        +List~string~ ReglesTransverses
+        +string AutoriteSigle
+        +List~EtapeFeuilleDeRoute~ FeuilleDeRoute
+        +string ReserveInterpretation
+    }
+    class MoteurQualification {
+        <<service>>
+        +Qualifier(Referentiel r, ValeursFiche v, DonneesOrganisation o) ResultatQualification
+        +EvaluerViolation(ConfigViolation c, bool risque, bool risqueEleve) BrancheViolation
+        +CalculerIndice(ConfigIndice c, MesuresIndice m) InstantaneIndice
+    }
+
+    Sources *-- ArticleCle
+    ConfigAipd *-- ConsultationPrealable
+    ConfigAipd *-- SectionGrille
+    ConfigIndice *-- ComposanteIndice
+    ConfigIndice *-- SeuilIndice
+    NoeudViolation *-- "2" BrancheViolation
+    ParametresAutorite *-- ModaliteDepot
+    Logigramme *-- "0..1" EcartTextePratique
+    Referentiel *-- Sources
+    Referentiel *-- ConfigCorrespondant
+    Referentiel *-- ConfigTransferts
+    MoteurQualification ..> Referentiel : lit
+    MoteurQualification ..> ResultatQualification : produit
+    Mandat ..> StatutMandat
+    Mandat ..> PorteeMandat
+    DesignationCorrespondant ..> StatutCorrespondant
+    Question ..> TypeQuestion
+    DefinitionChamp ..> NiveauChamp
+    DefinitionChamp ..> TypeChamp
+    DefinitionAlerte ..> CanalAlerte
+    Tache ..> OrigineTache
+```
