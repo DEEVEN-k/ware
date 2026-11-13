@@ -19,6 +19,20 @@ Une version PDF consolidée est générée dans `Waɖɛ_Modélisation.pdf`.
 | [10-flux-complet.md](10-flux-complet.md) | **Diagramme de flux complet** : le parcours de bout en bout, coloré par acteur |
 | [11-formulaires-configurables.md](11-formulaires-configurables.md) | **Formulaires configurables** : types de champ, listes de valeurs et champs créés dans l'application, garde-fous, cycle de vie, séquences, validation, tables |
 
+## Diagramme de classes expliqué
+
+`Waɖɛ_Diagramme_de_classes_explique.pdf` explique chaque classe, chaque champ et chaque relation,
+avec la raison de sa présence. Les explications sont dans `explications/`. Le document se
+régénère avec :
+
+```bash
+python3 _modélisation/outils/generer_explication_classes.py
+```
+
+La génération **échoue** si une classe, un champ, une valeur d'énumération ou une relation du
+fichier 02 n'est pas expliqué, ou si une explication ne correspond plus à rien : modifier le
+modèle oblige à mettre l'explication à jour.
+
 ## Planches grand format
 
 Les deux vues complètes sont trop grandes pour une page A4. Elles sont fournies à leur taille
