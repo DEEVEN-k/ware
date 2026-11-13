@@ -2,12 +2,13 @@
 
 > Fichier **généré** par `outils/generer_classes_complet.py` à partir de `02-diagrammes-de-classes.md`. Ne pas modifier à la main.
 
-Vue d'ensemble du domaine : **90 classes et énumérations** réparties en 8 modules, et 130 relations, dont les associations entre modules. La planche est grande : la version à zoomer se trouve dans `planches/` (PDF vectoriel, SVG, PNG).
+Vue d'ensemble du domaine : **106 classes et énumérations** réparties en 9 modules, et 158 relations, dont les associations entre modules. La planche est grande : la version à zoomer se trouve dans `planches/` (PDF vectoriel, SVG, PNG).
 
 | Module | Classes |
 |---|---|
 | Acces | Utilisateur, Organisation, ServiceDirection, MembreOrganisation, RoleOrganisation, ResponsableTraitementLegal, DesignationCorrespondant, Cabinet, MembreCabinet, RoleCabinet, Mandat, NiveauMandat, ActionReservable, AffectationConsultant, StatutMandat, PorteeMandat, StatutCorrespondant |
-| Referentiels | Juridiction, ReferentielVersion, StatutReferentiel, Referentiel, Regime, Logigramme, Question, Branche, TypeBranche, ConditionBloquante, RegleTransverse, EtapeFeuilleDeRoute, ParametresAutorite, DelaiInstruction, ConfigAipd, CritereAipd, ConfigViolation, NoeudViolation, ConfigIndice, DefinitionChamp, ExigenceChamp, Exigence, BulleInformation, TypeQuestion, NiveauChamp, TypeChamp, Sources, ArticleCle, ModaliteDepot, EcartTextePratique, ConfigCorrespondant, ConfigTransferts, ConsultationPrealable, SectionGrille, BrancheViolation, ComposanteIndice, SeuilIndice |
+| Formulaires | Primitive, PorteeConfiguration, StatutConfiguration, TypeChamp, ContraintesType, ListeValeurs, ValeurListe, Formulaire, VersionFormulaire, StatutVersionFormulaire, BlocFormulaire, DefinitionChamp, ExigenceChamp, Exigence, Condition, Clause, Operateur, Combinaison, UsageChamp, ValidateurDynamique, ControleurPublication |
+| Referentiels | Juridiction, ReferentielVersion, StatutReferentiel, Referentiel, Regime, Logigramme, Question, Branche, TypeBranche, ConditionBloquante, RegleTransverse, EtapeFeuilleDeRoute, ParametresAutorite, DelaiInstruction, ConfigAipd, CritereAipd, ConfigViolation, NoeudViolation, ConfigIndice, BulleInformation, TypeQuestion, Sources, ArticleCle, ModaliteDepot, EcartTextePratique, ConfigCorrespondant, ConfigTransferts, ConsultationPrealable, SectionGrille, BrancheViolation, ComposanteIndice, SeuilIndice |
 | Moteur | ResultatQualification, MoteurQualification |
 | Registre | FicheTraitement, StatutFiche, VersionFichePubliee, Qualification, VoieQualification, EtapeChemin, Prestataire, SousTraitanceFiche, TransfertFiche, PieceJointe |
 | Formalites | DossierFormalite, TypeDossier, StatutDossier, JalonDossier, DocumentProduit |
@@ -42,6 +43,8 @@ classDiagram
             +bool VisaActive
             +bool CircuitFusionne
             +Guid? GroupeParentId
+            +Guid VersionFormulaireId
+            +JsonDocument ValeursComplementaires
         }
         class ServiceDirection {
             +Guid Id
@@ -147,6 +150,188 @@ classDiagram
             <<enumeration>>
             Interne
             Externe
+        }
+    }
+    namespace Formulaires {
+        class Primitive {
+            <<enumeration>>
+            Texte
+            TexteLong
+            Nombre
+            Booleen
+            Date
+            DateHeure
+            Choix
+            ChoixMultiple
+            Fichier
+            Reference
+            Groupe
+            Collection
+        }
+        class PorteeConfiguration {
+            <<enumeration>>
+            Plateforme
+            Juridiction
+            Organisation
+        }
+        class StatutConfiguration {
+            <<enumeration>>
+            Brouillon
+            Publie
+            Obsolete
+        }
+        class TypeChamp {
+            +Guid Id
+            +string Code
+            +string Libelle
+            +string? Description
+            +Primitive Primitive
+            +ContraintesType Contraintes
+            +Guid? ListeValeursId
+            +string? EntiteReferencee
+            +string? MasqueSaisie
+            +string? MessageErreur
+            +PorteeConfiguration Portee
+            +string? Cible
+            +StatutConfiguration Statut
+            +int Version
+            +bool EstSysteme
+        }
+        class ContraintesType {
+            +int? LongueurMin
+            +int? LongueurMax
+            +string? Motif
+            +string? Format
+            +decimal? Min
+            +decimal? Max
+            +int? Decimales
+            +string? Unite
+            +int? SelectionsMax
+            +List~string~ ExtensionsAutorisees
+            +int? TailleMaxKo
+            +int? LignesMin
+            +int? LignesMax
+        }
+        class ListeValeurs {
+            +Guid Id
+            +string Code
+            +string Libelle
+            +PorteeConfiguration Portee
+            +string? Cible
+            +bool Hierarchique
+            +StatutConfiguration Statut
+            +int Version
+        }
+        class ValeurListe {
+            +string Code
+            +string Libelle
+            +int Ordre
+            +bool Active
+            +string? CodeParent
+            +string? AideCode
+        }
+        class Formulaire {
+            +Guid Id
+            +string Code
+            +string Libelle
+            +string ObjetCible
+            +bool ExtensibleParOrganisation
+        }
+        class VersionFormulaire {
+            +Guid Id
+            +Guid FormulaireId
+            +int Numero
+            +StatutVersionFormulaire Statut
+            +DateTimeOffset? PublieeLe
+            +Guid? PublieeParId
+            +string NotesVersion
+            +Publier()
+        }
+        class StatutVersionFormulaire {
+            <<enumeration>>
+            Brouillon
+            EnVerification
+            Publiee
+            Remplacee
+        }
+        class BlocFormulaire {
+            +string Code
+            +string Libelle
+            +int Ordre
+            +Condition? ConditionAffichage
+        }
+        class DefinitionChamp {
+            +Guid Id
+            +string Code
+            +string Libelle
+            +string? Placeholder
+            +Guid TypeChampId
+            +int TypeChampVersion
+            +string BlocCode
+            +int Ordre
+            +string? CodeParent
+            +JsonElement? ValeurParDefaut
+            +string? AideCode
+            +bool ExportRegistre
+            +bool Indexable
+            +bool Verrouille
+            +List~string~ Juridictions
+            +PorteeConfiguration Portee
+            +string? Cible
+            +string? RubriqueSocle
+            +Condition? ConditionAffichage
+            +string? Note
+        }
+        class ExigenceChamp {
+            +string ChampCode
+            +string JuridictionCode
+            +Exigence Niveau
+            +Condition? ConditionExigence
+        }
+        class Exigence {
+            <<enumeration>>
+            Obligatoire
+            Recommande
+            Conditionnel
+        }
+        class Condition {
+            +Combinaison Combinaison
+            +List~Clause~ Clauses
+        }
+        class Clause {
+            +string ChampCode
+            +Operateur Operateur
+            +JsonElement? Valeur
+        }
+        class Operateur {
+            <<enumeration>>
+            Egal
+            Different
+            Contient
+            EstRenseigne
+            EstVide
+            SuperieurOuEgal
+            InferieurOuEgal
+        }
+        class Combinaison {
+            <<enumeration>>
+            Toutes
+            AuMoinsUne
+        }
+        class UsageChamp {
+            +string ChampCode
+            +string Consommateur
+            +string Reference
+            +List~string~ CodesValeursUtilises
+        }
+        class ValidateurDynamique {
+            <<service>>
+            +Valider(VersionFormulaire v, JsonDocument valeurs, string juridiction) ResultatValidation
+            +CalculerCompletude(VersionFormulaire v, JsonDocument valeurs, string juridiction) decimal
+        }
+        class ControleurPublication {
+            <<service>>
+            +Verifier(VersionFormulaire v, List~ReferentielVersion~ referentiels) RapportControle
         }
     }
     namespace Referentiels {
@@ -289,31 +474,6 @@ classDiagram
             +List~ComposanteIndice~ Composantes
             +List~SeuilIndice~ Seuils
         }
-        class DefinitionChamp {
-            +string Id
-            +NiveauChamp Niveau
-            +string Bloc
-            +string LibelleAffiche
-            +TypeChamp Type
-            +List~string~ Valeurs
-            +string Juridiction
-            +bool AlimenteMoteur
-            +string RubriqueSocle
-            +string? AideId
-            +bool ExportRegistre
-            +string? Note
-        }
-        class ExigenceChamp {
-            +string ChampId
-            +string JuridictionCode
-            +Exigence Niveau
-        }
-        class Exigence {
-            <<enumeration>>
-            Obligatoire
-            Recommande
-            Conditionnel
-        }
         class BulleInformation {
             +string Id
             +string? JuridictionCode
@@ -325,25 +485,6 @@ classDiagram
             <<enumeration>>
             Booleen
             Multiple
-        }
-        class NiveauChamp {
-            <<enumeration>>
-            Organisation
-            Traitement
-        }
-        class TypeChamp {
-            <<enumeration>>
-            Texte
-            TexteLong
-            Booleen
-            Date
-            Liste
-            ListeMultiple
-            Tranche
-            Tableau
-            Fichier
-            Courriel
-            Telephone
         }
         class Sources {
             +TextePrincipal TextePrincipal
@@ -437,6 +578,7 @@ classDiagram
             +List~string~ Juridictions
             +Guid? ServiceId
             +StatutFiche Statut
+            +Guid VersionFormulaireId
             +JsonDocument Valeurs
             +decimal TauxCompletude
             +DateOnly? DerniereRevue
@@ -806,11 +948,9 @@ classDiagram
     ParametresAutorite *-- DelaiInstruction
     ConfigAipd *-- CritereAipd
     ConfigViolation *-- NoeudViolation
-    DefinitionChamp "1" *-- "*" ExigenceChamp
-    ExigenceChamp ..> Exigence
-    ExigenceChamp "*" -- "1" Juridiction
+    Juridiction "1" -- "*" ExigenceChamp
     Question ..> DefinitionChamp : Champ alimente
-    DefinitionChamp ..> BulleInformation : AideId
+    DefinitionChamp ..> BulleInformation : AideCode
     FicheTraitement ..> StatutFiche
     FicheTraitement "1" *-- "*" VersionFichePubliee
     FicheTraitement "1" *-- "*" Qualification : historique
@@ -821,7 +961,7 @@ classDiagram
     SousTraitanceFiche "*" --> "1" Prestataire
     FicheTraitement "1" *-- "*" TransfertFiche
     FicheTraitement "1" o-- "*" PieceJointe
-    FicheTraitement ..> DefinitionChamp : Valeurs[id]
+    FicheTraitement ..> DefinitionChamp : Valeurs[code]
     FicheTraitement "1" -- "*" DossierFormalite
     Qualification "1" -- "*" DossierFormalite : fonde
     DossierFormalite ..> TypeDossier
@@ -860,10 +1000,32 @@ classDiagram
     Mandat ..> PorteeMandat
     DesignationCorrespondant ..> StatutCorrespondant
     Question ..> TypeQuestion
-    DefinitionChamp ..> NiveauChamp
-    DefinitionChamp ..> TypeChamp
     DefinitionAlerte ..> CanalAlerte
     Tache ..> OrigineTache
+    TypeChamp ..> Primitive
+    TypeChamp *-- ContraintesType
+    TypeChamp "*" --> "0..1" ListeValeurs : valeurs admises
+    TypeChamp ..> PorteeConfiguration
+    TypeChamp ..> StatutConfiguration
+    ListeValeurs "1" *-- "*" ValeurListe
+    Formulaire "1" *-- "*" VersionFormulaire
+    VersionFormulaire ..> StatutVersionFormulaire
+    VersionFormulaire "1" *-- "*" BlocFormulaire
+    VersionFormulaire "1" *-- "*" DefinitionChamp
+    DefinitionChamp "*" --> "1" TypeChamp : de type
+    DefinitionChamp "0..1" o-- "*" DefinitionChamp : sous-champs (Groupe, Collection)
+    DefinitionChamp "1" *-- "*" ExigenceChamp
+    ExigenceChamp ..> Exigence
+    DefinitionChamp ..> Condition : affichage
+    ExigenceChamp ..> Condition : si Conditionnel
+    BlocFormulaire ..> Condition
+    Condition *-- Clause
+    Condition ..> Combinaison
+    Clause ..> Operateur
+    DefinitionChamp "1" -- "*" UsageChamp : utilisé par
+    ValidateurDynamique ..> VersionFormulaire : lit
+    ValidateurDynamique ..> TypeChamp : applique primitive + contraintes
+    ControleurPublication ..> UsageChamp : vérifie
     Organisation "1" -- "*" FicheTraitement : tient le registre
     ServiceDirection "0..1" -- "*" FicheTraitement : rattachée à
     Juridiction "1..*" -- "*" FicheTraitement : relève de
@@ -883,6 +1045,14 @@ classDiagram
     Utilisateur "1" -- "*" Notification : destinataire
     Utilisateur "1" -- "*" InvitationAipd
     Qualification ..> Regime : régime moteur et régime retenu
+    FicheTraitement "*" --> "1" VersionFormulaire : saisie avec
+    Organisation "*" --> "1" VersionFormulaire : saisie avec
+    Formulaire "*" -- "0..1" Organisation : champs propres (portée Organisation)
+    CritereAipd ..> DefinitionChamp : Champ
+    UsageChamp ..> Question : consommateur
+    ControleurPublication ..> ReferentielVersion : croise
+    ValeurListe ..> BulleInformation : AideCode
+    DocumentProduit ..> DefinitionChamp : champs exportés
     Qualification ..> ResultatQualification : enregistre
     DossierFormalite ..> Regime : régime du dossier
     DossierFormalite ..> ParametresAutorite : délais, silence, validité

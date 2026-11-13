@@ -44,6 +44,7 @@ flowchart TD
     WK["Wade.Worker<br/>(hôte Hangfire)"]
     subgraph MODS["Modules (chacun : Domaine · Application · Endpoints)"]
         M1["Wade.Modules.Acces<br/>identité, organisations, mandats, autorisation"]
+        M10["Wade.Modules.Formulaires<br/>types, listes, champs, versions,<br/>validateur dynamique"]
         M2["Wade.Modules.Referentiels"]
         M3["Wade.Modules.Registre"]
         M4["Wade.Modules.Formalites"]
@@ -62,6 +63,8 @@ flowchart TD
     M2 --> MOT
     M3 --> MOT
     M3 --> M2
+    M3 --> M10
+    M2 --> M10
     M4 --> M3
     M5 --> M3
     M4 & M5 & M6 --> M8
@@ -86,6 +89,7 @@ Règles de dépendance, vérifiées par un test d'architecture (NetArchTest) :
 | Autorisation | Policies + `IAuthorizationHandler` « droits effectifs » (flux 4.3) |
 | Tâches planifiées | Hangfire (stockage PostgreSQL) |
 | Validation des référentiels | JsonSchema.Net + contrôles de graphe |
+| Formulaires dynamiques | Validateur générique piloté par la configuration (C#), même règles en TypeScript côté front ; expressions régulières avec délai maximal |
 | Documents | Open XML SDK (modèles Word E01 à E07) + Gotenberg |
 | Courriels | MailKit |
 | Tests | xUnit, Testcontainers (PostgreSQL), recette du moteur sur les CSV, NetArchTest |

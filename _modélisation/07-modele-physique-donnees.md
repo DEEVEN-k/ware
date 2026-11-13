@@ -1,6 +1,6 @@
 # 7. Modèle physique des données (PostgreSQL)
 
-Une base PostgreSQL, **un schéma par module** (`acces`, `referentiel`, `registre`, `formalite`,
+Une base PostgreSQL, **un schéma par module** (`acces`, `formulaire`, `referentiel`, `registre`, `formalite`,
 `aipd`, `violation`, `pilotage`, `journal`). Les noms ci-dessous sont préfixés par leur schéma
 (par exemple `registre_fiche` pour `registre.fiche`), parce que Mermaid n'accepte pas le point.
 
@@ -34,6 +34,8 @@ erDiagram
         uuid groupe_parent_id FK
         jsonb designation_correspondant
         jsonb responsable_traitement
+        uuid version_formulaire_id FK
+        jsonb valeurs_complementaires
     }
     acces_service {
         uuid id PK
@@ -85,7 +87,7 @@ erDiagram
     acces_mandat ||--o{ acces_affectation : ""
 ```
 
-## 7.2 Référentiels et définitions de champs
+## 7.2 Référentiels et paramètres
 
 ```mermaid
 erDiagram
@@ -113,24 +115,6 @@ erDiagram
         jsonb entrees
         text regime_attendu
     }
-    referentiel_definition_champ {
-        text id PK
-        text niveau
-        text bloc
-        text libelle_affiche
-        text type
-        jsonb valeurs
-        text juridiction
-        bool alimente_moteur
-        text rubrique_socle
-        text aide_id FK
-        bool export_registre
-    }
-    referentiel_exigence_champ {
-        text champ_id PK
-        text juridiction_code PK
-        char exigence
-    }
     referentiel_bulle {
         text id PK
         text juridiction_code FK
@@ -157,13 +141,13 @@ erDiagram
 
     referentiel_juridiction ||--o{ referentiel_version : ""
     referentiel_juridiction ||--o{ referentiel_cas_recette : ""
-    referentiel_definition_champ ||--o{ referentiel_exigence_champ : ""
-    referentiel_juridiction ||--o{ referentiel_exigence_champ : ""
-    referentiel_bulle |o--o{ referentiel_definition_champ : "aide"
 ```
 
 Contrainte : `UNIQUE (juridiction_code) WHERE statut = 'Publie'`, c'est-à-dire une seule version
 publiée par juridiction.
+
+Les définitions de champs, les types de champ et les listes de valeurs ne sont plus dans le schéma
+`referentiel` : ils forment le schéma `formulaire`, détaillé en 11.8.
 
 ## 7.3 Registre, qualification, formalités, AIPD et violations
 
@@ -176,6 +160,7 @@ erDiagram
         text nom
         text_array juridictions
         uuid service_id FK
+        uuid version_formulaire_id FK
         text statut
         jsonb valeurs
         numeric taux_completude

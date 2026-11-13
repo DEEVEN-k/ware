@@ -44,6 +44,8 @@ classDiagram
         +bool VisaActive
         +bool CircuitFusionne
         +Guid? GroupeParentId
+        +Guid VersionFormulaireId
+        +JsonDocument ValeursComplementaires
     }
     class ServiceDirection {
         +Guid Id
@@ -303,31 +305,6 @@ classDiagram
         +List~ComposanteIndice~ Composantes
         +List~SeuilIndice~ Seuils
     }
-    class DefinitionChamp {
-        +string Id
-        +NiveauChamp Niveau
-        +string Bloc
-        +string LibelleAffiche
-        +TypeChamp Type
-        +List~string~ Valeurs
-        +string Juridiction
-        +bool AlimenteMoteur
-        +string RubriqueSocle
-        +string? AideId
-        +bool ExportRegistre
-        +string? Note
-    }
-    class ExigenceChamp {
-        +string ChampId
-        +string JuridictionCode
-        +Exigence Niveau
-    }
-    class Exigence {
-        <<enumeration>>
-        Obligatoire
-        Recommande
-        Conditionnel
-    }
     class BulleInformation {
         +string Id
         +string? JuridictionCode
@@ -355,17 +332,14 @@ classDiagram
     ParametresAutorite *-- DelaiInstruction
     ConfigAipd *-- CritereAipd
     ConfigViolation *-- NoeudViolation
-    DefinitionChamp "1" *-- "*" ExigenceChamp
-    ExigenceChamp ..> Exigence
-    ExigenceChamp "*" -- "1" Juridiction
+    Juridiction "1" -- "*" ExigenceChamp
     Question ..> DefinitionChamp : Champ alimente
-    DefinitionChamp ..> BulleInformation : AideId
+    DefinitionChamp ..> BulleInformation : AideCode
 ```
 
-> **Choix de modélisation : `ExigenceChamp`.** Le CSV porte deux colonnes `obligatoire_TG` et
-> `obligatoire_BJ`. Les transposer en colonnes rendrait l'ajout d'une juridiction impossible sans
-> migration de schéma, en contradiction avec la règle cardinale. On les normalise donc en une
-> table (champ, juridiction, exigence).
+> Les **champs** et leurs **types** ne font plus partie du référentiel juridique : ils sont créés
+> dans l'application et versionnés par le module Formulaires (section 2.7 et fichier 11). Le
+> référentiel ne fait que les **désigner par leur code** (`Question.Champ`, `CritereAipd.Champ`).
 
 ## 2.3 Registre et qualification
 
@@ -380,6 +354,7 @@ classDiagram
         +List~string~ Juridictions
         +Guid? ServiceId
         +StatutFiche Statut
+        +Guid VersionFormulaireId
         +JsonDocument Valeurs
         +decimal TauxCompletude
         +DateOnly? DerniereRevue
@@ -482,12 +457,12 @@ classDiagram
     SousTraitanceFiche "*" --> "1" Prestataire
     FicheTraitement "1" *-- "*" TransfertFiche
     FicheTraitement "1" o-- "*" PieceJointe
-    FicheTraitement ..> DefinitionChamp : Valeurs[id]
+    FicheTraitement ..> DefinitionChamp : Valeurs[code]
 ```
 
 **Points clés**
 
-- `Valeurs` (JSONB) contient les champs de niveau traitement, indexés par `DefinitionChamp.Id` (`t.finalites`, `t.donnees_sensibles`…). Les champs de niveau organisation sont lus sur `Organisation` et recopiés dans l'instantané à la publication.
+- `Valeurs` (JSONB) contient les champs de niveau traitement, indexés par `DefinitionChamp.Code` (`t.finalites`, `t.donnees_sensibles`…). Les champs de niveau organisation sont lus sur `Organisation` et recopiés dans l'instantané à la publication.
 - Les tableaux qui nourrissent les alertes, à savoir les sous-traitants (AL-06) et les transferts (AL-07), sont des entités à part entière, interrogeables par requête. Les autres tableaux (catégories de données, durées, accès internes, droits) restent dans le JSONB.
 - Un traitement peut relever de **plusieurs juridictions** (note du champ `t.juridiction`). Il reçoit alors une qualification courante **par juridiction**, avec unicité sur (fiche, juridiction) pour `EstCourante`, et autant de dossiers que nécessaire.
 - Une `Qualification` n'est **jamais modifiée** : chaque requalification crée une nouvelle ligne, et `EstCourante` désigne la dernière. Elle référence la `ReferentielVersion` exacte, ce qui la rend explicable même après publication d'une nouvelle version.
@@ -790,25 +765,6 @@ classDiagram
         Booleen
         Multiple
     }
-    class NiveauChamp {
-        <<enumeration>>
-        Organisation
-        Traitement
-    }
-    class TypeChamp {
-        <<enumeration>>
-        Texte
-        TexteLong
-        Booleen
-        Date
-        Liste
-        ListeMultiple
-        Tranche
-        Tableau
-        Fichier
-        Courriel
-        Telephone
-    }
     class CanalAlerte {
         <<enumeration>>
         Application
@@ -919,8 +875,231 @@ classDiagram
     Mandat ..> PorteeMandat
     DesignationCorrespondant ..> StatutCorrespondant
     Question ..> TypeQuestion
-    DefinitionChamp ..> NiveauChamp
-    DefinitionChamp ..> TypeChamp
     DefinitionAlerte ..> CanalAlerte
     Tache ..> OrigineTache
 ```
+
+## 2.7 Formulaires configurables : types et champs créés dans l'application
+
+Aucun champ ni aucun type de champ n'est codé en dur. Un administrateur les crée dans
+l'application, les assemble en formulaires versionnés, puis les publie. Seules les **primitives**
+(le comportement de base : saisir du texte, un nombre, une date, choisir dans une liste…) existent
+dans le code, car chacune exige un composant d'affichage et un validateur. Le détail, les exemples
+et les garde-fous sont dans le fichier 11.
+
+```mermaid
+classDiagram
+    direction TB
+    class Primitive {
+        <<enumeration>>
+        Texte
+        TexteLong
+        Nombre
+        Booleen
+        Date
+        DateHeure
+        Choix
+        ChoixMultiple
+        Fichier
+        Reference
+        Groupe
+        Collection
+    }
+    class PorteeConfiguration {
+        <<enumeration>>
+        Plateforme
+        Juridiction
+        Organisation
+    }
+    class StatutConfiguration {
+        <<enumeration>>
+        Brouillon
+        Publie
+        Obsolete
+    }
+    class TypeChamp {
+        +Guid Id
+        +string Code
+        +string Libelle
+        +string? Description
+        +Primitive Primitive
+        +ContraintesType Contraintes
+        +Guid? ListeValeursId
+        +string? EntiteReferencee
+        +string? MasqueSaisie
+        +string? MessageErreur
+        +PorteeConfiguration Portee
+        +string? Cible
+        +StatutConfiguration Statut
+        +int Version
+        +bool EstSysteme
+    }
+    class ContraintesType {
+        +int? LongueurMin
+        +int? LongueurMax
+        +string? Motif
+        +string? Format
+        +decimal? Min
+        +decimal? Max
+        +int? Decimales
+        +string? Unite
+        +int? SelectionsMax
+        +List~string~ ExtensionsAutorisees
+        +int? TailleMaxKo
+        +int? LignesMin
+        +int? LignesMax
+    }
+    class ListeValeurs {
+        +Guid Id
+        +string Code
+        +string Libelle
+        +PorteeConfiguration Portee
+        +string? Cible
+        +bool Hierarchique
+        +StatutConfiguration Statut
+        +int Version
+    }
+    class ValeurListe {
+        +string Code
+        +string Libelle
+        +int Ordre
+        +bool Active
+        +string? CodeParent
+        +string? AideCode
+    }
+    class Formulaire {
+        +Guid Id
+        +string Code
+        +string Libelle
+        +string ObjetCible
+        +bool ExtensibleParOrganisation
+    }
+    class VersionFormulaire {
+        +Guid Id
+        +Guid FormulaireId
+        +int Numero
+        +StatutVersionFormulaire Statut
+        +DateTimeOffset? PublieeLe
+        +Guid? PublieeParId
+        +string NotesVersion
+        +Publier()
+    }
+    class StatutVersionFormulaire {
+        <<enumeration>>
+        Brouillon
+        EnVerification
+        Publiee
+        Remplacee
+    }
+    class BlocFormulaire {
+        +string Code
+        +string Libelle
+        +int Ordre
+        +Condition? ConditionAffichage
+    }
+    class DefinitionChamp {
+        +Guid Id
+        +string Code
+        +string Libelle
+        +string? Placeholder
+        +Guid TypeChampId
+        +int TypeChampVersion
+        +string BlocCode
+        +int Ordre
+        +string? CodeParent
+        +JsonElement? ValeurParDefaut
+        +string? AideCode
+        +bool ExportRegistre
+        +bool Indexable
+        +bool Verrouille
+        +List~string~ Juridictions
+        +PorteeConfiguration Portee
+        +string? Cible
+        +string? RubriqueSocle
+        +Condition? ConditionAffichage
+        +string? Note
+    }
+    class ExigenceChamp {
+        +string ChampCode
+        +string JuridictionCode
+        +Exigence Niveau
+        +Condition? ConditionExigence
+    }
+    class Exigence {
+        <<enumeration>>
+        Obligatoire
+        Recommande
+        Conditionnel
+    }
+    class Condition {
+        +Combinaison Combinaison
+        +List~Clause~ Clauses
+    }
+    class Clause {
+        +string ChampCode
+        +Operateur Operateur
+        +JsonElement? Valeur
+    }
+    class Operateur {
+        <<enumeration>>
+        Egal
+        Different
+        Contient
+        EstRenseigne
+        EstVide
+        SuperieurOuEgal
+        InferieurOuEgal
+    }
+    class Combinaison {
+        <<enumeration>>
+        Toutes
+        AuMoinsUne
+    }
+    class UsageChamp {
+        +string ChampCode
+        +string Consommateur
+        +string Reference
+        +List~string~ CodesValeursUtilises
+    }
+    class ValidateurDynamique {
+        <<service>>
+        +Valider(VersionFormulaire v, JsonDocument valeurs, string juridiction) ResultatValidation
+        +CalculerCompletude(VersionFormulaire v, JsonDocument valeurs, string juridiction) decimal
+    }
+    class ControleurPublication {
+        <<service>>
+        +Verifier(VersionFormulaire v, List~ReferentielVersion~ referentiels) RapportControle
+    }
+
+    TypeChamp ..> Primitive
+    TypeChamp *-- ContraintesType
+    TypeChamp "*" --> "0..1" ListeValeurs : valeurs admises
+    TypeChamp ..> PorteeConfiguration
+    TypeChamp ..> StatutConfiguration
+    ListeValeurs "1" *-- "*" ValeurListe
+    Formulaire "1" *-- "*" VersionFormulaire
+    VersionFormulaire ..> StatutVersionFormulaire
+    VersionFormulaire "1" *-- "*" BlocFormulaire
+    VersionFormulaire "1" *-- "*" DefinitionChamp
+    DefinitionChamp "*" --> "1" TypeChamp : de type
+    DefinitionChamp "0..1" o-- "*" DefinitionChamp : sous-champs (Groupe, Collection)
+    DefinitionChamp "1" *-- "*" ExigenceChamp
+    ExigenceChamp ..> Exigence
+    DefinitionChamp ..> Condition : affichage
+    ExigenceChamp ..> Condition : si Conditionnel
+    BlocFormulaire ..> Condition
+    Condition *-- Clause
+    Condition ..> Combinaison
+    Clause ..> Operateur
+    DefinitionChamp "1" -- "*" UsageChamp : utilisé par
+    ValidateurDynamique ..> VersionFormulaire : lit
+    ValidateurDynamique ..> TypeChamp : applique primitive + contraintes
+    ControleurPublication ..> UsageChamp : vérifie
+```
+
+**Ce qui change par rapport à la modélisation précédente**
+
+- `TypeChamp` n'est plus une énumération : c'est une **entité** créée dans l'application, qui combine une primitive et des contraintes (format, bornes, liste de valeurs, extensions de fichier…).
+- `DefinitionChamp` appartient à une **version de formulaire**. Son `Code` (`t.finalites`, `org.secteur`…) est stable d'une version à l'autre ; c'est la clé de stockage des valeurs et la clé utilisée par les référentiels juridiques.
+- `FicheTraitement` (et `Organisation` pour les champs de niveau organisation) mémorise la **version du formulaire** avec laquelle ses valeurs ont été saisies.
+- `UsageChamp` est calculé à chaque contrôle de publication : il recense qui dépend d'un champ (question du moteur, critère d'AIPD, condition bloquante, modèle de document, indice). Un champ utilisé est `Verrouille` : sa primitive ne peut plus changer et les codes de valeurs dont le moteur dépend ne peuvent pas être supprimés.
