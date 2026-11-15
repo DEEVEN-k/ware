@@ -19,7 +19,6 @@ NOM_PLANCHE = "Waɖɛ_Diagramme_de_classes_complet"
 
 LIBELLE_MODULE = {
     "Acces": "Accès : organisations, cabinets, utilisateurs, mandats",
-    "Formulaires": "Formulaires configurables : types et champs créés dans l'application",
     "Referentiels": "Référentiels de juridiction",
     "Moteur": "Moteur de qualification",
     "Registre": "Registre et qualification",
@@ -29,7 +28,7 @@ LIBELLE_MODULE = {
     "Pilotage": "Pilotage : tâches, alertes, paramètres, indice, journal",
 }
 COULEUR_MODULE = {
-    "Acces": "#F3ECFA", "Formulaires": "#E3F4F4", "Referentiels": "#EAF5EC", "Moteur": "#FFF9E0", "Registre": "#E6F0FB",
+    "Acces": "#F3ECFA", "Referentiels": "#EAF5EC", "Moteur": "#FFF9E0", "Registre": "#E6F0FB",
     "Formalites": "#FDF1E1", "Aipd": "#FBE9EC", "Violations": "#FDE8E0", "Pilotage": "#EEF0EF",
 }
 
@@ -39,7 +38,6 @@ MODULE_PAR_SECTION = {
     "2.2": "Referentiels",
     "2.3": "Registre",
     "2.5": "Pilotage",
-    "2.7": "Formulaires",
 }
 # Sections dont les classes se répartissent entre plusieurs modules.
 MODULE_PAR_CLASSE = {
@@ -51,7 +49,7 @@ MODULE_PAR_CLASSE = {
     "Violation": "Violations", "NatureViolation": "Violations", "StatutViolation": "Violations",
     # 2.6
     "StatutMandat": "Acces", "PorteeMandat": "Acces", "StatutCorrespondant": "Acces",
-    "TypeQuestion": "Referentiels",
+    "TypeQuestion": "Referentiels", "NiveauChamp": "Referentiels", "TypeChamp": "Referentiels",
     "Sources": "Referentiels", "ArticleCle": "Referentiels", "ModaliteDepot": "Referentiels",
     "EcartTextePratique": "Referentiels", "ConfigCorrespondant": "Referentiels",
     "ConfigTransferts": "Referentiels", "ConsultationPrealable": "Referentiels",
@@ -60,7 +58,7 @@ MODULE_PAR_CLASSE = {
     "ResultatQualification": "Moteur", "MoteurQualification": "Moteur",
     "CanalAlerte": "Pilotage", "OrigineTache": "Pilotage",
 }
-ORDRE_MODULES = ["Acces", "Formulaires", "Referentiels", "Moteur", "Registre", "Formalites", "Aipd", "Violations", "Pilotage"]
+ORDRE_MODULES = ["Acces", "Referentiels", "Moteur", "Registre", "Formalites", "Aipd", "Violations", "Pilotage"]
 
 # Associations entre modules, absentes des diagrammes par module.
 LIENS_INTER_MODULES = """
@@ -83,14 +81,6 @@ LIENS_INTER_MODULES = """
     Utilisateur "1" -- "*" Notification : destinataire
     Utilisateur "1" -- "*" InvitationAipd
     Qualification ..> Regime : régime moteur et régime retenu
-    FicheTraitement "*" --> "1" VersionFormulaire : saisie avec
-    Organisation "*" --> "1" VersionFormulaire : saisie avec
-    Formulaire "*" -- "0..1" Organisation : champs propres (portée Organisation)
-    CritereAipd ..> DefinitionChamp : Champ
-    UsageChamp ..> Question : consommateur
-    ControleurPublication ..> ReferentielVersion : croise
-    ValeurListe ..> BulleInformation : AideCode
-    DocumentProduit ..> DefinitionChamp : champs exportés
     Qualification ..> ResultatQualification : enregistre
     DossierFormalite ..> Regime : régime du dossier
     DossierFormalite ..> ParametresAutorite : délais, silence, validité

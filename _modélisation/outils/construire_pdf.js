@@ -22,7 +22,6 @@ const CHAPITRES = [
   '06-diagrammes-de-sequence.md',
   '07-modele-physique-donnees.md',
   '08-architecture-composants.md',
-  '11-formulaires-configurables.md',
 ];
 
 function telecharger(url, dest) {
@@ -91,7 +90,7 @@ diagrammes de séquence, modèle physique PostgreSQL et architecture des composa
 Généré le ${date}. Les sources Mermaid font foi : dossier <code>_modélisation/</code> du dépôt.</div></div>
 <h1 style="break-before:page">Sommaire</h1><ol class="toc">
 <li>Contexte et cas d'utilisation</li><li>Diagrammes de classes</li><li>Diagrammes d'états</li><li>Flux et activités</li>
-<li>Logigrammes de qualification</li><li>Diagrammes de séquence</li><li>Modèle physique des données</li><li>Architecture des composants</li><li>Formulaires configurables</li>
+<li>Logigrammes de qualification</li><li>Diagrammes de séquence</li><li>Modèle physique des données</li><li>Architecture des composants</li>
 <li>Annexe : écarts relevés dans les livrables</li></ol>
 ${corps}
 ${annexeEcarts()}

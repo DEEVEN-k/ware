@@ -17,7 +17,6 @@ Une version PDF consolidée est générée dans `Waɖɛ_Modélisation.pdf`.
 | [08-architecture-composants.md](08-architecture-composants.md) | Déploiement, dépendances entre projets .NET, pile technique |
 | [09-diagramme-classes-complet.md](09-diagramme-classes-complet.md) | **Diagramme de classes complet** : les 90 classes et énumérations sur une seule vue, **généré** depuis le fichier 02 |
 | [10-flux-complet.md](10-flux-complet.md) | **Diagramme de flux complet** : le parcours de bout en bout, coloré par acteur |
-| [11-formulaires-configurables.md](11-formulaires-configurables.md) | **Formulaires configurables** : types de champ, listes de valeurs et champs créés dans l'application, garde-fous, cycle de vie, séquences, validation, tables |
 
 ## Diagramme de classes expliqué
 
@@ -79,7 +78,7 @@ appelle une décision avant l'implémentation.
 | # | Écart | Où | Proposition retenue dans la modélisation |
 |---|---|---|---|
 | 1 | Les questions citent leurs champs sous la forme `bloc1.x`, `bloc2.x`, `bloc3.x`, alors que le CSV les identifie par `t.x` ou `org.x`. | référentiels JSON, CSV | Une table de correspondance explicite, chargée avec le référentiel. À terme, aligner les référentiels sur les `id` du CSV, qui sont stables. |
-| 2 | `bloc1.personne_publique_ou_mission_service_public` (TG-Q6, BJ-Q4, condition bloquante de BJ-Q8) **n'existe pas** dans le CSV. | référentiels JSON | Champ **dérivé** : `org.nature_publique OU org.mission_service_public`, comme l'indiquent les notes du CSV. À confirmer (voir aussi la décision n° 3 du fichier 11). Avec les formulaires configurables, ce type d'écart est désormais **bloqué à la publication**. |
+| 2 | `bloc1.personne_publique_ou_mission_service_public` (TG-Q6, BJ-Q4, condition bloquante de BJ-Q8) **n'existe pas** dans le CSV. | référentiels JSON | Champ **dérivé** : `org.nature_publique OU org.mission_service_public`, comme l'indiquent les notes du CSV. À confirmer. |
 | 3 | Le critère d'AIPD `BJ-AIPD-1` porte sur `aipd.score_risque`, une valeur produite par l'AIPD elle-même. Le raisonnement est circulaire au moment de la qualification. | referentiel-benin.json | Évaluer ce critère **après** l'AIPD, au titre de la consultation préalable (art. 429). À la qualification, seuls les autres critères s'appliquent. À confirmer. |
 | 4 | L'indice (G01) compte les formalités au statut « Récépissé reçu » ou « Dispense documentée ». Ces statuts n'existent pas dans le cycle du dossier (G03). | G01, G03 | « Récépissé reçu » est rattaché à `Acceptée` (décision expresse ou récépissé). « Dispense documentée » correspond à une fiche publiée dont le régime n'est pas une formalité. |
 | 5 | `t.volume_personnes` est une **tranche** (« 1 000 à 9 999 »…), alors que le seuil d'AIPD est un **nombre** (10 000). | CSV, référentiels | Critère réuni si la borne basse de la tranche est ≥ au seuil. Les seuils administrables doivent coïncider avec une borne de tranche, ce qui est vérifié à la publication. |

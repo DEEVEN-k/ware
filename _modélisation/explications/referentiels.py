@@ -195,6 +195,63 @@ CLASSES = {
             "Seuils": "Les libellés selon la valeur (Action requise, À surveiller…).",
         },
     },
+    "DefinitionChamp": {
+        "role": "Un champ de la fiche de traitement ou de l'organisation, tel que livré par AMELEGAL dans registre-champs.csv (notice § 6). Chargé en base, jamais codé : chaque attribut reprend une colonne du CSV.",
+        "champs": {
+            "Id": "Colonne id. Identifiant technique stable (t.finalites, org.secteur…) : clé de stockage des valeurs et clé par laquelle le logigramme désigne le champ qui répond à une question.",
+            "Niveau": "Colonne niveau. Un champ de niveau organisation est saisi une fois et repris dans chaque fiche (notice § 6).",
+            "Bloc": "Colonne bloc. Bloc d'affichage de la fiche, conformément à l'article 26.2 du cahier des charges.",
+            "LibelleAffiche": "Colonne libelle_affiche. Libellé présenté à l'utilisateur.",
+            "Type": "Colonne type. L'un des 12 types arrêtés par la notice ; il détermine l'affichage et les contrôles de saisie.",
+            "Valeurs": "Colonne valeurs. Pour une liste : les valeurs admises, ou une source dynamique (« juridictions publiées », « normes publiées »). Pour un tableau : ses colonnes, reprises du modèle APDP. Pour une tranche : les tranches.",
+            "Juridiction": "Colonne juridiction (TG, BJ ou commun). Un champ marqué TG n'est ni affiché ni exporté au Bénin, et réciproquement (notice § 6).",
+            "AlimenteMoteur": "Colonne alimente_moteur. Le champ conditionne une réponse du logigramme ; il appelle obligatoirement une bulle d'information, contrôle prévu en recette (notice § 7).",
+            "RubriqueSocle": "Colonne rubrique_socle_commun. Rubrique correspondante du socle commun de registre en douze rubriques, issu du modèle APDP.",
+            "AideId": "Colonne aide_id. La bulle d'information rattachée au champ.",
+            "ExportRegistre": "Colonne export_registre. Un champ marqué non n'apparaît sur aucun export, aucune fiche imprimable et aucun dossier de formalité (exemple : l'origine dans la cartographie AMELEGAL).",
+            "Note": "Colonne note. Précision d'implémentation donnée par AMELEGAL (par exemple « préremplie depuis l'organisation, modifiable »).",
+        },
+    },
+    "ExigenceChamp": {
+        "role": "Le caractère obligatoire d'un champ dans une juridiction, chargé depuis les colonnes obligatoire_TG et obligatoire_BJ du CSV. Une table plutôt que deux colonnes, pour pouvoir créer une juridiction depuis le back-office sans toucher au code (notice § 7).",
+        "champs": {
+            "ChampId": "Le champ concerné.",
+            "JuridictionCode": "La juridiction concernée.",
+            "Niveau": "O, R ou C du CSV : obligatoire, recommandé ou conditionnel. Une case vide signifie que le champ est sans objet dans ce pays.",
+        },
+    },
+    "Exigence": {
+        "role": "Les valeurs des colonnes obligatoire_TG et obligatoire_BJ (notice § 6).",
+        "valeurs": {
+            "Obligatoire": "O : bloque la soumission de la fiche si vide (AL-05).",
+            "Recommande": "R : simple avertissement ; pèse sur le taux de complétude.",
+            "Conditionnel": "C : obligatoire selon la réponse à un autre champ, comme l'indique la note du CSV.",
+        },
+    },
+    "NiveauChamp": {
+        "role": "Colonne niveau du CSV.",
+        "valeurs": {
+            "Organisation": "Saisi une fois au niveau de l'organisation, repris dans chaque fiche.",
+            "Traitement": "Propre à chaque fiche de traitement.",
+        },
+    },
+    "TypeChamp": {
+        "role": "Les 12 types de champ arrêtés par la notice (§ 6) et utilisés dans registre-champs.csv. Liste fermée : l'application sait afficher et contrôler chacun d'eux.",
+        "valeurs": {
+            "Texte": "Texte court (dénomination, référence…).",
+            "TexteLong": "Texte libre long (description, mesures de sécurité, modalités de consentement).",
+            "Booleen": "Oui / non : la plupart des réponses au logigramme.",
+            "Date": "Date (création du traitement, validité d'une décision).",
+            "Liste": "Une valeur parmi les valeurs admises.",
+            "ListeMultiple": "Plusieurs valeurs (finalités, caractéristiques art. 8 ou 407).",
+            "Tranche": "Une tranche parmi des intervalles (effectif, volume de personnes).",
+            "Tableau": "Plusieurs lignes à colonnes fixes, reprises du modèle APDP (catégories de données, transferts, droits des personnes…).",
+            "Fichier": "Une pièce jointe (justificatif de désignation).",
+            "Fichiers": "Plusieurs pièces jointes (pièces jointes de la fiche).",
+            "Courriel": "Adresse électronique, contrôlée au format.",
+            "Telephone": "Numéro de téléphone, contrôlé au format.",
+        },
+    },
     "BulleInformation": {
         "role": "Une aide contextuelle sur une notion juridique (livrables D01, D02).",
         "champs": {

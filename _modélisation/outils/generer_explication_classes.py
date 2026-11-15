@@ -21,7 +21,7 @@ sys.path.insert(0, str(OUTILS))
 sys.path.insert(0, str(DOSSIER / "explications"))
 
 import generer_classes_complet as g  # noqa: E402
-from acces_formulaires import CLASSES as C1  # noqa: E402
+from acces import CLASSES as C1  # noqa: E402
 from metier import CLASSES as C3  # noqa: E402
 from referentiels import CLASSES as C2  # noqa: E402
 from relations import RELATIONS  # noqa: E402
@@ -33,7 +33,6 @@ LOGO = DOSSIER.parent / "00 Commun aux deux pays" / "01 Ware identité visuelle"
 
 INTRO_MODULE = {
     "Acces": "Qui se connecte, pour quelle structure, avec quels droits, et dans quelles limites un cabinet peut agir chez un client. Sources : G04 (habilitations) et G05 (mandats).",
-    "Formulaires": "Les champs des formulaires et leurs types sont créés dans l'application, sans développement. Seules les douze primitives sont dans le code. Source : chapitre 11 du dossier de modélisation.",
     "Referentiels": "Le droit de chaque pays, sous forme de données versionnées : régimes, logigramme, autorité, AIPD, violations, indice. Règle cardinale de la notice : aucune valeur juridique dans le code.",
     "Moteur": "Le moteur de qualification et son résultat. Il ne fait que lire un référentiel et des valeurs, ce qui le rend testable avec les cas de recette.",
     "Registre": "Le registre des traitements : fiches, qualifications, sous-traitance, transferts, pièces jointes.",
@@ -299,10 +298,9 @@ code {{ font-family: "DejaVu Sans Mono", monospace; font-size: 8pt; background: 
 <section class="module"><h1>{len(g.ORDRE_MODULES) + 1}. Points ouverts</h1>
 <p>Relevés en relisant le modèle ; à trancher avant l'implémentation.</p>
 <table><thead><tr><th style="width:4%">#</th><th style="width:36%">Point</th><th>Proposition</th></tr></thead><tbody>
-<tr><td>1</td><td><code>Organisation</code> porte encore en colonnes des champs que les formulaires configurables rendent paramétrables (<code>Rccm</code>, <code>Adresse</code>, <code>Secteur</code>…).</td><td>Ne garder en colonnes que les champs utilisés par la logique du système (<code>NaturePublique</code>, <code>MissionServicePublic</code>, <code>PaysEtablissement</code>, <code>VisaActive</code>, <code>CircuitFusionne</code>, <code>GroupeParentId</code>) et basculer les autres dans <code>ValeursComplementaires</code>.</td></tr>
-<tr><td>2</td><td><code>Cabinet.OrganisationPropreId</code> double la relation « dossier propre ».</td><td>Sans conséquence ; on peut ne garder que la relation.</td></tr>
-<tr><td>3</td><td><code>DesignationCorrespondant</code> ne garde que la désignation en cours.</td><td>Historiser les désignations (date de début et de fin) pour prouver qui était désigné à la date d'une qualification ancienne.</td></tr>
-<tr><td>4</td><td>Les écarts relevés dans les livrables (README, n° 1 à 7).</td><td>Voir l'annexe du dossier de modélisation.</td></tr>
+<tr><td>1</td><td><code>Cabinet.OrganisationPropreId</code> double la relation « dossier propre ».</td><td>Sans conséquence ; on peut ne garder que la relation.</td></tr>
+<tr><td>2</td><td><code>DesignationCorrespondant</code> ne garde que la désignation en cours.</td><td>Historiser les désignations (date de début et de fin) pour prouver qui était désigné à la date d'une qualification ancienne.</td></tr>
+<tr><td>3</td><td>Les écarts relevés dans les livrables (README, n° 1 à 7).</td><td>Voir l'annexe du dossier de modélisation.</td></tr>
 </tbody></table></section>
 </body></html>"""
     SORTIE_HTML.parent.mkdir(exist_ok=True)
