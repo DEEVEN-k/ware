@@ -1,0 +1,347 @@
+<svg width="2905pt" height="530pt"
+ viewBox="0.00 0.00 2905.40 530.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 505.2)">
+<title>Phase</title>
+<polygon fill="white" stroke="transparent" points="-25.2,25.2 -25.2,-505.2 2880.2,-505.2 2880.2,25.2 -25.2,25.2"/>
+<text text-anchor="start" x="8" y="-459.4" font-family="DejaVu Sans" font-weight="bold" font-size="22.00">2 · Qualification et publication</text>
+<text text-anchor="start" x="384" y="-459.4" font-family="DejaVu Sans" font-size="22.00"> &#160;</text>
+<text text-anchor="start" x="398" y="-459.4" font-family="DejaVu Sans" font-size="12.00" fill="#5b6b5f">Waɖɛ · diagramme d&#39;activité UML · couloirs horizontaux, lecture de gauche à droite</text>
+<g id="clust1" class="cluster">
+<title>cluster_COR</title>
+<polygon fill="#e6f0e8" stroke="#00370b" stroke-width="1.3" points="423.14,-188 423.14,-345 2259,-345 2259,-188 423.14,-188"/>
+<text text-anchor="start" x="431.14" y="-330.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#00370b">Correspondant</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_RT</title>
+<polygon fill="#e6eefb" stroke="#2a5db0" stroke-width="1.3" points="1810.64,-353 1810.64,-440 2040,-440 2040,-353 1810.64,-353"/>
+<text text-anchor="start" x="1818.64" y="-425.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#2a5db0">Responsable de traitement</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_SYS</title>
+<polygon fill="#f1f3f2" stroke="#7b857e" stroke-width="1.3" points="105,-8 105,-180 2768,-180 2768,-8 105,-8"/>
+<text text-anchor="start" x="113" y="-165.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#7b857e">Système Waɖɛ</text>
+</g>
+<!-- H_COR -->
+<!-- C6 -->
+<g id="node2" class="node">
+<title>C6</title>
+<polygon fill="white" stroke="#00370b" stroke-width="1.2" points="568,-239 553,-224 568,-209 583,-224 568,-239"/>
+</g>
+<!-- H_COR&#45;&gt;C6 -->
+<!-- C7 -->
+<g id="node3" class="node">
+<title>C7</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M823,-238C823,-238 687,-238 687,-238 681,-238 675,-232 675,-226 675,-226 675,-214 675,-214 675,-208 681,-202 687,-202 687,-202 823,-202 823,-202 829,-202 835,-208 835,-214 835,-214 835,-226 835,-226 835,-232 829,-238 823,-238"/>
+<text text-anchor="start" x="684" y="-223.2" font-family="DejaVu Sans" font-size="11.00">Renvoyer au contributeur</text>
+<text text-anchor="start" x="736" y="-211.2" font-family="DejaVu Sans" font-size="11.00">(motif)</text>
+</g>
+<!-- C6&#45;&gt;C7 -->
+<g id="edge7" class="edge">
+<title>C6&#45;&gt;C7</title>
+<path fill="none" stroke="#3f5a47" d="M582.91,-223.7C601.11,-223.31 634.54,-222.58 667.05,-221.88"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="667.4,-224.5 674.84,-221.71 667.29,-219.25 667.4,-224.5"/>
+<text text-anchor="start" x="598" y="-225.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[à compléter]</text>
+</g>
+<!-- C3 -->
+<g id="node4" class="node">
+<title>C3</title>
+<polygon fill="white" stroke="#00370b" stroke-width="1.2" points="755,-290 740,-275 755,-260 770,-275 755,-290"/>
+</g>
+<!-- C6&#45;&gt;C3 -->
+<g id="edge9" class="edge">
+<title>C6&#45;&gt;C3</title>
+<path fill="none" stroke="#3f5a47" d="M577.21,-230.18C582.8,-234.1 590.52,-239 598,-242 644.45,-260.66 703.12,-269.42 733.57,-272.96"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="733.28,-275.57 741.02,-273.79 733.86,-270.35 733.28,-275.57"/>
+<text text-anchor="start" x="604" y="-261.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[complète]</text>
+</g>
+<!-- VERS_B7 -->
+<g id="node10" class="node">
+<title>VERS_B7</title>
+<ellipse fill="#eaf5ec" stroke="#00901d" stroke-width="1.2" cx="1007.5" cy="-214" rx="11.5" ry="11.5"/>
+<text text-anchor="start" x="897" y="-195.5" font-family="DejaVu Sans" font-weight="bold" font-size="10.00" fill="#00370b">vers phase 1 · B7</text>
+</g>
+<!-- C7&#45;&gt;VERS_B7 -->
+<g id="edge8" class="edge">
+<title>C7&#45;&gt;VERS_B7</title>
+<path fill="none" stroke="#3f5a47" d="M835.26,-218.1C889.21,-216.81 956.37,-215.2 988.17,-214.44"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="988.38,-217.06 995.82,-214.26 988.26,-211.81 988.38,-217.06"/>
+</g>
+<!-- C4 -->
+<g id="node5" class="node">
+<title>C4</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M1071,-284C1071,-284 944,-284 944,-284 938,-284 932,-278 932,-272 932,-272 932,-260 932,-260 932,-254 938,-248 944,-248 944,-248 1071,-248 1071,-248 1077,-248 1083,-254 1083,-260 1083,-260 1083,-272 1083,-272 1083,-278 1077,-284 1071,-284"/>
+<text text-anchor="start" x="941" y="-269.2" font-family="DejaVu Sans" font-size="11.00">Retenir un autre régime</text>
+<text text-anchor="start" x="957.5" y="-257.2" font-family="DejaVu Sans" font-size="11.00">(motif obligatoire)</text>
+</g>
+<!-- C3&#45;&gt;C4 -->
+<g id="edge11" class="edge">
+<title>C3&#45;&gt;C4</title>
+<path fill="none" stroke="#3f5a47" d="M769.82,-274.5C798.82,-273.46 867.95,-270.98 924.06,-268.96"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="924.48,-271.57 931.88,-268.68 924.29,-266.33 924.48,-271.57"/>
+<text text-anchor="start" x="850" y="-273.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[autre régime]</text>
+</g>
+<!-- MC -->
+<g id="node6" class="node">
+<title>MC</title>
+<polygon fill="white" stroke="#00370b" stroke-width="1.2" points="1427,-235 1412,-220 1427,-205 1442,-220 1427,-235"/>
+</g>
+<!-- C3&#45;&gt;MC -->
+<g id="edge10" class="edge">
+<title>C3&#45;&gt;MC</title>
+<path fill="none" stroke="#3f5a47" d="M765.85,-279.18C829.35,-305.4 1184.94,-441.42 1397,-293 1413.8,-281.24 1420.87,-258.1 1423.84,-241.02"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1426.5,-240.99 1425,-233.19 1421.31,-240.23 1426.5,-240.99"/>
+<text text-anchor="start" x="1098" y="-363.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[régime du moteur retenu]</text>
+</g>
+<!-- C5 -->
+<g id="node16" class="node">
+<title>C5</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M1369,-143C1369,-143 1249,-143 1249,-143 1243,-143 1237,-137 1237,-131 1237,-131 1237,-111 1237,-111 1237,-105 1243,-99 1249,-99 1249,-99 1369,-99 1369,-99 1375,-99 1381,-105 1381,-111 1381,-111 1381,-131 1381,-131 1381,-137 1375,-143 1369,-143"/>
+<text text-anchor="start" x="1269.5" y="-130.2" font-family="DejaVu Sans" font-size="11.00">Créer la tâche</text>
+<text text-anchor="start" x="1246" y="-118.2" font-family="DejaVu Sans" font-size="11.00">« consulter l&#39;autorité »</text>
+<text text-anchor="start" x="1290.5" y="-106.2" font-family="DejaVu Sans" font-size="11.00">(BJ&#45;T3)</text>
+</g>
+<!-- C4&#45;&gt;C5 -->
+<g id="edge12" class="edge">
+<title>C4&#45;&gt;C5</title>
+<path fill="none" stroke="#3f5a47" d="M1073.01,-247.89C1076.41,-246.64 1079.76,-245.35 1083,-244 1149.87,-216.22 1222.59,-174.09 1266.74,-147.06"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1268.3,-149.18 1273.31,-143.02 1265.54,-144.71 1268.3,-149.18"/>
+</g>
+<!-- C8 -->
+<g id="node7" class="node">
+<title>C8</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M1582,-238C1582,-238 1485,-238 1485,-238 1479,-238 1473,-232 1473,-226 1473,-226 1473,-214 1473,-214 1473,-208 1479,-202 1485,-202 1485,-202 1582,-202 1582,-202 1588,-202 1594,-208 1594,-214 1594,-214 1594,-226 1594,-226 1594,-232 1588,-238 1582,-238"/>
+<text text-anchor="start" x="1482" y="-223.2" font-family="DejaVu Sans" font-size="11.00">Arrêter le régime :</text>
+<text text-anchor="start" x="1494" y="-211.2" font-family="DejaVu Sans" font-size="11.00">fiche Qualifiée</text>
+</g>
+<!-- MC&#45;&gt;C8 -->
+<g id="edge14" class="edge">
+<title>MC&#45;&gt;C8</title>
+<path fill="none" stroke="#3f5a47" d="M1442.09,-220C1448.47,-220 1456.52,-220 1465.16,-220"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1465.39,-222.63 1472.89,-220 1465.39,-217.38 1465.39,-222.63"/>
+</g>
+<!-- C9 -->
+<g id="node17" class="node">
+<title>C9</title>
+<polygon fill="white" stroke="#7b857e" stroke-width="1.2" points="1640,-143 1625,-128 1640,-113 1655,-128 1640,-143"/>
+</g>
+<!-- C8&#45;&gt;C9 -->
+<g id="edge15" class="edge">
+<title>C8&#45;&gt;C9</title>
+<path fill="none" stroke="#3f5a47" d="M1588.59,-201.9C1590.47,-200.68 1592.28,-199.38 1594,-198 1611.62,-183.85 1624.5,-160.86 1631.87,-145.11"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1634.36,-145.96 1635.03,-138.04 1629.57,-143.81 1634.36,-145.96"/>
+</g>
+<!-- MC3 -->
+<g id="node8" class="node">
+<title>MC3</title>
+<polygon fill="white" stroke="#00370b" stroke-width="1.2" points="2079,-235 2064,-220 2079,-205 2094,-220 2079,-235"/>
+</g>
+<!-- C12 -->
+<g id="node9" class="node">
+<title>C12</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M2233,-238C2233,-238 2137,-238 2137,-238 2131,-238 2125,-232 2125,-226 2125,-226 2125,-214 2125,-214 2125,-208 2131,-202 2137,-202 2137,-202 2233,-202 2233,-202 2239,-202 2245,-208 2245,-214 2245,-214 2245,-226 2245,-226 2245,-232 2239,-238 2233,-238"/>
+<text text-anchor="start" x="2134" y="-217.2" font-family="DejaVu Sans" font-size="11.00">Publier au registre</text>
+</g>
+<!-- MC3&#45;&gt;C12 -->
+<g id="edge22" class="edge">
+<title>MC3&#45;&gt;C12</title>
+<path fill="none" stroke="#3f5a47" d="M2094.03,-220C2100.37,-220 2108.38,-220 2116.98,-220"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2117.18,-222.63 2124.68,-220 2117.18,-217.38 2117.18,-222.63"/>
+</g>
+<!-- C13 -->
+<g id="node20" class="node">
+<title>C13</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M2392,-143C2392,-143 2295,-143 2295,-143 2289,-143 2283,-137 2283,-131 2283,-131 2283,-119 2283,-119 2283,-113 2289,-107 2295,-107 2295,-107 2392,-107 2392,-107 2398,-107 2404,-113 2404,-119 2404,-119 2404,-131 2404,-131 2404,-137 2398,-143 2392,-143"/>
+<text text-anchor="start" x="2292" y="-128.2" font-family="DejaVu Sans" font-size="11.00">Créer l&#39;instantané,</text>
+<text text-anchor="start" x="2295" y="-116.2" font-family="DejaVu Sans" font-size="11.00">recalculer l&#39;indice</text>
+</g>
+<!-- C12&#45;&gt;C13 -->
+<g id="edge23" class="edge">
+<title>C12&#45;&gt;C13</title>
+<path fill="none" stroke="#3f5a47" d="M2245.08,-204.61C2249.9,-202.63 2254.6,-200.44 2259,-198 2282.41,-185.04 2305,-164.65 2320.77,-148.71"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2322.92,-150.26 2326.26,-143.06 2319.15,-146.6 2322.92,-150.26"/>
+</g>
+<!-- H_RT -->
+<!-- C11 -->
+<g id="node12" class="node">
+<title>C11</title>
+<path fill="white" stroke="#2a5db0" stroke-width="1.2" d="M2008,-403C2008,-403 1942,-403 1942,-403 1936,-403 1930,-397 1930,-391 1930,-391 1930,-379 1930,-379 1930,-373 1936,-367 1942,-367 1942,-367 2008,-367 2008,-367 2014,-367 2020,-373 2020,-379 2020,-379 2020,-391 2020,-391 2020,-397 2014,-403 2008,-403"/>
+<text text-anchor="start" x="1939" y="-382.2" font-family="DejaVu Sans" font-size="11.00">Viser la fiche</text>
+</g>
+<!-- H_RT&#45;&gt;C11 -->
+<!-- C11&#45;&gt;MC3 -->
+<g id="edge21" class="edge">
+<title>C11&#45;&gt;MC3</title>
+<path fill="none" stroke="#3f5a47" d="M1987.31,-366.71C2007.57,-333.93 2049.71,-265.76 2068.55,-235.29"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2070.9,-236.48 2072.61,-228.72 2066.43,-233.72 2070.9,-236.48"/>
+</g>
+<!-- H_SYS -->
+<!-- C1 -->
+<g id="node14" class="node">
+<title>C1</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M310,-143C310,-143 185,-143 185,-143 179,-143 173,-137 173,-131 173,-131 173,-119 173,-119 173,-113 179,-107 185,-107 185,-107 310,-107 310,-107 316,-107 322,-113 322,-119 322,-119 322,-131 322,-131 322,-137 316,-143 310,-143"/>
+<text text-anchor="start" x="182" y="-128.2" font-family="DejaVu Sans" font-size="11.00">Exécuter le logigramme</text>
+<text text-anchor="start" x="190" y="-116.2" font-family="DejaVu Sans" font-size="11.00">de chaque juridiction</text>
+</g>
+<!-- H_SYS&#45;&gt;C1 -->
+<!-- C2 -->
+<g id="node15" class="node">
+<title>C2</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M510,-143C510,-143 365,-143 365,-143 359,-143 353,-137 353,-131 353,-131 353,-119 353,-119 353,-113 359,-107 365,-107 365,-107 510,-107 510,-107 516,-107 522,-113 522,-119 522,-119 522,-131 522,-131 522,-137 516,-143 510,-143"/>
+<text text-anchor="start" x="366.5" y="-128.2" font-family="DejaVu Sans" font-size="11.00">Présenter régime, motifs,</text>
+<text text-anchor="start" x="362" y="-116.2" font-family="DejaVu Sans" font-size="11.00">fondement, feuille de route</text>
+</g>
+<!-- C1&#45;&gt;C2 -->
+<g id="edge5" class="edge">
+<title>C1&#45;&gt;C2</title>
+<path fill="none" stroke="#3f5a47" d="M322.26,-125C329.82,-125 337.57,-125 345.29,-125"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="345.49,-127.63 352.99,-125 345.49,-122.38 345.49,-127.63"/>
+</g>
+<!-- C2&#45;&gt;C6 -->
+<g id="edge6" class="edge">
+<title>C2&#45;&gt;C6</title>
+<path fill="none" stroke="#3f5a47" d="M466.62,-143.18C483.13,-154.19 504.2,-168.81 522,-183 533.42,-192.1 545.61,-203.32 554.42,-211.72"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="552.71,-213.71 559.93,-217.02 556.35,-209.93 552.71,-213.71"/>
+</g>
+<!-- C5&#45;&gt;MC -->
+<g id="edge13" class="edge">
+<title>C5&#45;&gt;MC</title>
+<path fill="none" stroke="#3f5a47" d="M1336.03,-143.22C1359.59,-163.32 1393.38,-192.16 1412.13,-208.16"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1410.9,-210.57 1418.31,-213.44 1414.31,-206.57 1410.9,-210.57"/>
+</g>
+<!-- MC2 -->
+<g id="node18" class="node">
+<title>MC2</title>
+<polygon fill="white" stroke="#7b857e" stroke-width="1.2" points="1765,-86 1750,-71 1765,-56 1780,-71 1765,-86"/>
+</g>
+<!-- C9&#45;&gt;MC2 -->
+<g id="edge17" class="edge">
+<title>C9&#45;&gt;MC2</title>
+<path fill="none" stroke="#3f5a47" d="M1650.34,-123C1655.99,-120.02 1663.36,-116.2 1670,-113 1696.49,-100.24 1727.75,-86.54 1746.71,-78.37"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1748.18,-80.6 1754.04,-75.23 1746.11,-75.77 1748.18,-80.6"/>
+<text text-anchor="start" x="1672" y="-115.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[non requise]</text>
+</g>
+<!-- VERS_D1 -->
+<g id="node24" class="node">
+<title>VERS_D1</title>
+<ellipse fill="#eaf5ec" stroke="#00901d" stroke-width="1.2" cx="1765" cy="-131" rx="11.5" ry="11.5"/>
+<text text-anchor="start" x="1676.5" y="-146.5" font-family="DejaVu Sans" font-weight="bold" font-size="10.00" fill="#00370b">vers phase 3 · D1</text>
+</g>
+<!-- C9&#45;&gt;VERS_D1 -->
+<g id="edge16" class="edge">
+<title>C9&#45;&gt;VERS_D1</title>
+<path fill="none" stroke="#3f5a47" d="M1655.11,-128.34C1677.45,-128.89 1720.95,-129.95 1745.67,-130.55"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1745.71,-133.18 1753.28,-130.74 1745.84,-127.93 1745.71,-133.18"/>
+<text text-anchor="start" x="1670" y="-132.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[AIPD requise]</text>
+</g>
+<!-- C10 -->
+<g id="node19" class="node">
+<title>C10</title>
+<polygon fill="white" stroke="#7b857e" stroke-width="1.2" points="1830,-140 1815,-125 1830,-110 1845,-125 1830,-140"/>
+</g>
+<!-- MC2&#45;&gt;C10 -->
+<g id="edge18" class="edge">
+<title>MC2&#45;&gt;C10</title>
+<path fill="none" stroke="#3f5a47" d="M1773.73,-77.62C1784.12,-86.53 1802.76,-102.51 1815.5,-113.42"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1813.81,-115.44 1821.21,-118.32 1817.23,-111.45 1813.81,-115.44"/>
+</g>
+<!-- C10&#45;&gt;MC3 -->
+<g id="edge20" class="edge">
+<title>C10&#45;&gt;MC3</title>
+<path fill="none" stroke="#3f5a47" d="M1841.3,-128.96C1879.35,-143.6 2012.31,-194.73 2060.44,-213.25"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2059.71,-215.78 2067.66,-216.02 2061.6,-210.88 2059.71,-215.78"/>
+<text text-anchor="start" x="1939.5" y="-207.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[visa désactivé]</text>
+</g>
+<!-- C10&#45;&gt;C11 -->
+<g id="edge19" class="edge">
+<title>C10&#45;&gt;C11</title>
+<path fill="none" stroke="#3f5a47" d="M1836.09,-134.25C1856.08,-170.6 1929.63,-304.33 1960.37,-360.21"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1958.15,-361.63 1964.07,-366.94 1962.75,-359.1 1958.15,-361.63"/>
+<text text-anchor="start" x="1860" y="-272.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[visa activé]</text>
+</g>
+<!-- F2 -->
+<g id="node21" class="node">
+<title>F2</title>
+<polygon fill="#12180e" stroke="#12180e" stroke-width="1.2" points="2557,-127.5 2435,-127.5 2435,-122.5 2557,-122.5 2557,-127.5"/>
+</g>
+<!-- C13&#45;&gt;F2 -->
+<g id="edge24" class="edge">
+<title>C13&#45;&gt;F2</title>
+<path fill="none" stroke="#3f5a47" d="M2404.41,-125C2411.91,-125 2419.63,-125 2427.24,-125"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2427.3,-127.63 2434.8,-125 2427.3,-122.38 2427.3,-127.63"/>
+</g>
+<!-- F5P -->
+<g id="node22" class="node">
+<title>F5P</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M2688,-95C2688,-95 2600,-95 2600,-95 2594,-95 2588,-89 2588,-83 2588,-83 2588,-71 2588,-71 2588,-65 2594,-59 2600,-59 2600,-59 2688,-59 2688,-59 2694,-59 2700,-65 2700,-71 2700,-71 2700,-83 2700,-83 2700,-89 2694,-95 2688,-95"/>
+<text text-anchor="start" x="2597" y="-80.2" font-family="DejaVu Sans" font-size="11.00">Planifier la revue</text>
+<text text-anchor="start" x="2603.5" y="-68.2" font-family="DejaVu Sans" font-size="11.00">(12 ou 6 mois)</text>
+</g>
+<!-- F2&#45;&gt;F5P -->
+<g id="edge26" class="edge">
+<title>F2&#45;&gt;F5P</title>
+<path fill="none" stroke="#3f5a47" d="M2504.85,-122.42C2519.26,-117.68 2551.19,-107.18 2580.72,-97.47"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2581.86,-99.86 2588.17,-95.03 2580.22,-94.88 2581.86,-99.86"/>
+</g>
+<!-- VERS_E1 -->
+<g id="node25" class="node">
+<title>VERS_E1</title>
+<ellipse fill="#eaf5ec" stroke="#00901d" stroke-width="1.2" cx="2644" cy="-129" rx="11.5" ry="11.5"/>
+<text text-anchor="start" x="2534.5" y="-110.5" font-family="DejaVu Sans" font-weight="bold" font-size="10.00" fill="#00370b">vers phase 4 · E1</text>
+</g>
+<!-- F2&#45;&gt;VERS_E1 -->
+<g id="edge25" class="edge">
+<title>F2&#45;&gt;VERS_E1</title>
+<path fill="none" stroke="#3f5a47" d="M2557.23,-126.65C2581.53,-127.32 2607.78,-128.04 2624.75,-128.5"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2624.72,-131.12 2632.29,-128.71 2624.86,-125.88 2624.72,-131.12"/>
+</g>
+<!-- VERS_MF -->
+<g id="node26" class="node">
+<title>VERS_MF</title>
+<ellipse fill="#eaf5ec" stroke="#00901d" stroke-width="1.2" cx="2742.5" cy="-77" rx="11.5" ry="11.5"/>
+<text text-anchor="start" x="2754" y="-58.5" font-family="DejaVu Sans" font-weight="bold" font-size="10.00" fill="#00370b">vers phase 5 · MF</text>
+</g>
+<!-- F5P&#45;&gt;VERS_MF -->
+<g id="edge27" class="edge">
+<title>F5P&#45;&gt;VERS_MF</title>
+<path fill="none" stroke="#3f5a47" d="M2700.02,-77C2708.35,-77 2716.41,-77 2723.17,-77"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2723.47,-79.63 2730.97,-77 2723.47,-74.38 2723.47,-79.63"/>
+</g>
+<!-- DEPUIS_B12 -->
+<g id="node23" class="node">
+<title>DEPUIS_B12</title>
+<ellipse fill="#eaf5ec" stroke="#00901d" stroke-width="1.2" cx="130.5" cy="-100" rx="11.5" ry="11.5"/>
+<text text-anchor="start" x="0" y="-81.5" font-family="DejaVu Sans" font-weight="bold" font-size="10.00" fill="#00370b">depuis phase 1 · B12</text>
+</g>
+<!-- DEPUIS_B12&#45;&gt;C1 -->
+<g id="edge4" class="edge">
+<title>DEPUIS_B12&#45;&gt;C1</title>
+<path fill="none" stroke="#3f5a47" d="M142.11,-102.31C148.12,-103.61 156.25,-105.38 165.33,-107.35"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="164.91,-109.95 172.79,-108.98 166.02,-104.82 164.91,-109.95"/>
+</g>
+<!-- DEPUIS_D8 -->
+<g id="node27" class="node">
+<title>DEPUIS_D8</title>
+<ellipse fill="#eaf5ec" stroke="#00901d" stroke-width="1.2" cx="1640" cy="-79" rx="11.5" ry="11.5"/>
+<text text-anchor="start" x="1515.5" y="-60.5" font-family="DejaVu Sans" font-weight="bold" font-size="10.00" fill="#00370b">depuis phase 3 · D8</text>
+</g>
+<!-- DEPUIS_D8&#45;&gt;MC2 -->
+<g id="edge28" class="edge">
+<title>DEPUIS_D8&#45;&gt;MC2</title>
+<path fill="none" stroke="#3f5a47" d="M1648.91,-71.57C1654.37,-66.96 1662.06,-61.47 1670,-59 1697.58,-50.41 1706.67,-53.37 1735,-59 1739.17,-59.83 1743.49,-61.27 1747.48,-62.86"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1746.71,-65.39 1754.63,-66.02 1748.83,-60.59 1746.71,-65.39"/>
+<text text-anchor="start" x="1686.5" y="-61.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[sinon]</text>
+</g>
+<!-- DEPUIS_D9 -->
+<g id="node28" class="node">
+<title>DEPUIS_D9</title>
+<ellipse fill="#eaf5ec" stroke="#00901d" stroke-width="1.2" cx="1640" cy="-34" rx="11.5" ry="11.5"/>
+<text text-anchor="start" x="1515.5" y="-15.5" font-family="DejaVu Sans" font-weight="bold" font-size="10.00" fill="#00370b">depuis phase 3 · D9</text>
+</g>
+<!-- DEPUIS_D9&#45;&gt;MC2 -->
+<g id="edge29" class="edge">
+<title>DEPUIS_D9&#45;&gt;MC2</title>
+<path fill="none" stroke="#3f5a47" d="M1651.64,-33.83C1669.58,-33.91 1706.69,-35.72 1735,-48 1740.84,-50.53 1746.5,-54.54 1751.24,-58.51"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1749.75,-60.7 1757.08,-63.76 1753.25,-56.79 1749.75,-60.7"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,432 @@
+<svg width="2957pt" height="561pt"
+ viewBox="0.00 0.00 2956.90 560.97" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 535.77)">
+<title>Phase</title>
+<polygon fill="white" stroke="transparent" points="-25.2,25.2 -25.2,-535.77 2931.7,-535.77 2931.7,25.2 -25.2,25.2"/>
+<text text-anchor="start" x="8" y="-489.97" font-family="DejaVu Sans" font-weight="bold" font-size="22.00">4 · Formalité</text>
+<text text-anchor="start" x="165" y="-489.97" font-family="DejaVu Sans" font-size="22.00"> &#160;</text>
+<text text-anchor="start" x="179" y="-489.97" font-family="DejaVu Sans" font-size="12.00" fill="#5b6b5f">Waɖɛ · diagramme d&#39;activité UML · couloirs horizontaux, lecture de gauche à droite</text>
+<g id="clust1" class="cluster">
+<title>cluster_COR</title>
+<polygon fill="#e6f0e8" stroke="#00370b" stroke-width="1.3" points="159,-20.57 159,-189.57 2898.5,-189.57 2898.5,-20.57 159,-20.57"/>
+<text text-anchor="start" x="167" y="-175.37" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#00370b">Correspondant</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_SYS</title>
+<polygon fill="#f1f3f2" stroke="#7b857e" stroke-width="1.3" points="98,-301.57 98,-470.57 2755.5,-470.57 2755.5,-301.57 98,-301.57"/>
+<text text-anchor="start" x="106" y="-456.37" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#7b857e">Système Waɖɛ</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_AUT</title>
+<polygon fill="#ffffff" stroke="#555555" stroke-width="1.3" points="1299.14,-197.57 1299.14,-284.57 1606.5,-284.57 1606.5,-197.57 1299.14,-197.57"/>
+<text text-anchor="start" x="1307.14" y="-270.37" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#555555">Autorité de contrôle (IPDCP, APDP)</text>
+</g>
+<!-- H_COR -->
+<!-- E3 -->
+<g id="node2" class="node">
+<title>E3</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M430.5,-152.57C430.5,-152.57 348.5,-152.57 348.5,-152.57 342.5,-152.57 336.5,-146.57 336.5,-140.57 336.5,-140.57 336.5,-128.57 336.5,-128.57 336.5,-122.57 342.5,-116.57 348.5,-116.57 348.5,-116.57 430.5,-116.57 430.5,-116.57 436.5,-116.57 442.5,-122.57 442.5,-128.57 442.5,-128.57 442.5,-140.57 442.5,-140.57 442.5,-146.57 436.5,-152.57 430.5,-152.57"/>
+<text text-anchor="start" x="345.5" y="-137.77" font-family="DejaVu Sans" font-size="11.00">Créer le dossier</text>
+<text text-anchor="start" x="363" y="-125.77" font-family="DejaVu Sans" font-size="11.00">prérempli</text>
+</g>
+<!-- H_COR&#45;&gt;E3 -->
+<!-- E4 -->
+<g id="node15" class="node">
+<title>E4</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M759.5,-351.57C759.5,-351.57 636.5,-351.57 636.5,-351.57 630.5,-351.57 624.5,-345.57 624.5,-339.57 624.5,-339.57 624.5,-327.57 624.5,-327.57 624.5,-321.57 630.5,-315.57 636.5,-315.57 636.5,-315.57 759.5,-315.57 759.5,-315.57 765.5,-315.57 771.5,-321.57 771.5,-327.57 771.5,-327.57 771.5,-339.57 771.5,-339.57 771.5,-345.57 765.5,-351.57 759.5,-351.57"/>
+<text text-anchor="start" x="633.5" y="-336.77" font-family="DejaVu Sans" font-size="11.00">Générer les documents</text>
+<text text-anchor="start" x="683" y="-324.77" font-family="DejaVu Sans" font-size="11.00">(E03)</text>
+</g>
+<!-- E3&#45;&gt;E4 -->
+<g id="edge8" class="edge">
+<title>E3&#45;&gt;E4</title>
+<path fill="none" stroke="#3f5a47" d="M402.45,-152.84C414.73,-170.64 435.17,-197.71 457.5,-216.57 522.73,-271.68 546.05,-277.85 624.5,-311.57 625.38,-311.95 626.28,-312.33 627.18,-312.7"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="626.26,-315.16 634.2,-315.47 628.19,-310.28 626.26,-315.16"/>
+</g>
+<!-- T1 -->
+<g id="node16" class="node">
+<title>T1</title>
+<polygon fill="#fff9e0" stroke="#b7791f" stroke-width="1.2" points="698,-373.57 713,-393.07 683,-393.07 698,-373.57"/>
+<text text-anchor="start" x="574" y="-364.77" font-family="DejaVu Sans" font-size="11.00">30 jours sans dépôt</text>
+</g>
+<!-- E3&#45;&gt;T1 -->
+<g id="edge11" class="edge">
+<title>E3&#45;&gt;T1</title>
+<path fill="none" stroke="#b7791f" stroke-dasharray="5,2" d="M393.6,-152.82C400,-185.31 417.56,-253.6 457.5,-294.57 521.63,-360.35 637.88,-379.86 680.65,-384.95"/>
+<polygon fill="#b7791f" stroke="#b7791f" points="680.44,-387.57 688.18,-385.79 681.02,-382.35 680.44,-387.57"/>
+</g>
+<!-- E5 -->
+<g id="node3" class="node">
+<title>E5</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M923.5,-152.57C923.5,-152.57 814.5,-152.57 814.5,-152.57 808.5,-152.57 802.5,-146.57 802.5,-140.57 802.5,-140.57 802.5,-128.57 802.5,-128.57 802.5,-122.57 808.5,-116.57 814.5,-116.57 814.5,-116.57 923.5,-116.57 923.5,-116.57 929.5,-116.57 935.5,-122.57 935.5,-128.57 935.5,-128.57 935.5,-140.57 935.5,-140.57 935.5,-146.57 929.5,-152.57 923.5,-152.57"/>
+<text text-anchor="start" x="820.5" y="-137.77" font-family="DejaVu Sans" font-size="11.00">Joindre les pièces</text>
+<text text-anchor="start" x="811.5" y="-125.77" font-family="DejaVu Sans" font-size="11.00">de la feuille de route</text>
+</g>
+<!-- E6 -->
+<g id="node4" class="node">
+<title>E6</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M1067.5,-152.57C1067.5,-152.57 978.5,-152.57 978.5,-152.57 972.5,-152.57 966.5,-146.57 966.5,-140.57 966.5,-140.57 966.5,-128.57 966.5,-128.57 966.5,-122.57 972.5,-116.57 978.5,-116.57 978.5,-116.57 1067.5,-116.57 1067.5,-116.57 1073.5,-116.57 1079.5,-122.57 1079.5,-128.57 1079.5,-128.57 1079.5,-140.57 1079.5,-140.57 1079.5,-146.57 1073.5,-152.57 1067.5,-152.57"/>
+<text text-anchor="start" x="975.5" y="-131.77" font-family="DejaVu Sans" font-size="11.00">Valider le dossier</text>
+</g>
+<!-- E5&#45;&gt;E6 -->
+<g id="edge10" class="edge">
+<title>E5&#45;&gt;E6</title>
+<path fill="none" stroke="#3f5a47" d="M935.79,-134.57C943.21,-134.57 950.77,-134.57 958.16,-134.57"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="958.62,-137.19 966.12,-134.57 958.62,-131.94 958.62,-137.19"/>
+</g>
+<!-- E7 -->
+<g id="node5" class="node">
+<title>E7</title>
+<polygon fill="#fff6e0" stroke="#b7791f" stroke-width="1.2" points="1204.5,-146.57 1110.5,-146.57 1110.5,-122.57 1204.5,-122.57 1216.5,-134.57 1204.5,-146.57"/>
+<text text-anchor="start" x="1119.5" y="-137.77" font-family="DejaVu Sans" font-size="11.00">Déposer auprès</text>
+<text text-anchor="start" x="1130" y="-125.77" font-family="DejaVu Sans" font-size="11.00">de l&#39;autorité</text>
+</g>
+<!-- E6&#45;&gt;E7 -->
+<g id="edge14" class="edge">
+<title>E6&#45;&gt;E7</title>
+<path fill="none" stroke="#3f5a47" d="M1079.54,-134.57C1087.1,-134.57 1094.89,-134.57 1102.53,-134.57"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1102.6,-137.19 1110.1,-134.57 1102.6,-131.94 1102.6,-137.19"/>
+</g>
+<!-- E8 -->
+<g id="node19" class="node">
+<title>E8</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M1367.5,-351.57C1367.5,-351.57 1259.5,-351.57 1259.5,-351.57 1253.5,-351.57 1247.5,-345.57 1247.5,-339.57 1247.5,-339.57 1247.5,-327.57 1247.5,-327.57 1247.5,-321.57 1253.5,-315.57 1259.5,-315.57 1259.5,-315.57 1367.5,-315.57 1367.5,-315.57 1373.5,-315.57 1379.5,-321.57 1379.5,-327.57 1379.5,-327.57 1379.5,-339.57 1379.5,-339.57 1379.5,-345.57 1373.5,-351.57 1367.5,-351.57"/>
+<text text-anchor="start" x="1256.5" y="-336.77" font-family="DejaVu Sans" font-size="11.00">Enregistrer le dépôt,</text>
+<text text-anchor="start" x="1260.5" y="-324.77" font-family="DejaVu Sans" font-size="11.00">calculer l&#39;échéance</text>
+</g>
+<!-- E7&#45;&gt;E8 -->
+<g id="edge15" class="edge">
+<title>E7&#45;&gt;E8</title>
+<path fill="none" stroke="#3f5a47" d="M1168.05,-152.69C1175.66,-187.01 1196.73,-262.06 1246.69,-310.22"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1244.98,-312.21 1252.27,-315.38 1248.54,-308.36 1244.98,-312.21"/>
+</g>
+<!-- E11 -->
+<g id="node6" class="node">
+<title>E11</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M1789.5,-152.57C1789.5,-152.57 1718.5,-152.57 1718.5,-152.57 1712.5,-152.57 1706.5,-146.57 1706.5,-140.57 1706.5,-140.57 1706.5,-128.57 1706.5,-128.57 1706.5,-122.57 1712.5,-116.57 1718.5,-116.57 1718.5,-116.57 1789.5,-116.57 1789.5,-116.57 1795.5,-116.57 1801.5,-122.57 1801.5,-128.57 1801.5,-128.57 1801.5,-140.57 1801.5,-140.57 1801.5,-146.57 1795.5,-152.57 1789.5,-152.57"/>
+<text text-anchor="start" x="1715.5" y="-137.77" font-family="DejaVu Sans" font-size="11.00">Répondre aux</text>
+<text text-anchor="start" x="1718" y="-125.77" font-family="DejaVu Sans" font-size="11.00">observations</text>
+</g>
+<!-- E9 -->
+<g id="node31" class="node">
+<title>E9</title>
+<path fill="white" stroke="#555555" stroke-width="1.2" d="M1519.5,-247.57C1519.5,-247.57 1422.5,-247.57 1422.5,-247.57 1416.5,-247.57 1410.5,-241.57 1410.5,-235.57 1410.5,-235.57 1410.5,-223.57 1410.5,-223.57 1410.5,-217.57 1416.5,-211.57 1422.5,-211.57 1422.5,-211.57 1519.5,-211.57 1519.5,-211.57 1525.5,-211.57 1531.5,-217.57 1531.5,-223.57 1531.5,-223.57 1531.5,-235.57 1531.5,-235.57 1531.5,-241.57 1525.5,-247.57 1519.5,-247.57"/>
+<text text-anchor="start" x="1419.5" y="-226.77" font-family="DejaVu Sans" font-size="11.00">Instruire le dossier</text>
+</g>
+<!-- E11&#45;&gt;E9 -->
+<g id="edge19" class="edge">
+<title>E11&#45;&gt;E9</title>
+<path fill="none" stroke="#3f5a47" d="M1743.68,-152.83C1733.2,-171.87 1714.57,-201.52 1691.5,-220.57 1659.45,-247.03 1647.11,-250.7 1606.5,-259.57 1580.45,-265.26 1572.68,-264.64 1546.5,-259.57 1536.37,-257.61 1525.86,-254.27 1516.05,-250.52"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1516.98,-248.06 1509.05,-247.73 1515.04,-252.94 1516.98,-248.06"/>
+</g>
+<!-- E13 -->
+<g id="node7" class="node">
+<title>E13</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M1782.5,-94.57C1782.5,-94.57 1725.5,-94.57 1725.5,-94.57 1719.5,-94.57 1713.5,-88.57 1713.5,-82.57 1713.5,-82.57 1713.5,-70.57 1713.5,-70.57 1713.5,-64.57 1719.5,-58.57 1725.5,-58.57 1725.5,-58.57 1782.5,-58.57 1782.5,-58.57 1788.5,-58.57 1794.5,-64.57 1794.5,-70.57 1794.5,-70.57 1794.5,-82.57 1794.5,-82.57 1794.5,-88.57 1788.5,-94.57 1782.5,-94.57"/>
+<text text-anchor="start" x="1722.5" y="-79.77" font-family="DejaVu Sans" font-size="11.00">Régulariser</text>
+<text text-anchor="start" x="1727" y="-67.77" font-family="DejaVu Sans" font-size="11.00">le dossier</text>
+</g>
+<!-- E13&#45;&gt;E5 -->
+<g id="edge21" class="edge">
+<title>E13&#45;&gt;E5</title>
+<path fill="none" stroke="#3f5a47" d="M1713.17,-79.08C1677.81,-81.09 1624.74,-83.57 1578.5,-83.57 1022,-83.57 1022,-83.57 1022,-83.57 982.57,-83.57 940.24,-99.18 910.29,-113.13"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="908.98,-110.85 903.34,-116.45 911.24,-115.59 908.98,-110.85"/>
+</g>
+<!-- E12 -->
+<g id="node8" class="node">
+<title>E12</title>
+<polygon fill="#e4f1f4" stroke="#0e5f73" stroke-width="1.2" points="1952.5,-146.57 1834.5,-146.57 1834.5,-152.57 1816.5,-134.57 1834.5,-116.57 1834.5,-122.57 1952.5,-122.57 1952.5,-146.57"/>
+<text text-anchor="start" x="1825.5" y="-137.77" font-family="DejaVu Sans" font-size="11.00">Enregistrer récépissé</text>
+<text text-anchor="start" x="1853" y="-125.77" font-family="DejaVu Sans" font-size="11.00">ou décision</text>
+</g>
+<!-- ME -->
+<g id="node24" class="node">
+<title>ME</title>
+<polygon fill="white" stroke="#7b857e" stroke-width="1.2" points="2352.5,-379.57 2337.5,-364.57 2352.5,-349.57 2367.5,-364.57 2352.5,-379.57"/>
+</g>
+<!-- E12&#45;&gt;ME -->
+<g id="edge23" class="edge">
+<title>E12&#45;&gt;ME</title>
+<path fill="none" stroke="#3f5a47" d="M1909.14,-152.74C1925.12,-164.59 1946.98,-179.95 1967.5,-191.57 2102.73,-268.17 2278.11,-336.83 2333.75,-357.93"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2333.13,-360.5 2341.08,-360.69 2334.99,-355.59 2333.13,-360.5"/>
+</g>
+<!-- E16R -->
+<g id="node9" class="node">
+<title>E16R</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M2400.5,-135.57C2400.5,-135.57 2304.5,-135.57 2304.5,-135.57 2298.5,-135.57 2292.5,-129.57 2292.5,-123.57 2292.5,-123.57 2292.5,-111.57 2292.5,-111.57 2292.5,-105.57 2298.5,-99.57 2304.5,-99.57 2304.5,-99.57 2400.5,-99.57 2400.5,-99.57 2406.5,-99.57 2412.5,-105.57 2412.5,-111.57 2412.5,-111.57 2412.5,-123.57 2412.5,-123.57 2412.5,-129.57 2406.5,-135.57 2400.5,-135.57"/>
+<text text-anchor="start" x="2301.5" y="-114.77" font-family="DejaVu Sans" font-size="11.00">Relancer l&#39;autorité</text>
+</g>
+<!-- E16R&#45;&gt;E9 -->
+<g id="edge30" class="edge">
+<title>E16R&#45;&gt;E9</title>
+<path fill="none" stroke="#3f5a47" d="M2340.28,-99.54C2318.31,-66.73 2266.18,-0.57 2203,-0.57 1883.5,-0.57 1883.5,-0.57 1883.5,-0.57 1802.11,-0.57 1765.46,8.55 1706.5,-47.57 1690.62,-62.69 1704.46,-76.88 1691.5,-94.57 1640.04,-164.79 1608.54,-167.02 1531.5,-207.57 1531.18,-207.74 1530.86,-207.9 1530.55,-208.07"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1529.24,-205.79 1523.65,-211.43 1531.54,-210.5 1529.24,-205.79"/>
+</g>
+<!-- E19 -->
+<g id="node10" class="node">
+<title>E19</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M2872.5,-86.57C2872.5,-86.57 2791.5,-86.57 2791.5,-86.57 2785.5,-86.57 2779.5,-80.57 2779.5,-74.57 2779.5,-74.57 2779.5,-62.57 2779.5,-62.57 2779.5,-56.57 2785.5,-50.57 2791.5,-50.57 2791.5,-50.57 2872.5,-50.57 2872.5,-50.57 2878.5,-50.57 2884.5,-56.57 2884.5,-62.57 2884.5,-62.57 2884.5,-74.57 2884.5,-74.57 2884.5,-80.57 2878.5,-86.57 2872.5,-86.57"/>
+<text text-anchor="start" x="2801.5" y="-71.77" font-family="DejaVu Sans" font-size="11.00">Préparer le</text>
+<text text-anchor="start" x="2788.5" y="-59.77" font-family="DejaVu Sans" font-size="11.00">renouvellement</text>
+</g>
+<!-- E19&#45;&gt;E3 -->
+<g id="edge35" class="edge">
+<title>E19&#45;&gt;E3</title>
+<path fill="none" stroke="#3f5a47" d="M2779.3,-63.7C2752.53,-61.58 2719.28,-59.57 2689.5,-59.57 2069,-59.57 2069,-59.57 2069,-59.57 1949.99,-59.57 1920.48,-50.24 1801.5,-47.57 1759.29,-46.62 1748.52,-43.41 1706.5,-47.57 1699.73,-48.24 1698.24,-49.69 1691.5,-50.57 1627.92,-58.88 1611.62,-59.57 1547.5,-59.57 697,-59.57 697,-59.57 697,-59.57 605.27,-59.57 502.41,-91.66 442.23,-113.85"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="441.21,-111.43 435.1,-116.51 443.05,-116.35 441.21,-111.43"/>
+</g>
+<!-- DEPUIS_P6 -->
+<g id="node11" class="node">
+<title>DEPUIS_P6</title>
+<ellipse fill="#eaf5ec" stroke="#00901d" stroke-width="1.2" cx="184.5" cy="-109.57" rx="11.5" ry="11.5"/>
+<text text-anchor="start" x="61" y="-91.07" font-family="DejaVu Sans" font-weight="bold" font-size="10.00" fill="#00370b">depuis phase 5 · P6</text>
+</g>
+<!-- DEPUIS_P6&#45;&gt;E3 -->
+<g id="edge37" class="edge">
+<title>DEPUIS_P6&#45;&gt;E3</title>
+<path fill="none" stroke="#3f5a47" d="M196.13,-110.88C220.47,-113.88 281.78,-121.43 328.7,-127.2"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="328.63,-129.84 336.39,-128.15 329.27,-124.63 328.63,-129.84"/>
+</g>
+<!-- H_SYS -->
+<!-- E1 -->
+<g id="node13" class="node">
+<title>E1</title>
+<polygon fill="white" stroke="#7b857e" stroke-width="1.2" points="184.5,-361.57 169.5,-346.57 184.5,-331.57 199.5,-346.57 184.5,-361.57"/>
+</g>
+<!-- H_SYS&#45;&gt;E1 -->
+<!-- E1&#45;&gt;E3 -->
+<g id="edge6" class="edge">
+<title>E1&#45;&gt;E3</title>
+<path fill="none" stroke="#3f5a47" d="M192.49,-339.27C219.82,-310.73 320.23,-205.87 365.77,-158.31"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="367.75,-160.03 371.04,-152.8 363.96,-156.4 367.75,-160.03"/>
+<text text-anchor="start" x="234" y="-318.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[formalité due]</text>
+</g>
+<!-- E2 -->
+<g id="node14" class="node">
+<title>E2</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M597.5,-413.57C597.5,-413.57 469.5,-413.57 469.5,-413.57 463.5,-413.57 457.5,-407.57 457.5,-401.57 457.5,-401.57 457.5,-389.57 457.5,-389.57 457.5,-383.57 463.5,-377.57 469.5,-377.57 469.5,-377.57 597.5,-377.57 597.5,-377.57 603.5,-377.57 609.5,-383.57 609.5,-389.57 609.5,-389.57 609.5,-401.57 609.5,-401.57 609.5,-407.57 603.5,-413.57 597.5,-413.57"/>
+<text text-anchor="start" x="466.5" y="-398.77" font-family="DejaVu Sans" font-size="11.00">Documenter la dispense</text>
+<text text-anchor="start" x="503" y="-386.77" font-family="DejaVu Sans" font-size="11.00">au registre</text>
+</g>
+<!-- E1&#45;&gt;E2 -->
+<g id="edge5" class="edge">
+<title>E1&#45;&gt;E2</title>
+<path fill="none" stroke="#3f5a47" d="M197.85,-348.31C237.52,-353.92 364.1,-371.79 449.7,-383.88"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="449.54,-386.51 457.34,-384.96 450.28,-381.31 449.54,-386.51"/>
+<text text-anchor="start" x="214.5" y="-367.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[dispense ou exclusion]</text>
+</g>
+<!-- VERS_MF -->
+<g id="node29" class="node">
+<title>VERS_MF</title>
+<ellipse fill="#eaf5ec" stroke="#00901d" stroke-width="1.2" cx="2589.5" cy="-388.57" rx="11.5" ry="11.5"/>
+<text text-anchor="start" x="2601" y="-370.07" font-family="DejaVu Sans" font-weight="bold" font-size="10.00" fill="#00370b">vers phase 5 · MF</text>
+</g>
+<!-- E2&#45;&gt;VERS_MF -->
+<g id="edge7" class="edge">
+<title>E2&#45;&gt;VERS_MF</title>
+<path fill="none" stroke="#3f5a47" d="M576.78,-413.65C591.6,-419.17 608.53,-424.56 624.5,-427.57 695.29,-440.91 714.47,-432.57 786.5,-432.57 786.5,-432.57 786.5,-432.57 2459.5,-432.57 2504,-432.57 2520.25,-448.54 2559.5,-427.57 2568.39,-422.82 2575.3,-414.01 2580.14,-405.97"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2582.69,-406.77 2584,-398.93 2578.09,-404.25 2582.69,-406.77"/>
+</g>
+<!-- E4&#45;&gt;E5 -->
+<g id="edge9" class="edge">
+<title>E4&#45;&gt;E5</title>
+<path fill="none" stroke="#3f5a47" d="M766.05,-315.54C767.94,-314.3 769.77,-312.98 771.5,-311.57 821.13,-271.18 849.09,-198.21 861.02,-159.79"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="863.54,-160.53 863.19,-152.59 858.51,-159.01 863.54,-160.53"/>
+</g>
+<!-- E20 -->
+<g id="node17" class="node">
+<title>E20</title>
+<polygon fill="#fff6e0" stroke="#b7791f" stroke-width="1.2" points="912,-398.57 814,-398.57 814,-374.57 912,-374.57 924,-386.57 912,-398.57"/>
+<text text-anchor="start" x="823" y="-389.77" font-family="DejaVu Sans" font-size="11.00">AL&#45;03 : formalité</text>
+<text text-anchor="start" x="833.5" y="-377.77" font-family="DejaVu Sans" font-size="11.00">non déposée</text>
+</g>
+<!-- T1&#45;&gt;E20 -->
+<g id="edge12" class="edge">
+<title>T1&#45;&gt;E20</title>
+<path fill="none" stroke="#3f5a47" d="M708.09,-386.57C726.46,-386.57 769.39,-386.57 806.16,-386.57"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="806.4,-389.19 813.9,-386.57 806.4,-383.94 806.4,-389.19"/>
+</g>
+<!-- X1 -->
+<g id="node18" class="node">
+<title>X1</title>
+<ellipse fill="white" stroke="#12180e" stroke-width="1.2" cx="1023" cy="-386.57" rx="11" ry="11"/>
+<text text-anchor="middle" x="1023" y="-382.87" font-family="DejaVu Sans" font-size="14.00">×</text>
+</g>
+<!-- E20&#45;&gt;X1 -->
+<g id="edge13" class="edge">
+<title>E20&#45;&gt;X1</title>
+<path fill="none" stroke="#3f5a47" d="M924.02,-386.57C952.09,-386.57 984.54,-386.57 1004.16,-386.57"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1004.22,-389.19 1011.72,-386.57 1004.22,-383.94 1004.22,-389.19"/>
+</g>
+<!-- E8&#45;&gt;E9 -->
+<g id="edge16" class="edge">
+<title>E8&#45;&gt;E9</title>
+<path fill="none" stroke="#3f5a47" d="M1372.15,-315.52C1374.67,-314.27 1377.14,-312.96 1379.5,-311.57 1406.11,-295.94 1431.71,-271.57 1448.85,-253.46"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1451.14,-254.86 1454.33,-247.58 1447.3,-251.28 1451.14,-254.86"/>
+</g>
+<!-- T2 -->
+<g id="node20" class="node">
+<title>T2</title>
+<polygon fill="#fff9e0" stroke="#b7791f" stroke-width="1.2" points="1754,-318.57 1769,-338.07 1739,-338.07 1754,-318.57"/>
+<text text-anchor="start" x="1614" y="-309.77" font-family="DejaVu Sans" font-size="11.00">Échéance d&#39;instruction</text>
+<text text-anchor="start" x="1654.5" y="-297.77" font-family="DejaVu Sans" font-size="11.00">atteinte</text>
+</g>
+<!-- E14 -->
+<g id="node21" class="node">
+<title>E14</title>
+<polygon fill="white" stroke="#7b857e" stroke-width="1.2" points="1982.5,-352.57 1967.5,-337.57 1982.5,-322.57 1997.5,-337.57 1982.5,-352.57"/>
+</g>
+<!-- T2&#45;&gt;E14 -->
+<g id="edge25" class="edge">
+<title>T2&#45;&gt;E14</title>
+<path fill="none" stroke="#3f5a47" d="M1764.44,-331.82C1798,-332.71 1912.04,-335.73 1959.98,-337"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1960.05,-339.63 1967.61,-337.2 1960.19,-334.38 1960.05,-339.63"/>
+</g>
+<!-- E15 -->
+<g id="node22" class="node">
+<title>E15</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M2249.5,-409.57C2249.5,-409.57 2154.5,-409.57 2154.5,-409.57 2148.5,-409.57 2142.5,-403.57 2142.5,-397.57 2142.5,-397.57 2142.5,-385.57 2142.5,-385.57 2142.5,-379.57 2148.5,-373.57 2154.5,-373.57 2154.5,-373.57 2249.5,-373.57 2249.5,-373.57 2255.5,-373.57 2261.5,-379.57 2261.5,-385.57 2261.5,-385.57 2261.5,-397.57 2261.5,-397.57 2261.5,-403.57 2255.5,-409.57 2249.5,-409.57"/>
+<text text-anchor="start" x="2175" y="-394.77" font-family="DejaVu Sans" font-size="11.00">Passer en</text>
+<text text-anchor="start" x="2151.5" y="-382.77" font-family="DejaVu Sans" font-size="11.00">Acceptation tacite</text>
+</g>
+<!-- E14&#45;&gt;E15 -->
+<g id="edge26" class="edge">
+<title>E14&#45;&gt;E15</title>
+<path fill="none" stroke="#3f5a47" d="M1991.63,-344.17C1997.19,-348.35 2004.9,-353.52 2012.5,-356.57 2051.43,-372.2 2097.72,-380.92 2134.68,-385.75"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2134.65,-388.39 2142.42,-386.72 2135.31,-383.19 2134.65,-388.39"/>
+<text text-anchor="start" x="2012.5" y="-397.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[silence vaut acceptation</text>
+<text text-anchor="start" x="2051.5" y="-387.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">(Bénin)]</text>
+</g>
+<!-- E16 -->
+<g id="node23" class="node">
+<title>E16</title>
+<polygon fill="#fff6e0" stroke="#b7791f" stroke-width="1.2" points="2248.5,-345.57 2143.5,-345.57 2143.5,-321.57 2248.5,-321.57 2260.5,-333.57 2248.5,-345.57"/>
+<text text-anchor="start" x="2161" y="-336.77" font-family="DejaVu Sans" font-size="11.00">AL&#45;04 : dossier</text>
+<text text-anchor="start" x="2152.5" y="-324.77" font-family="DejaVu Sans" font-size="11.00">sans suite (+15 j)</text>
+</g>
+<!-- E14&#45;&gt;E16 -->
+<g id="edge28" class="edge">
+<title>E14&#45;&gt;E16</title>
+<path fill="none" stroke="#3f5a47" d="M1997.44,-337.31C2024.76,-336.81 2086.92,-335.67 2135.42,-334.78"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2135.62,-337.4 2143.07,-334.63 2135.53,-332.15 2135.62,-337.4"/>
+<text text-anchor="start" x="2029" y="-339.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[sans effet (Togo)]</text>
+</g>
+<!-- E15&#45;&gt;ME -->
+<g id="edge27" class="edge">
+<title>E15&#45;&gt;ME</title>
+<path fill="none" stroke="#3f5a47" d="M2261.69,-380.9C2286.72,-376.35 2314.22,-371.35 2332.11,-368.1"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2332.7,-370.66 2339.61,-366.73 2331.76,-365.49 2332.7,-370.66"/>
+</g>
+<!-- E16&#45;&gt;E16R -->
+<g id="edge29" class="edge">
+<title>E16&#45;&gt;E16R</title>
+<path fill="none" stroke="#3f5a47" d="M2256.7,-315.52C2258.38,-314.29 2259.99,-312.97 2261.5,-311.57 2311.87,-264.83 2336.45,-184.28 2346.2,-143.23"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2348.79,-143.7 2347.91,-135.81 2343.67,-142.53 2348.79,-143.7"/>
+</g>
+<!-- E17 -->
+<g id="node25" class="node">
+<title>E17</title>
+<polygon fill="white" stroke="#7b857e" stroke-width="1.2" points="2458.5,-379.57 2443.5,-364.57 2458.5,-349.57 2473.5,-364.57 2458.5,-379.57"/>
+</g>
+<!-- ME&#45;&gt;E17 -->
+<g id="edge31" class="edge">
+<title>ME&#45;&gt;E17</title>
+<path fill="none" stroke="#3f5a47" d="M2367.53,-364.57C2385.05,-364.57 2415.22,-364.57 2435.75,-364.57"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2435.86,-367.19 2443.36,-364.57 2435.86,-361.94 2435.86,-367.19"/>
+</g>
+<!-- T3 -->
+<g id="node26" class="node">
+<title>T3</title>
+<polygon fill="#fff9e0" stroke="#b7791f" stroke-width="1.2" points="2589.5,-325.57 2604.5,-345.07 2574.5,-345.07 2589.5,-325.57"/>
+<text text-anchor="start" x="2493.5" y="-316.77" font-family="DejaVu Sans" font-size="11.00">J&#45;60 puis J&#45;15</text>
+<text text-anchor="start" x="2483.5" y="-304.77" font-family="DejaVu Sans" font-size="11.00">avant expiration</text>
+</g>
+<!-- E17&#45;&gt;T3 -->
+<g id="edge32" class="edge">
+<title>E17&#45;&gt;T3</title>
+<path fill="none" stroke="#3f5a47" d="M2471.4,-362.17C2494.02,-357.61 2543.31,-347.68 2570.16,-342.27"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2570.89,-344.8 2577.72,-340.74 2569.85,-339.65 2570.89,-344.8"/>
+<text text-anchor="start" x="2489" y="-370.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[validité limitée</text>
+<text text-anchor="start" x="2488.5" y="-360.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">(Bénin : 2 ans)]</text>
+</g>
+<!-- E17&#45;&gt;VERS_MF -->
+<g id="edge36" class="edge">
+<title>E17&#45;&gt;VERS_MF</title>
+<path fill="none" stroke="#3f5a47" d="M2471.4,-366.78C2494.13,-371.01 2543.8,-380.25 2570.56,-385.23"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2570.23,-387.84 2578.08,-386.63 2571.19,-382.68 2570.23,-387.84"/>
+<text text-anchor="start" x="2496" y="-385.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[sans limite]</text>
+</g>
+<!-- E18 -->
+<g id="node27" class="node">
+<title>E18</title>
+<polygon fill="#fff6e0" stroke="#b7791f" stroke-width="1.2" points="2729.5,-347.57 2635.5,-347.57 2635.5,-323.57 2729.5,-323.57 2741.5,-335.57 2729.5,-347.57"/>
+<text text-anchor="start" x="2644.5" y="-338.77" font-family="DejaVu Sans" font-size="11.00">AL&#45;12 : décision</text>
+<text text-anchor="start" x="2653.5" y="-326.77" font-family="DejaVu Sans" font-size="11.00">à renouveler</text>
+</g>
+<!-- T3&#45;&gt;E18 -->
+<g id="edge33" class="edge">
+<title>T3&#45;&gt;E18</title>
+<path fill="none" stroke="#3f5a47" d="M2599.45,-338.29C2606.31,-338.08 2616.44,-337.77 2627.4,-337.43"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2627.68,-340.05 2635.1,-337.19 2627.52,-334.8 2627.68,-340.05"/>
+</g>
+<!-- E18&#45;&gt;E19 -->
+<g id="edge34" class="edge">
+<title>E18&#45;&gt;E19</title>
+<path fill="none" stroke="#3f5a47" d="M2741.71,-323.64C2746.8,-320.94 2751.53,-317.63 2755.5,-313.57 2815.62,-252.06 2828,-143.81 2830.45,-94.43"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="2833.08,-94.36 2830.78,-86.75 2827.84,-94.13 2833.08,-94.36"/>
+</g>
+<!-- DEPUIS_F2 -->
+<g id="node28" class="node">
+<title>DEPUIS_F2</title>
+<ellipse fill="#eaf5ec" stroke="#00901d" stroke-width="1.2" cx="123.5" cy="-328.57" rx="11.5" ry="11.5"/>
+<text text-anchor="start" x="0" y="-310.07" font-family="DejaVu Sans" font-weight="bold" font-size="10.00" fill="#00370b">depuis phase 2 · F2</text>
+</g>
+<!-- DEPUIS_F2&#45;&gt;E1 -->
+<g id="edge4" class="edge">
+<title>DEPUIS_F2&#45;&gt;E1</title>
+<path fill="none" stroke="#3f5a47" d="M134.78,-331.71C143.2,-334.27 155.31,-337.97 165.36,-341.04"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="164.6,-343.55 172.54,-343.23 166.13,-338.53 164.6,-343.55"/>
+</g>
+<!-- H_AUT -->
+<!-- H_AUT&#45;&gt;E9 -->
+<!-- E10 -->
+<g id="node32" class="node">
+<title>E10</title>
+<polygon fill="white" stroke="#555555" stroke-width="1.2" points="1577.5,-241.57 1562.5,-226.57 1577.5,-211.57 1592.5,-226.57 1577.5,-241.57"/>
+</g>
+<!-- E9&#45;&gt;E10 -->
+<g id="edge17" class="edge">
+<title>E9&#45;&gt;E10</title>
+<path fill="none" stroke="#3f5a47" d="M1531.58,-227.86C1540.01,-227.62 1548.18,-227.38 1555.2,-227.18"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1555.42,-229.8 1562.84,-226.96 1555.27,-224.55 1555.42,-229.8"/>
+</g>
+<!-- E10&#45;&gt;E11 -->
+<g id="edge18" class="edge">
+<title>E10&#45;&gt;E11</title>
+<path fill="none" stroke="#3f5a47" d="M1589.12,-222.79C1609.54,-215.33 1655.48,-197.7 1691.5,-177.57 1702.23,-171.57 1713.4,-164.16 1723.23,-157.18"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1724.93,-159.19 1729.48,-152.68 1721.86,-154.93 1724.93,-159.19"/>
+<text text-anchor="start" x="1620.5" y="-214.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[observations]</text>
+</g>
+<!-- E10&#45;&gt;E13 -->
+<g id="edge20" class="edge">
+<title>E10&#45;&gt;E13</title>
+<path fill="none" stroke="#3f5a47" d="M1587.31,-221.07C1592.94,-217.43 1600.33,-212.45 1606.5,-207.57 1646.71,-175.76 1658.73,-169 1691.5,-129.57 1699.54,-119.9 1697.6,-114.46 1706.5,-105.57 1708.57,-103.5 1710.82,-101.5 1713.17,-99.6"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1715.17,-101.38 1719.59,-94.78 1712.01,-97.19 1715.17,-101.38"/>
+<text text-anchor="start" x="1639" y="-202.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[rejet]</text>
+</g>
+<!-- E10&#45;&gt;E12 -->
+<g id="edge22" class="edge">
+<title>E10&#45;&gt;E12</title>
+<path fill="none" stroke="#3f5a47" d="M1586.14,-233.31C1593.02,-238.89 1603.68,-246.41 1614.5,-249.57 1647.35,-259.17 1658.52,-258.69 1691.5,-249.57 1756.02,-231.73 1820.65,-185.82 1856.03,-157.7"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1858.09,-159.41 1862.28,-152.67 1854.8,-155.32 1858.09,-159.41"/>
+<text text-anchor="start" x="1622.5" y="-259.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[acceptation]</text>
+</g>
+<!-- E10&#45;&gt;T2 -->
+<g id="edge24" class="edge">
+<title>E10&#45;&gt;T2</title>
+<path fill="none" stroke="#3f5a47" d="M1581.19,-237.89C1585.49,-253.5 1595.46,-281.43 1614.5,-296.57 1650.74,-325.38 1707.78,-330.78 1736.01,-331.6"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1736.25,-334.23 1743.79,-331.72 1736.33,-328.98 1736.25,-334.23"/>
+<text text-anchor="start" x="1614.5" y="-329.37" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[pas de réponse]</text>
+</g>
+</g>
+</svg>

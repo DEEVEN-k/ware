@@ -1,0 +1,335 @@
+<svg width="2156pt" height="642pt"
+ viewBox="0.00 0.00 2156.12 642.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 617.2)">
+<title>Phase</title>
+<polygon fill="white" stroke="transparent" points="-25.2,25.2 -25.2,-617.2 2130.92,-617.2 2130.92,25.2 -25.2,25.2"/>
+<text text-anchor="start" x="8" y="-571.4" font-family="DejaVu Sans" font-weight="bold" font-size="22.00">6 · Violation de données</text>
+<text text-anchor="start" x="308" y="-571.4" font-family="DejaVu Sans" font-size="22.00"> &#160;</text>
+<text text-anchor="start" x="322" y="-571.4" font-family="DejaVu Sans" font-size="12.00" fill="#5b6b5f">Waɖɛ · diagramme d&#39;activité UML · couloirs horizontaux, lecture de gauche à droite</text>
+<g id="clust1" class="cluster">
+<title>cluster_CON</title>
+<polygon fill="#eaf5ec" stroke="#00901d" stroke-width="1.3" points="8,-465 8,-552 374.22,-552 374.22,-465 8,-465"/>
+<text text-anchor="start" x="16" y="-537.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#00901d">Contributeur métier</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_COR</title>
+<polygon fill="#e6f0e8" stroke="#00370b" stroke-width="1.3" points="586.36,-121 586.36,-314 2097.72,-314 2097.72,-121 586.36,-121"/>
+<text text-anchor="start" x="594.36" y="-299.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#00370b">Correspondant</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_SYS</title>
+<polygon fill="#f1f3f2" stroke="#7b857e" stroke-width="1.3" points="191.72,-322 191.72,-457 1240.72,-457 1240.72,-322 191.72,-322"/>
+<text text-anchor="start" x="199.72" y="-442.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#7b857e">Système Waɖɛ</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_AUT</title>
+<polygon fill="#ffffff" stroke="#555555" stroke-width="1.3" points="1426.86,-26 1426.86,-113 1716.72,-113 1716.72,-26 1426.86,-26"/>
+<text text-anchor="start" x="1434.86" y="-98.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00" fill="#555555">Autorité de contrôle (IPDCP, APDP)</text>
+</g>
+<!-- H_CON -->
+<!-- G0 -->
+<g id="node2" class="node">
+<title>G0</title>
+<polygon fill="#e4f1f4" stroke="#0e5f73" stroke-width="1.2" points="167.72,-509 71.72,-509 71.72,-515 53.72,-497 71.72,-479 71.72,-485 167.72,-485 167.72,-509"/>
+<text text-anchor="start" x="62.72" y="-494.2" font-family="DejaVu Sans" font-size="11.00">Incident constaté</text>
+</g>
+<!-- H_CON&#45;&gt;G0 -->
+<!-- G1 -->
+<g id="node3" class="node">
+<title>G1</title>
+<path fill="white" stroke="#00901d" stroke-width="1.2" d="M348.22,-515C348.22,-515 229.22,-515 229.22,-515 223.22,-515 217.22,-509 217.22,-503 217.22,-503 217.22,-491 217.22,-491 217.22,-485 223.22,-479 229.22,-479 229.22,-479 348.22,-479 348.22,-479 354.22,-479 360.22,-485 360.22,-491 360.22,-491 360.22,-503 360.22,-503 360.22,-509 354.22,-515 348.22,-515"/>
+<text text-anchor="start" x="232.72" y="-500.2" font-family="DejaVu Sans" font-size="11.00">Déclarer la violation</text>
+<text text-anchor="start" x="226.22" y="-488.2" font-family="DejaVu Sans" font-size="11.00">(y compris sur mobile)</text>
+</g>
+<!-- G0&#45;&gt;G1 -->
+<g id="edge5" class="edge">
+<title>G0&#45;&gt;G1</title>
+<path fill="none" stroke="#3f5a47" d="M167.89,-497C181.05,-497 195.3,-497 209.23,-497"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="209.43,-499.63 216.93,-497 209.43,-494.38 209.43,-499.63"/>
+</g>
+<!-- G2 -->
+<g id="node17" class="node">
+<title>G2</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M496.72,-420C496.72,-420 414.72,-420 414.72,-420 408.72,-420 402.72,-414 402.72,-408 402.72,-408 402.72,-396 402.72,-396 402.72,-390 408.72,-384 414.72,-384 414.72,-384 496.72,-384 496.72,-384 502.72,-384 508.72,-390 508.72,-396 508.72,-396 508.72,-408 508.72,-408 508.72,-414 502.72,-420 496.72,-420"/>
+<text text-anchor="start" x="411.72" y="-405.2" font-family="DejaVu Sans" font-size="11.00">Fixer l&#39;échéance</text>
+<text text-anchor="start" x="422.72" y="-393.2" font-family="DejaVu Sans" font-size="11.00">à 72 heures</text>
+</g>
+<!-- G1&#45;&gt;G2 -->
+<g id="edge6" class="edge">
+<title>G1&#45;&gt;G2</title>
+<path fill="none" stroke="#3f5a47" d="M339.4,-478.83C351.09,-473.9 363.31,-468.2 374.22,-462 392.92,-451.38 412.29,-437.06 427.35,-425.07"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="429.33,-426.85 433.52,-420.1 426.03,-422.76 429.33,-426.85"/>
+</g>
+<!-- H_COR -->
+<!-- G3 -->
+<g id="node5" class="node">
+<title>G3</title>
+<polygon fill="white" stroke="#00370b" stroke-width="1.2" points="741.72,-276 726.72,-261 741.72,-246 756.72,-261 741.72,-276"/>
+</g>
+<!-- H_COR&#45;&gt;G3 -->
+<!-- G4 -->
+<g id="node6" class="node">
+<title>G4</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M1127.72,-277C1127.72,-277 1047.72,-277 1047.72,-277 1041.72,-277 1035.72,-271 1035.72,-265 1035.72,-265 1035.72,-253 1035.72,-253 1035.72,-247 1041.72,-241 1047.72,-241 1047.72,-241 1127.72,-241 1127.72,-241 1133.72,-241 1139.72,-247 1139.72,-253 1139.72,-253 1139.72,-265 1139.72,-265 1139.72,-271 1133.72,-277 1127.72,-277"/>
+<text text-anchor="start" x="1051.22" y="-262.2" font-family="DejaVu Sans" font-size="11.00">Consigner au</text>
+<text text-anchor="start" x="1044.72" y="-250.2" font-family="DejaVu Sans" font-size="11.00">registre interne</text>
+</g>
+<!-- G3&#45;&gt;G4 -->
+<g id="edge14" class="edge">
+<title>G3&#45;&gt;G4</title>
+<path fill="none" stroke="#3f5a47" d="M757.06,-260.92C802.64,-260.65 945.97,-259.82 1027.84,-259.34"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1028.09,-261.97 1035.57,-259.3 1028.06,-256.72 1028.09,-261.97"/>
+<text text-anchor="start" x="805.72" y="-262.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[V1 : aucun risque]</text>
+</g>
+<!-- G5 -->
+<g id="node7" class="node">
+<title>G5</title>
+<polygon fill="white" stroke="#00370b" stroke-width="1.2" points="964.72,-224 949.72,-209 964.72,-194 979.72,-209 964.72,-224"/>
+</g>
+<!-- G3&#45;&gt;G5 -->
+<g id="edge15" class="edge">
+<title>G3&#45;&gt;G5</title>
+<path fill="none" stroke="#3f5a47" d="M750.68,-254.53C762.09,-245.67 784.11,-230.06 805.72,-223 852.82,-207.62 911.76,-206.95 942.63,-207.9"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="942.61,-210.53 950.21,-208.19 942.81,-205.28 942.61,-210.53"/>
+<text text-anchor="start" x="821.22" y="-225.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[V1 : risque]</text>
+</g>
+<!-- MG -->
+<g id="node13" class="node">
+<title>MG</title>
+<polygon fill="white" stroke="#00370b" stroke-width="1.2" points="1762.72,-189 1747.72,-174 1762.72,-159 1777.72,-174 1762.72,-189"/>
+</g>
+<!-- G4&#45;&gt;MG -->
+<g id="edge24" class="edge">
+<title>G4&#45;&gt;MG</title>
+<path fill="none" stroke="#3f5a47" d="M1140.05,-264.38C1192.07,-269.36 1274.9,-276 1346.72,-276 1346.72,-276 1346.72,-276 1634.72,-276 1689.21,-276 1733.62,-218.22 1752.25,-189.64"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1754.63,-190.79 1756.43,-183.05 1750.19,-187.98 1754.63,-190.79"/>
+</g>
+<!-- G6 -->
+<g id="node8" class="node">
+<title>G6</title>
+<polygon fill="#fff6e0" stroke="#b7791f" stroke-width="1.2" points="1391.72,-165 1291.72,-165 1291.72,-141 1391.72,-141 1403.72,-153 1391.72,-165"/>
+<text text-anchor="start" x="1300.72" y="-156.2" font-family="DejaVu Sans" font-size="11.00">Notifier l&#39;autorité</text>
+<text text-anchor="start" x="1332.72" y="-144.2" font-family="DejaVu Sans" font-size="11.00">(E05)</text>
+</g>
+<!-- G5&#45;&gt;G6 -->
+<g id="edge16" class="edge">
+<title>G5&#45;&gt;G6</title>
+<path fill="none" stroke="#3f5a47" d="M977.06,-206.28C990.86,-203.03 1014.9,-197.6 1035.72,-194 1121.32,-179.21 1221,-166.93 1283.97,-159.78"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1284.31,-162.38 1291.46,-158.93 1283.72,-157.17 1284.31,-162.38"/>
+<text text-anchor="start" x="1036.22" y="-196.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[V2 : risque non élevé]</text>
+</g>
+<!-- FG2 -->
+<g id="node9" class="node">
+<title>FG2</title>
+<polygon fill="#12180e" stroke="#12180e" stroke-width="1.2" points="1276.72,-211.5 1154.72,-211.5 1154.72,-206.5 1276.72,-206.5 1276.72,-211.5"/>
+</g>
+<!-- G5&#45;&gt;FG2 -->
+<g id="edge17" class="edge">
+<title>G5&#45;&gt;FG2</title>
+<path fill="none" stroke="#3f5a47" d="M979.82,-209C1011.38,-209 1089.43,-209 1146.94,-209"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1147.06,-211.63 1154.56,-209 1147.06,-206.38 1147.06,-211.63"/>
+<text text-anchor="start" x="1046.22" y="-211.8" font-family="DejaVu Sans" font-size="9.00" fill="#00370b">[V2 : risque élevé]</text>
+</g>
+<!-- G6&#45;&gt;MG -->
+<g id="edge25" class="edge">
+<title>G6&#45;&gt;MG</title>
+<path fill="none" stroke="#3f5a47" d="M1403.43,-148.01C1403.53,-148.01 1403.62,-148 1403.72,-148 1542.87,-141.69 1579.1,-142.51 1716.72,-164 1725.38,-165.35 1734.86,-167.38 1742.88,-169.25"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1742.42,-171.84 1750.33,-171.05 1743.65,-166.74 1742.42,-171.84"/>
+</g>
+<!-- GA -->
+<g id="node26" class="node">
+<title>GA</title>
+<polygon fill="#e4f1f4" stroke="#0e5f73" stroke-width="1.2" points="1673.72,-70 1611.72,-70 1611.72,-76 1593.72,-58 1611.72,-40 1611.72,-46 1673.72,-46 1673.72,-70"/>
+<text text-anchor="start" x="1602.72" y="-61.2" font-family="DejaVu Sans" font-size="11.00">Recevoir la</text>
+<text text-anchor="start" x="1602.72" y="-49.2" font-family="DejaVu Sans" font-size="11.00">notification</text>
+</g>
+<!-- G6&#45;&gt;GA -->
+<g id="edge22" class="edge">
+<title>G6&#45;&gt;GA</title>
+<path fill="none" stroke="#b7791f" stroke-dasharray="5,2" d="M1390.9,-134.9C1395.21,-133.19 1399.54,-131.53 1403.72,-130 1466.14,-107.19 1539.66,-84.86 1586.22,-71.26"/>
+<polygon fill="#b7791f" stroke="#b7791f" points="1586.99,-73.77 1593.46,-69.16 1585.52,-68.73 1586.99,-73.77"/>
+</g>
+<!-- G6B -->
+<g id="node10" class="node">
+<title>G6B</title>
+<polygon fill="#fff6e0" stroke="#b7791f" stroke-width="1.2" points="1513.22,-247 1413.22,-247 1413.22,-223 1513.22,-223 1525.22,-235 1513.22,-247"/>
+<text text-anchor="start" x="1422.22" y="-232.2" font-family="DejaVu Sans" font-size="11.00">Notifier l&#39;autorité</text>
+</g>
+<!-- FG2&#45;&gt;G6B -->
+<g id="edge18" class="edge">
+<title>FG2&#45;&gt;G6B</title>
+<path fill="none" stroke="#3f5a47" d="M1241.29,-211.54C1278.99,-215.44 1352.3,-223.02 1405.42,-228.51"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1405.37,-231.14 1413.11,-229.3 1405.91,-225.92 1405.37,-231.14"/>
+</g>
+<!-- G7 -->
+<g id="node11" class="node">
+<title>G7</title>
+<polygon fill="#fff6e0" stroke="#b7791f" stroke-width="1.2" points="1529.72,-189 1396.72,-189 1396.72,-165 1529.72,-165 1541.72,-177 1529.72,-189"/>
+<text text-anchor="start" x="1405.72" y="-180.2" font-family="DejaVu Sans" font-size="11.00">Informer les personnes</text>
+<text text-anchor="start" x="1437.22" y="-168.2" font-family="DejaVu Sans" font-size="11.00">concernées</text>
+</g>
+<!-- FG2&#45;&gt;G7 -->
+<g id="edge19" class="edge">
+<title>FG2&#45;&gt;G7</title>
+<path fill="none" stroke="#3f5a47" d="M1236.45,-206.49C1268.97,-202.35 1335.53,-193.88 1389.01,-187.08"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1389.36,-189.68 1396.47,-186.13 1388.69,-184.47 1389.36,-189.68"/>
+</g>
+<!-- JG -->
+<g id="node12" class="node">
+<title>JG</title>
+<polygon fill="#12180e" stroke="#12180e" stroke-width="1.2" points="1694.72,-179.5 1572.72,-179.5 1572.72,-174.5 1694.72,-174.5 1694.72,-179.5"/>
+</g>
+<!-- G6B&#45;&gt;JG -->
+<g id="edge20" class="edge">
+<title>G6B&#45;&gt;JG</title>
+<path fill="none" stroke="#3f5a47" d="M1520.75,-216.97C1554.62,-204.88 1596.84,-189.81 1618.48,-182.08"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1619.53,-184.5 1625.71,-179.5 1617.76,-179.55 1619.53,-184.5"/>
+</g>
+<!-- G6B&#45;&gt;GA -->
+<g id="edge23" class="edge">
+<title>G6B&#45;&gt;GA</title>
+<path fill="none" stroke="#b7791f" stroke-dasharray="5,2" d="M1525.3,-218.53C1531.36,-215.09 1537.02,-210.96 1541.72,-206 1570.82,-175.29 1550,-151.69 1572.72,-116 1580.93,-103.11 1592.56,-91 1603.39,-81.21"/>
+<polygon fill="#b7791f" stroke="#b7791f" points="1605.4,-82.94 1609.31,-76.02 1601.94,-78.99 1605.4,-82.94"/>
+</g>
+<!-- G7&#45;&gt;JG -->
+<g id="edge21" class="edge">
+<title>G7&#45;&gt;JG</title>
+<path fill="none" stroke="#3f5a47" d="M1541.97,-177C1549.62,-177 1557.39,-177 1564.99,-177"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1565.03,-179.63 1572.53,-177 1565.03,-174.38 1565.03,-179.63"/>
+</g>
+<!-- JG&#45;&gt;MG -->
+<g id="edge26" class="edge">
+<title>JG&#45;&gt;MG</title>
+<path fill="none" stroke="#3f5a47" d="M1694.87,-175.58C1711.18,-175.19 1727.78,-174.8 1740.35,-174.5"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1740.56,-177.13 1748,-174.32 1740.44,-171.88 1740.56,-177.13"/>
+</g>
+<!-- G9 -->
+<g id="node14" class="node">
+<title>G9</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M1928.72,-177C1928.72,-177 1820.72,-177 1820.72,-177 1814.72,-177 1808.72,-171 1808.72,-165 1808.72,-165 1808.72,-153 1808.72,-153 1808.72,-147 1814.72,-141 1820.72,-141 1820.72,-141 1928.72,-141 1928.72,-141 1934.72,-141 1940.72,-147 1940.72,-153 1940.72,-153 1940.72,-165 1940.72,-165 1940.72,-171 1934.72,-177 1928.72,-177"/>
+<text text-anchor="start" x="1817.72" y="-162.2" font-family="DejaVu Sans" font-size="11.00">Mettre en œuvre les</text>
+<text text-anchor="start" x="1818.22" y="-150.2" font-family="DejaVu Sans" font-size="11.00">mesures correctives</text>
+</g>
+<!-- MG&#45;&gt;G9 -->
+<g id="edge27" class="edge">
+<title>MG&#45;&gt;G9</title>
+<path fill="none" stroke="#3f5a47" d="M1776.34,-172.28C1782.93,-171.38 1791.58,-170.2 1801.01,-168.92"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1801.63,-171.48 1808.71,-167.87 1800.92,-166.28 1801.63,-171.48"/>
+</g>
+<!-- G10 -->
+<g id="node15" class="node">
+<title>G10</title>
+<path fill="white" stroke="#00370b" stroke-width="1.2" d="M2071.72,-174C2071.72,-174 1983.72,-174 1983.72,-174 1977.72,-174 1971.72,-168 1971.72,-162 1971.72,-162 1971.72,-150 1971.72,-150 1971.72,-144 1977.72,-138 1983.72,-138 1983.72,-138 2071.72,-138 2071.72,-138 2077.72,-138 2083.72,-144 2083.72,-150 2083.72,-150 2083.72,-162 2083.72,-162 2083.72,-168 2077.72,-174 2071.72,-174"/>
+<text text-anchor="start" x="1980.72" y="-153.2" font-family="DejaVu Sans" font-size="11.00">Clore la violation</text>
+</g>
+<!-- G9&#45;&gt;G10 -->
+<g id="edge28" class="edge">
+<title>G9&#45;&gt;G10</title>
+<path fill="none" stroke="#3f5a47" d="M1941.07,-157.7C1948.72,-157.55 1956.52,-157.39 1964.13,-157.24"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1964.23,-159.87 1971.67,-157.09 1964.12,-154.62 1964.23,-159.87"/>
+</g>
+<!-- G11 -->
+<g id="node23" class="node">
+<title>G11</title>
+<path fill="white" stroke="#7b857e" stroke-width="1.2" d="M359.72,-372C359.72,-372 217.72,-372 217.72,-372 211.72,-372 205.72,-366 205.72,-360 205.72,-360 205.72,-348 205.72,-348 205.72,-342 211.72,-336 217.72,-336 217.72,-336 359.72,-336 359.72,-336 365.72,-336 371.72,-342 371.72,-348 371.72,-348 371.72,-360 371.72,-360 371.72,-366 365.72,-372 359.72,-372"/>
+<text text-anchor="start" x="231.22" y="-357.2" font-family="DejaVu Sans" font-size="11.00">Mettre à jour l&#39;indice</text>
+<text text-anchor="start" x="214.72" y="-345.2" font-family="DejaVu Sans" font-size="11.00">(traitement des violations)</text>
+</g>
+<!-- G10&#45;&gt;G11 -->
+<g id="edge29" class="edge">
+<title>G10&#45;&gt;G11</title>
+<path fill="none" stroke="#3f5a47" d="M2019.43,-137.8C2001.61,-96.65 1951.67,0 1875.72,0 454.72,0 454.72,0 454.72,0 309.84,0 291.86,-246.59 289.88,-328.16"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="287.25,-328.41 289.73,-335.96 292.5,-328.51 287.25,-328.41"/>
+</g>
+<!-- H_SYS -->
+<!-- H_SYS&#45;&gt;G2 -->
+<!-- FG -->
+<g id="node18" class="node">
+<title>FG</title>
+<polygon fill="#12180e" stroke="#12180e" stroke-width="1.2" points="661.72,-365.5 539.72,-365.5 539.72,-360.5 661.72,-360.5 661.72,-365.5"/>
+</g>
+<!-- G2&#45;&gt;FG -->
+<g id="edge7" class="edge">
+<title>G2&#45;&gt;FG</title>
+<path fill="none" stroke="#3f5a47" d="M508.75,-387.81C534.93,-380.67 564.87,-372.5 583.03,-367.55"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="583.95,-370.02 590.49,-365.52 582.56,-364.96 583.95,-370.02"/>
+</g>
+<!-- FG&#45;&gt;G3 -->
+<g id="edge10" class="edge">
+<title>FG&#45;&gt;G3</title>
+<path fill="none" stroke="#3f5a47" d="M605.24,-360.42C614.49,-353.64 640.27,-334.74 661.72,-319 684.29,-302.44 710.47,-283.21 726.31,-271.59"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="727.93,-273.65 732.42,-267.1 724.82,-269.42 727.93,-273.65"/>
+</g>
+<!-- G2A -->
+<g id="node19" class="node">
+<title>G2A</title>
+<polygon fill="#fff6e0" stroke="#b7791f" stroke-width="1.2" points="778.72,-414 692.72,-414 692.72,-390 778.72,-390 790.72,-402 778.72,-414"/>
+<text text-anchor="start" x="717.22" y="-405.2" font-family="DejaVu Sans" font-size="11.00">AL&#45;01 au</text>
+<text text-anchor="start" x="701.72" y="-393.2" font-family="DejaVu Sans" font-size="11.00">correspondant</text>
+</g>
+<!-- FG&#45;&gt;G2A -->
+<g id="edge8" class="edge">
+<title>FG&#45;&gt;G2A</title>
+<path fill="none" stroke="#3f5a47" d="M610.84,-365.56C625.92,-369.79 657.18,-378.56 685.25,-386.44"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="684.76,-389.03 692.69,-388.52 686.18,-383.97 684.76,-389.03"/>
+</g>
+<!-- T5 -->
+<g id="node20" class="node">
+<title>T5</title>
+<polygon fill="#fff9e0" stroke="#b7791f" stroke-width="1.2" points="741.72,-336 756.72,-355.5 726.72,-355.5 741.72,-336"/>
+<text text-anchor="start" x="623.72" y="-327.2" font-family="DejaVu Sans" font-size="11.00">25, 50, 75 et 90 %</text>
+<text text-anchor="start" x="653.22" y="-315.2" font-family="DejaVu Sans" font-size="11.00">du délai</text>
+</g>
+<!-- FG&#45;&gt;T5 -->
+<g id="edge9" class="edge">
+<title>FG&#45;&gt;T5</title>
+<path fill="none" stroke="#3f5a47" d="M626.57,-360.5C654.37,-357.7 698.7,-353.23 723.13,-350.77"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="723.69,-353.35 730.89,-349.99 723.16,-348.13 723.69,-353.35"/>
+</g>
+<!-- G2A&#45;&gt;G3 -->
+<g id="edge13" class="edge">
+<title>G2A&#45;&gt;G3</title>
+<path fill="none" stroke="#b7791f" stroke-dasharray="5,2" d="M698.05,-383.9C689.57,-378.22 681.88,-371.01 677.22,-362 670.28,-348.57 671.57,-342.02 677.22,-328 687.04,-303.63 710.45,-283.17 726.19,-271.49"/>
+<polygon fill="#b7791f" stroke="#b7791f" points="727.84,-273.54 732.41,-267.04 724.78,-269.27 727.84,-273.54"/>
+</g>
+<!-- G2B -->
+<g id="node21" class="node">
+<title>G2B</title>
+<polygon fill="#fff6e0" stroke="#b7791f" stroke-width="1.2" points="1008.72,-366 908.72,-366 908.72,-342 1008.72,-342 1020.72,-354 1008.72,-366"/>
+<text text-anchor="start" x="917.72" y="-357.2" font-family="DejaVu Sans" font-size="11.00">Rappels tant que</text>
+<text text-anchor="start" x="931.72" y="-345.2" font-family="DejaVu Sans" font-size="11.00">non notifiée</text>
+</g>
+<!-- T5&#45;&gt;G2B -->
+<g id="edge11" class="edge">
+<title>T5&#45;&gt;G2B</title>
+<path fill="none" stroke="#3f5a47" d="M751.93,-349.21C776.93,-349.77 847.68,-351.37 900.57,-352.57"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="900.68,-355.2 908.24,-352.74 900.8,-349.95 900.68,-355.2"/>
+</g>
+<!-- X2 -->
+<g id="node22" class="node">
+<title>X2</title>
+<ellipse fill="white" stroke="#12180e" stroke-width="1.2" cx="1215.72" cy="-354" rx="11" ry="11"/>
+<text text-anchor="middle" x="1215.72" y="-350.3" font-family="DejaVu Sans" font-size="14.00">×</text>
+</g>
+<!-- G2B&#45;&gt;X2 -->
+<g id="edge12" class="edge">
+<title>G2B&#45;&gt;X2</title>
+<path fill="none" stroke="#3f5a47" d="M1020.98,-354C1076.96,-354 1160.31,-354 1196.67,-354"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="1196.97,-356.63 1204.47,-354 1196.97,-351.38 1196.97,-356.63"/>
+</g>
+<!-- FIN2 -->
+<g id="node24" class="node">
+<title>FIN2</title>
+<ellipse fill="#12180e" stroke="#12180e" stroke-width="1.2" cx="455.72" cy="-349" rx="8.5" ry="8.5"/>
+<ellipse fill="none" stroke="#12180e" stroke-width="1.2" cx="455.72" cy="-349" rx="12.5" ry="12.5"/>
+</g>
+<!-- G11&#45;&gt;FIN2 -->
+<g id="edge30" class="edge">
+<title>G11&#45;&gt;FIN2</title>
+<path fill="none" stroke="#3f5a47" d="M371.74,-351.51C395.57,-350.79 419.45,-350.07 435.44,-349.58"/>
+<polygon fill="#3f5a47" stroke="#3f5a47" points="435.62,-352.21 443.03,-349.35 435.46,-346.96 435.62,-352.21"/>
+</g>
+<!-- H_AUT -->
+<!-- H_AUT&#45;&gt;GA -->
+</g>
+</svg>

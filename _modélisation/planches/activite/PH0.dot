@@ -1,0 +1,50 @@
+digraph Phase {
+  graph [rankdir=LR, newrank=true, fontname="DejaVu Sans", pad=0.35, nodesep=0.3, ranksep=0.4, forcelabels=true, bgcolor="white", labelloc=t, labeljust=l, fontsize=22,
+         label=<<B>0 · Mise en place</B>  <FONT POINT-SIZE="12" COLOR="#5b6b5f">Waɖɛ · diagramme d'activité UML · couloirs horizontaux, lecture de gauche à droite</FONT>>];
+  node [fontname="DejaVu Sans", fontsize=11, margin="0.12,0.06", penwidth=1.2];
+  edge [fontname="DejaVu Sans", fontsize=9, color="#3f5a47", fontcolor="#00370B", arrowsize=0.75];
+  subgraph cluster_ADM { label=<<B>Administrateur d&#x27;organisation</B>>; fontsize=14; fontcolor="#6B3FA0"; style="filled"; fillcolor="#F3ECFA"; color="#6B3FA0"; penwidth=1.3; margin=14;
+    H_ADM [shape=point, width=0.01, style=invis];
+    S0 [shape=circle, style=filled, fillcolor="#12180E", color="#12180E", width=0.3, fixedsize=true, label=""];
+    A1 [shape=box, style="rounded,filled", fillcolor="white", color="#6B3FA0", label=<Créer l&#x27;espace,<BR/>accepter les CGU>];
+    A1C [shape=box, style="rounded,filled", fillcolor="white", color="#6B3FA0", label=<Confirmer l&#x27;adresse,<BR/>activer la double<BR/>authentification>];
+    A2 [shape=box, style="rounded,filled", fillcolor="white", color="#6B3FA0", label=<Décrire l&#x27;organisation>];
+    A3 [shape=box, style="rounded,filled", fillcolor="white", color="#6B3FA0", label=<Renseigner la désignation<BR/>légale du correspondant>];
+    F0 [shape=box, style=filled, fillcolor="#12180E", color="#12180E", width=1.7, height=0.07, fixedsize=true, label=""];
+    A4 [shape=box, style="rounded,filled", fillcolor="white", color="#6B3FA0", label=<Inviter les utilisateurs<BR/>(rôles, périmètres)>];
+    A5 [shape=diamond, style=filled, fillcolor="white", color="#6B3FA0", width=0.42, height=0.42, fixedsize=true, label=""];
+    A7 [shape=diamond, style=filled, fillcolor="white", color="#6B3FA0", width=0.42, height=0.42, fixedsize=true, label=""];
+    MA [shape=diamond, style=filled, fillcolor="white", color="#6B3FA0", width=0.42, height=0.42, fixedsize=true, label=""];
+    J0 [shape=box, style=filled, fillcolor="#12180E", color="#12180E", width=1.7, height=0.07, fixedsize=true, label=""];
+    VERS_B1 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>vers phase 1 · B1</B></FONT>>];
+  }
+  subgraph cluster_CAB { label=<<B>Cabinet (sous mandat)</B>>; fontsize=14; fontcolor="#C97A12"; style="filled"; fillcolor="#FDEBD3"; color="#C97A12"; penwidth=1.3; margin=14;
+    H_CAB [shape=point, width=0.01, style=invis];
+    A6 [shape=box, style="rounded,filled", fillcolor="white", color="#C97A12", label=<Demander un mandat<BR/>(niveau, périmètre, durée)>];
+    A8 [shape=box, style="rounded,filled", fillcolor="white", color="#C97A12", label=<Affecter nominativement<BR/>les consultants>];
+  }
+  subgraph cluster_SYS { label=<<B>Système Waɖɛ</B>>; fontsize=14; fontcolor="#7b857e"; style="filled"; fillcolor="#F1F3F2"; color="#7b857e"; penwidth=1.3; margin=14;
+    H_SYS [shape=point, width=0.01, style=invis];
+    A1E [shape=cds, style=filled, fillcolor="#FFF6E0", color="#B7791F", label=<Courriel de<BR/>vérification>];
+  }
+  H_ADM -> S0 [style=invis];
+  H_CAB -> A6 [style=invis];
+  H_SYS -> A1E [style=invis];
+  S0 -> A1 [];
+  A1 -> A1E [];
+  A1E -> A1C [];
+  A1C -> A2 [];
+  A2 -> A3 [];
+  A3 -> F0 [];
+  F0 -> A4 [];
+  F0 -> A5 [];
+  A5 -> A6 [label=<[recours à un cabinet]>];
+  A5 -> MA [label=<[sans cabinet]>];
+  A6 -> A7 [];
+  A7 -> A8 [label=<[mandat accepté (2FA)]>];
+  A7 -> MA [label=<[refusé]>];
+  A8 -> MA [];
+  A4 -> J0 [];
+  MA -> J0 [];
+  J0 -> VERS_B1 [];
+}

@@ -1,0 +1,55 @@
+digraph Phase {
+  graph [rankdir=LR, newrank=true, fontname="DejaVu Sans", pad=0.35, nodesep=0.3, ranksep=0.4, forcelabels=true, bgcolor="white", labelloc=t, labeljust=l, fontsize=22,
+         label=<<B>5 · Pilotage continu</B>  <FONT POINT-SIZE="12" COLOR="#5b6b5f">Waɖɛ · diagramme d'activité UML · couloirs horizontaux, lecture de gauche à droite</FONT>>];
+  node [fontname="DejaVu Sans", fontsize=11, margin="0.12,0.06", penwidth=1.2];
+  edge [fontname="DejaVu Sans", fontsize=9, color="#3f5a47", fontcolor="#00370B", arrowsize=0.75];
+  subgraph cluster_CON { label=<<B>Contributeur métier</B>>; fontsize=14; fontcolor="#00901D"; style="filled"; fillcolor="#EAF5EC"; color="#00901D"; penwidth=1.3; margin=14;
+    H_CON [shape=point, width=0.01, style=invis];
+    MOD [shape=box, style="rounded,filled", fillcolor="white", color="#00901D", label=<Modifier substantiellement<BR/>la fiche publiée>];
+  }
+  subgraph cluster_COR { label=<<B>Correspondant</B>>; fontsize=14; fontcolor="#00370B"; style="filled"; fillcolor="#E6F0E8"; color="#00370B"; penwidth=1.3; margin=14;
+    H_COR [shape=point, width=0.01, style=invis];
+    P7 [shape=diamond, style=filled, fillcolor="white", color="#00370B", width=0.42, height=0.42, fixedsize=true, label=""];
+    ARCH [shape=box, style="rounded,filled", fillcolor="white", color="#00370B", label=<Archiver la fiche>];
+    FIN [shape=doublecircle, style=filled, fillcolor="#12180E", color="#12180E", width=0.24, fixedsize=true, label=""];
+  }
+  subgraph cluster_SYS { label=<<B>Système Waɖɛ</B>>; fontsize=14; fontcolor="#7b857e"; style="filled"; fillcolor="#F1F3F2"; color="#7b857e"; penwidth=1.3; margin=14;
+    H_SYS [shape=point, width=0.01, style=invis];
+    MF [shape=diamond, style=filled, fillcolor="white", color="#7b857e", width=0.42, height=0.42, fixedsize=true, label=""];
+    P1 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Mettre à jour l&#x27;indice<BR/>et le tableau de bord>];
+    P8 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Attendre un événement<BR/>de révision>];
+    T4 [shape=invtriangle, style=filled, fillcolor="#FFF9E0", color="#B7791F", width=0.42, height=0.36, fixedsize=true, label="", xlabel=<Échéance de revue<BR/>(AL-08)>];
+    R1 [shape=larrow, style=filled, fillcolor="#E4F1F4", color="#0E5F73", label=<Nouvelle version<BR/>du référentiel (AL-09)>];
+    MP [shape=diamond, style=filled, fillcolor="white", color="#7b857e", width=0.42, height=0.42, fixedsize=true, label=""];
+    P4 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Passer la fiche<BR/>« À réviser »>];
+    P5 [shape=diamond, style=filled, fillcolor="white", color="#7b857e", width=0.42, height=0.42, fixedsize=true, label=""];
+    P6 [shape=cds, style=filled, fillcolor="#FFF6E0", color="#B7791F", label=<AL-13 : nouvelle<BR/>déclaration requise>];
+    DEPUIS_F5P [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>depuis phase 2 · F5P</B></FONT>>];
+    DEPUIS_E2 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>depuis phase 4 · E2</B></FONT>>];
+    DEPUIS_E17 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>depuis phase 4 · E17</B></FONT>>];
+    VERS_E3 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>vers phase 4 · E3</B></FONT>>];
+    VERS_B9 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>vers phase 1 · B9</B></FONT>>];
+  }
+  H_CON -> MOD [style=invis];
+  H_COR -> P7 [style=invis];
+  H_SYS -> MF [style=invis];
+  DEPUIS_F5P -> MF [];
+  DEPUIS_E2 -> MF [];
+  DEPUIS_E17 -> MF [label=<[sans limite]>];
+  MF -> P1 [];
+  P1 -> P7 [];
+  P7 -> ARCH [label=<[traitement abandonné]>];
+  ARCH -> FIN [];
+  P7 -> P8 [label=<[toujours en œuvre]>];
+  P8 -> T4 [];
+  P8 -> R1 [];
+  P8 -> MOD [];
+  T4 -> MP [];
+  R1 -> MP [];
+  MOD -> MP [];
+  MP -> P4 [];
+  P4 -> P5 [];
+  P5 -> P6 [label=<[déjà déclarée et<BR/>modification substantielle]>];
+  P6 -> VERS_E3 [];
+  P5 -> VERS_B9 [label=<[sinon : resoumettre]>];
+}

@@ -1,0 +1,69 @@
+digraph Phase {
+  graph [rankdir=LR, newrank=true, fontname="DejaVu Sans", pad=0.35, nodesep=0.3, ranksep=0.4, forcelabels=true, bgcolor="white", labelloc=t, labeljust=l, fontsize=22,
+         label=<<B>2 · Qualification et publication</B>  <FONT POINT-SIZE="12" COLOR="#5b6b5f">Waɖɛ · diagramme d'activité UML · couloirs horizontaux, lecture de gauche à droite</FONT>>];
+  node [fontname="DejaVu Sans", fontsize=11, margin="0.12,0.06", penwidth=1.2];
+  edge [fontname="DejaVu Sans", fontsize=9, color="#3f5a47", fontcolor="#00370B", arrowsize=0.75];
+  subgraph cluster_COR { label=<<B>Correspondant</B>>; fontsize=14; fontcolor="#00370B"; style="filled"; fillcolor="#E6F0E8"; color="#00370B"; penwidth=1.3; margin=14;
+    H_COR [shape=point, width=0.01, style=invis];
+    C6 [shape=diamond, style=filled, fillcolor="white", color="#00370B", width=0.42, height=0.42, fixedsize=true, label=""];
+    C7 [shape=box, style="rounded,filled", fillcolor="white", color="#00370B", label=<Renvoyer au contributeur<BR/>(motif)>];
+    C3 [shape=diamond, style=filled, fillcolor="white", color="#00370B", width=0.42, height=0.42, fixedsize=true, label=""];
+    C4 [shape=box, style="rounded,filled", fillcolor="white", color="#00370B", label=<Retenir un autre régime<BR/>(motif obligatoire)>];
+    MC [shape=diamond, style=filled, fillcolor="white", color="#00370B", width=0.42, height=0.42, fixedsize=true, label=""];
+    C8 [shape=box, style="rounded,filled", fillcolor="white", color="#00370B", label=<Arrêter le régime :<BR/>fiche Qualifiée>];
+    MC3 [shape=diamond, style=filled, fillcolor="white", color="#00370B", width=0.42, height=0.42, fixedsize=true, label=""];
+    C12 [shape=box, style="rounded,filled", fillcolor="white", color="#00370B", label=<Publier au registre>];
+    VERS_B7 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>vers phase 1 · B7</B></FONT>>];
+  }
+  subgraph cluster_RT { label=<<B>Responsable de traitement</B>>; fontsize=14; fontcolor="#2A5DB0"; style="filled"; fillcolor="#E6EEFB"; color="#2A5DB0"; penwidth=1.3; margin=14;
+    H_RT [shape=point, width=0.01, style=invis];
+    C11 [shape=box, style="rounded,filled", fillcolor="white", color="#2A5DB0", label=<Viser la fiche>];
+  }
+  subgraph cluster_SYS { label=<<B>Système Waɖɛ</B>>; fontsize=14; fontcolor="#7b857e"; style="filled"; fillcolor="#F1F3F2"; color="#7b857e"; penwidth=1.3; margin=14;
+    H_SYS [shape=point, width=0.01, style=invis];
+    C1 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Exécuter le logigramme<BR/>de chaque juridiction>];
+    C2 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Présenter régime, motifs,<BR/>fondement, feuille de route>];
+    C5 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Créer la tâche<BR/>« consulter l&#x27;autorité »<BR/>(BJ-T3)>];
+    C9 [shape=diamond, style=filled, fillcolor="white", color="#7b857e", width=0.42, height=0.42, fixedsize=true, label=""];
+    MC2 [shape=diamond, style=filled, fillcolor="white", color="#7b857e", width=0.42, height=0.42, fixedsize=true, label=""];
+    C10 [shape=diamond, style=filled, fillcolor="white", color="#7b857e", width=0.42, height=0.42, fixedsize=true, label=""];
+    C13 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Créer l&#x27;instantané,<BR/>recalculer l&#x27;indice>];
+    F2 [shape=box, style=filled, fillcolor="#12180E", color="#12180E", width=1.7, height=0.07, fixedsize=true, label=""];
+    F5P [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Planifier la revue<BR/>(12 ou 6 mois)>];
+    DEPUIS_B12 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>depuis phase 1 · B12</B></FONT>>];
+    VERS_D1 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>vers phase 3 · D1</B></FONT>>];
+    VERS_E1 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>vers phase 4 · E1</B></FONT>>];
+    VERS_MF [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>vers phase 5 · MF</B></FONT>>];
+    DEPUIS_D8 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>depuis phase 3 · D8</B></FONT>>];
+    DEPUIS_D9 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>depuis phase 3 · D9</B></FONT>>];
+  }
+  H_COR -> C6 [style=invis];
+  H_RT -> C11 [style=invis];
+  H_SYS -> C1 [style=invis];
+  DEPUIS_B12 -> C1 [];
+  C1 -> C2 [];
+  C2 -> C6 [];
+  C6 -> C7 [label=<[à compléter]>];
+  C7 -> VERS_B7 [];
+  C6 -> C3 [label=<[complète]>];
+  C3 -> MC [label=<[régime du moteur retenu]>];
+  C3 -> C4 [label=<[autre régime]>];
+  C4 -> C5 [];
+  C5 -> MC [];
+  MC -> C8 [];
+  C8 -> C9 [];
+  C9 -> VERS_D1 [label=<[AIPD requise]>];
+  C9 -> MC2 [label=<[non requise]>];
+  MC2 -> C10 [];
+  C10 -> C11 [label=<[visa activé]>];
+  C10 -> MC3 [label=<[visa désactivé]>];
+  C11 -> MC3 [];
+  MC3 -> C12 [];
+  C12 -> C13 [];
+  C13 -> F2 [];
+  F2 -> VERS_E1 [];
+  F2 -> F5P [];
+  F5P -> VERS_MF [];
+  DEPUIS_D8 -> MC2 [label=<[sinon]>];
+  DEPUIS_D9 -> MC2 [];
+}

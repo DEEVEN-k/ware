@@ -17,6 +17,7 @@ Une version PDF consolidée est générée dans `Waɖɛ_Modélisation.pdf`.
 | [08-architecture-composants.md](08-architecture-composants.md) | Déploiement, dépendances entre projets .NET, pile technique |
 | [09-diagramme-classes-complet.md](09-diagramme-classes-complet.md) | **Diagramme de classes complet** : les 90 classes et énumérations sur une seule vue, **généré** depuis le fichier 02 |
 | [10-flux-complet.md](10-flux-complet.md) | **Diagramme de flux complet** : le parcours de bout en bout, coloré par acteur |
+| [12-diagramme-activite.md](12-diagramme-activite.md) | **Diagramme d'activité UML** : un diagramme par phase, couloirs par acteur, décisions gardées, fourches, signaux et échéances ; PDF `Waɖɛ_Diagramme_activite.pdf` |
 
 ## Diagramme de classes expliqué
 

@@ -1,0 +1,51 @@
+digraph Phase {
+  graph [rankdir=LR, newrank=true, fontname="DejaVu Sans", pad=0.35, nodesep=0.3, ranksep=0.4, forcelabels=true, bgcolor="white", labelloc=t, labeljust=l, fontsize=22,
+         label=<<B>1 · Recensement</B>  <FONT POINT-SIZE="12" COLOR="#5b6b5f">Waɖɛ · diagramme d'activité UML · couloirs horizontaux, lecture de gauche à droite</FONT>>];
+  node [fontname="DejaVu Sans", fontsize=11, margin="0.12,0.06", penwidth=1.2];
+  edge [fontname="DejaVu Sans", fontsize=9, color="#3f5a47", fontcolor="#00370B", arrowsize=0.75];
+  subgraph cluster_CON { label=<<B>Contributeur métier</B>>; fontsize=14; fontcolor="#00901D"; style="filled"; fillcolor="#EAF5EC"; color="#00901D"; penwidth=1.3; margin=14;
+    H_CON [shape=point, width=0.01, style=invis];
+    B1 [shape=diamond, style=filled, fillcolor="white", color="#00901D", width=0.42, height=0.42, fixedsize=true, label=""];
+    B2 [shape=box, style="rounded,filled", fillcolor="white", color="#00901D", label=<Répondre au diagnostic<BR/>guidé (F01)>];
+    B3 [shape=box, style="rounded,filled", fillcolor="white", color="#00901D", label=<Importer un registre<BR/>existant>];
+    B4 [shape=box, style="rounded,filled", fillcolor="white", color="#00901D", label=<Partir d&#x27;un modèle<BR/>sectoriel (F02)>];
+    B5 [shape=box, style="rounded,filled", fillcolor="white", color="#00901D", label=<Remplir la trame<BR/>de collecte (F04)>];
+    MB [shape=diamond, style=filled, fillcolor="white", color="#00901D", width=0.42, height=0.42, fixedsize=true, label=""];
+    B7 [shape=box, style="rounded,filled", fillcolor="white", color="#00901D", label=<Saisir les 3 blocs<BR/>de la fiche>];
+    B9 [shape=box, style="rounded,filled", fillcolor="white", color="#00901D", label=<Soumettre à<BR/>qualification>];
+    DEPUIS_J0 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>depuis phase 0 · J0</B></FONT>>];
+    DEPUIS_C7 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>depuis phase 2 · C7</B></FONT>>];
+    DEPUIS_P5 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>depuis phase 5 · P5</B></FONT>>];
+  }
+  subgraph cluster_SYS { label=<<B>Système Waɖɛ</B>>; fontsize=14; fontcolor="#7b857e"; style="filled"; fillcolor="#F1F3F2"; color="#7b857e"; penwidth=1.3; margin=14;
+    H_SYS [shape=point, width=0.01, style=invis];
+    B6 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Créer les fiches<BR/>en Brouillon>];
+    B8 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Qualifier en direct<BR/>(résultat provisoire)>];
+    B10 [shape=diamond, style=filled, fillcolor="white", color="#7b857e", width=0.42, height=0.42, fixedsize=true, label=""];
+    B11 [shape=cds, style=filled, fillcolor="#FFF6E0", color="#B7791F", label=<AL-05 : champs<BR/>obligatoires manquants>];
+    B12 [shape=cds, style=filled, fillcolor="#FFF6E0", color="#B7791F", label=<Notifier le<BR/>correspondant>];
+    VERS_C1 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>vers phase 2 · C1</B></FONT>>];
+  }
+  H_CON -> B1 [style=invis];
+  H_SYS -> B6 [style=invis];
+  DEPUIS_J0 -> B1 [];
+  B1 -> B2 [label=<[diagnostic]>];
+  B1 -> B3 [label=<[import]>];
+  B1 -> B4 [label=<[modèle]>];
+  B1 -> B5 [label=<[trame]>];
+  B2 -> MB [];
+  B3 -> MB [];
+  B4 -> MB [];
+  B5 -> MB [];
+  MB -> B6 [];
+  B6 -> B7 [];
+  B7 -> B8 [label=<[à chaque saisie]>];
+  B8 -> B9 [];
+  B9 -> B10 [];
+  B10 -> B11 [label=<[incomplète]>];
+  B11 -> B7 [];
+  B10 -> B12 [label=<[complète]>];
+  B12 -> VERS_C1 [];
+  DEPUIS_C7 -> B7 [];
+  DEPUIS_P5 -> B9 [label=<[sinon : resoumettre]>];
+}

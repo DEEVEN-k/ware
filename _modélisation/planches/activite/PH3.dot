@@ -1,0 +1,52 @@
+digraph Phase {
+  graph [rankdir=LR, newrank=true, fontname="DejaVu Sans", pad=0.35, nodesep=0.3, ranksep=0.4, forcelabels=true, bgcolor="white", labelloc=t, labeljust=l, fontsize=22,
+         label=<<B>3 · Analyse d&#x27;impact</B>  <FONT POINT-SIZE="12" COLOR="#5b6b5f">Waɖɛ · diagramme d'activité UML · couloirs horizontaux, lecture de gauche à droite</FONT>>];
+  node [fontname="DejaVu Sans", fontsize=11, margin="0.12,0.06", penwidth=1.2];
+  edge [fontname="DejaVu Sans", fontsize=9, color="#3f5a47", fontcolor="#00370B", arrowsize=0.75];
+  subgraph cluster_CON { label=<<B>Contributeur métier</B>>; fontsize=14; fontcolor="#00901D"; style="filled"; fillcolor="#EAF5EC"; color="#00901D"; penwidth=1.3; margin=14;
+    H_CON [shape=point, width=0.01, style=invis];
+    D3A [shape=box, style="rounded,filled", fillcolor="white", color="#00901D", label=<Rédiger les sections<BR/>auxquelles il est invité>];
+  }
+  subgraph cluster_COR { label=<<B>Correspondant</B>>; fontsize=14; fontcolor="#00370B"; style="filled"; fillcolor="#E6F0E8"; color="#00370B"; penwidth=1.3; margin=14;
+    H_COR [shape=point, width=0.01, style=invis];
+    D2 [shape=box, style="rounded,filled", fillcolor="white", color="#00370B", label=<Lancer l&#x27;analyse,<BR/>inviter des contributeurs>];
+    FD [shape=box, style=filled, fillcolor="#12180E", color="#12180E", width=1.7, height=0.07, fixedsize=true, label=""];
+    D3B [shape=box, style="rounded,filled", fillcolor="white", color="#00370B", label=<Rédiger description,<BR/>nécessité, mesures>];
+    JD [shape=box, style=filled, fillcolor="#12180E", color="#12180E", width=1.7, height=0.07, fixedsize=true, label=""];
+    D4 [shape=box, style="rounded,filled", fillcolor="white", color="#00370B", label=<Coter les risques<BR/>(initial, résiduel)>];
+    D5 [shape=box, style="rounded,filled", fillcolor="white", color="#00370B", label=<Soumettre à validation>];
+  }
+  subgraph cluster_RT { label=<<B>Responsable de traitement</B>>; fontsize=14; fontcolor="#2A5DB0"; style="filled"; fillcolor="#E6EEFB"; color="#2A5DB0"; penwidth=1.3; margin=14;
+    H_RT [shape=point, width=0.01, style=invis];
+    D6 [shape=diamond, style=filled, fillcolor="white", color="#2A5DB0", width=0.42, height=0.42, fixedsize=true, label=""];
+  }
+  subgraph cluster_SYS { label=<<B>Système Waɖɛ</B>>; fontsize=14; fontcolor="#7b857e"; style="filled"; fillcolor="#F1F3F2"; color="#7b857e"; penwidth=1.3; margin=14;
+    H_SYS [shape=point, width=0.01, style=invis];
+    D1 [shape=cds, style=filled, fillcolor="#FFF6E0", color="#B7791F", label=<Ouvrir l&#x27;AIPD,<BR/>alerte AL-02>];
+    D7 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Générer le rapport<BR/>d&#x27;AIPD (E04)>];
+    D8 [shape=diamond, style=filled, fillcolor="white", color="#7b857e", width=0.42, height=0.42, fixedsize=true, label=""];
+    D9 [shape=box, style="rounded,filled", fillcolor="white", color="#7b857e", label=<Ouvrir un dossier de<BR/>consultation préalable<BR/>(8 semaines)>];
+    DEPUIS_C9 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>depuis phase 2 · C9</B></FONT>>];
+    VERS_MC2 [shape=circle, style=filled, fillcolor="#EAF5EC", color="#00901D", fixedsize=true, width=0.32, label="", xlabel=<<FONT COLOR="#00370B" POINT-SIZE="10"><B>vers phase 2 · MC2</B></FONT>>];
+  }
+  H_CON -> D3A [style=invis];
+  H_COR -> D2 [style=invis];
+  H_RT -> D6 [style=invis];
+  H_SYS -> D1 [style=invis];
+  DEPUIS_C9 -> D1 [label=<[AIPD requise]>];
+  D1 -> D2 [];
+  D2 -> FD [];
+  FD -> D3A [];
+  FD -> D3B [];
+  D3A -> JD [];
+  D3B -> JD [];
+  JD -> D4 [];
+  D4 -> D5 [];
+  D5 -> D6 [];
+  D6 -> D3B [label=<[renvoi]>];
+  D6 -> D7 [label=<[validée]>];
+  D7 -> D8 [];
+  D8 -> D9 [label=<[risque résiduel élevé<BR/>(Bénin, art. 429)]>];
+  D8 -> VERS_MC2 [label=<[sinon]>];
+  D9 -> VERS_MC2 [];
+}
