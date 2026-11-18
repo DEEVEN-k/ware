@@ -32,6 +32,19 @@ La génération **échoue** si une classe, un champ, une valeur d'énumération 
 fichier 02 n'est pas expliqué, ou si une explication ne correspond plus à rien : modifier le
 modèle oblige à mettre l'explication à jour.
 
+## Diagramme de flux expliqué
+
+`Waɖɛ_Diagramme_de_flux_explique.pdf` explique chaque phase, chaque étape, chaque décision et
+chaque passage d'une phase à l'autre du diagramme de flux complet, avec la source qui le justifie.
+Les explications sont dans `explications/flux.py`. Le document se régénère avec :
+
+```bash
+python3 _modélisation/outils/generer_explication_flux.py
+```
+
+Comme pour les classes, la génération **échoue** si une étape ou un passage entre phases de
+`10-flux-complet.md` n'est pas expliqué.
+
 ## Planches grand format
 
 Les deux vues complètes sont trop grandes pour une page A4. Elles sont fournies à leur taille
