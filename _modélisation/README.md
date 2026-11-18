@@ -46,6 +46,18 @@ python3 _modélisation/outils/generer_explication_flux.py
 Comme pour les classes, la génération **échoue** si une étape ou un passage entre phases de
 `10-flux-complet.md` n'est pas expliqué.
 
+## Fichier draw.io
+
+`Waɖɛ_Modélisation.drawio` s'ouvre dans [draw.io / diagrams.net](https://app.diagrams.net) (Fichier >
+Ouvrir, ou glisser le fichier dans la fenêtre). Ses 9 pages (onglets en bas de l'écran) sont en
+formes modifiables : le diagramme de classes complet (une forme « classe UML » par classe, un champ
+par ligne), le diagramme de flux complet et les 7 diagrammes d'activité (couloirs, formes UML et
+SysML natives). Il se régénère, après les autres générateurs, avec :
+
+```bash
+python3 _modélisation/outils/generer_drawio.py
+```
+
 ## Planches grand format
 
 Les deux vues complètes sont trop grandes pour une page A4. Elles sont fournies à leur taille
