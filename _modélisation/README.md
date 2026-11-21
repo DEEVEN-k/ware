@@ -58,6 +58,14 @@ SysML natives). Il se régénère, après les autres générateurs, avec :
 python3 _modélisation/outils/generer_drawio.py
 ```
 
+Le diagramme d'activité existe aussi **seul, sur une page unique** : `Waɖɛ_Diagramme_activite.drawio`
+(un pool UML, un couloir horizontal par acteur sur toute la largeur, les 7 phases de gauche à
+droite, tous les flots directs). Il se régénère avec :
+
+```bash
+python3 _modélisation/outils/generer_activite_drawio.py
+```
+
 ## Planches grand format
 
 Les deux vues complètes sont trop grandes pour une page A4. Elles sont fournies à leur taille
