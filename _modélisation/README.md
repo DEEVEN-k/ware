@@ -18,6 +18,7 @@ Une version PDF consolidée est générée dans `Waɖɛ_Modélisation.pdf`.
 | [09-diagramme-classes-complet.md](09-diagramme-classes-complet.md) | **Diagramme de classes complet** : les 90 classes et énumérations sur une seule vue, **généré** depuis le fichier 02 |
 | [10-flux-complet.md](10-flux-complet.md) | **Diagramme de flux complet** : le parcours de bout en bout, coloré par acteur |
 | [12-diagramme-activite.md](12-diagramme-activite.md) | **Diagramme d'activité UML** : un diagramme par phase, couloirs par acteur, décisions gardées, fourches, signaux et échéances ; PDF `Waɖɛ_Diagramme_activite.pdf` |
+| [13-tracabilite-classes.md](13-tracabilite-classes.md) | **Traçabilité du diagramme de classes** : pour chaque classe et chaque champ, le fichier AMELEGAL d'où il vient ; PDF `Waɖɛ_Tracabilite_diagramme_de_classes.pdf`, **généré** par `outils/generer_tracabilite_classes.py` |
 
 ## Diagramme de classes expliqué
 
